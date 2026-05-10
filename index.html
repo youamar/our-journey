@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Our Journey · Italy &amp; Switzerland · Aug 2026</title>
+<meta name="description" content="11 days, 2 countries, 8 cities — a love letter in the form of a trip. Italy & Switzerland, August 17–27, 2026." />
+
+<!-- Heart favicon (browser tab icon) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9D%A4%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+
+<!-- Social share preview (WhatsApp / Instagram / Messenger) -->
+<meta property="og:title" content="Our Journey · Italy & Switzerland 💕" />
+<meta property="og:description" content="11 days, 2 countries, a thousand small moments — a trip planned just for you." />
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/1280px-Colosseo_2020.jpg" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Dancing+Script:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;background:#faf5ef;color:#2a1f24;overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.65}
+  img{display:block;max-width:100%;background:#e8dcd0}
+  .script{font-family:'Dancing Script',cursive;color:#c4546a}
+
+  /* ============ HERO ============ */
+  .hero-wrap{height:230vh;position:relative}
+  .hero{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.1);will-change:transform,opacity}
+  .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(40,15,25,.3),rgba(40,15,25,.5) 60%,rgba(20,10,15,.75))}
+  .hero-content{position:relative;z-index:2;text-align:center;color:#fff;padding:0 20px;will-change:transform,opacity}
+  .hero .script{font-size:clamp(1.4rem,3vw,2.2rem);color:#ffd6dc;text-shadow:0 2px 20px rgba(0,0,0,.6);letter-spacing:1px}
+  .hero h1{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(3.5rem,11vw,9rem);line-height:.95;margin:.2em 0;text-shadow:0 4px 40px rgba(0,0,0,.5)}
+  .hero .sub{font-size:.95rem;letter-spacing:10px;text-transform:uppercase;font-weight:300;opacity:.95}
+  .hero .dates{margin-top:2.2rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.4rem;opacity:.95}
+  .scroll-cue{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);color:#fff;font-size:.7rem;letter-spacing:4px;text-transform:uppercase;opacity:.7;animation:fadeBounce 2.5s infinite}
+  @keyframes fadeBounce{0%,100%{transform:translate(-50%,0);opacity:.5}50%{transform:translate(-50%,8px);opacity:1}}
+
+  .reveal{opacity:0;transform:translateY(50px);transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1s cubic-bezier(.16,1,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ============ LETTER ============ */
+  .letter{padding:130px 30px;text-align:center;background:#fdf9f3}
+  .letter h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(2.8rem,6vw,4.8rem);color:#c4546a;margin-bottom:1.2rem}
+  .letter p{max-width:680px;margin:0 auto;font-size:clamp(1.1rem,1.5vw,1.3rem);color:#5a4a4c;font-weight:300;line-height:1.9}
+
+  /* ============ AT A GLANCE ============ */
+  .glance{padding:110px 6vw 130px;text-align:center;background:linear-gradient(180deg,#fdf9f3,#f5ebde)}
+  .glance .label{font-size:.75rem;letter-spacing:6px;text-transform:uppercase;color:#c4546a;font-weight:700;margin-bottom:.8rem}
+  .glance h2{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,7vw,5.5rem);font-weight:700;color:#2a1f24;margin-bottom:.8rem;line-height:1}
+  .glance .sub{color:#7a6a6c;margin-bottom:3.5rem;font-size:1.05rem}
+  .glance-grid{display:grid;grid-template-columns:repeat(9,1fr);gap:8px;max-width:1100px;margin:0 auto;position:relative}
+  .glance-line{position:absolute;left:5%;right:5%;top:36px;height:2px;background:linear-gradient(90deg,#c4546a 0%,#c4546a 33%,#5d8eb9 50%,#5d8eb9 100%);opacity:.3;z-index:0}
+  .stop{position:relative;display:flex;flex-direction:column;align-items:center;gap:8px;z-index:1}
+  .stop .dot{width:22px;height:22px;border-radius:50%;background:#c4546a;border:5px solid #fdf9f3;box-shadow:0 0 0 1px #c4546a;transition:transform .3s}
+  .stop.swiss .dot{background:#5d8eb9;box-shadow:0 0 0 1px #5d8eb9}
+  .stop:hover .dot{transform:scale(1.3)}
+  .stop .d{font-size:.62rem;letter-spacing:2px;color:#9a8a8c;font-weight:700;margin-top:8px}
+  .stop .n{font-size:.95rem;color:#2a1f24;font-weight:700}
+  @media(max-width:760px){.glance-grid{grid-template-columns:repeat(3,1fr);gap:24px}.glance-line{display:none}}
+
+  /* ============ PHASE INTRO ============ */
+  .phase-intro{padding:160px 30px 110px;text-align:center;background:#faf5ef}
+  .phase-intro .flag{font-size:4rem;margin-bottom:.5rem}
+  .phase-intro .label{font-size:.78rem;letter-spacing:7px;text-transform:uppercase;color:#c4546a;margin-bottom:.6rem;font-weight:700}
+  .phase-intro.swiss .label{color:#5d8eb9}
+  .phase-intro h2{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(4rem,13vw,9rem);line-height:.95;color:#2a1f24}
+  .phase-intro .tag{margin-top:1.6rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.4rem;color:#7a6a6c;max-width:560px;margin-left:auto;margin-right:auto}
+
+  /* ============ DAY HERO BANNER ============ */
+  .day-hero{position:relative;height:85vh;min-height:560px;overflow:hidden;display:flex;align-items:flex-end}
+  .day-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.05);transition:transform 10s ease-out}
+  .day-hero:hover img{transform:scale(1.13)}
+  .day-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.05) 0%,rgba(0,0,0,.2) 50%,rgba(0,0,0,.78) 100%)}
+  .day-hero-text{position:relative;z-index:2;color:#fff;padding:70px 6vw;width:100%}
+  .day-hero-text .num{display:inline-block;font-size:.78rem;letter-spacing:6px;text-transform:uppercase;color:#ffd6dc;font-weight:700;padding:7px 18px;border:1.5px solid rgba(255,214,220,.7);border-radius:100px;margin-bottom:1.2rem;backdrop-filter:blur(12px);background:rgba(0,0,0,.2)}
+  .day-hero-text h3{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(4rem,12vw,10rem);line-height:.92;text-shadow:0 6px 40px rgba(0,0,0,.5);letter-spacing:-2px}
+  .day-hero-text .where{margin-top:.7rem;font-size:1rem;letter-spacing:5px;text-transform:uppercase;font-weight:400;opacity:.95}
+  .day-hero-text .date{margin-top:.5rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.4rem;color:#ffd6dc}
+
+  /* ============ DAY BODY ============ */
+  .day-body{padding:100px 6vw 110px;background:#fdf9f3}
+  .day-body-inner{max-width:1180px;margin:0 auto}
+  .feeling{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.6rem,3vw,2.4rem);color:#2a1f24;text-align:center;max-width:780px;margin:0 auto 4rem;line-height:1.4}
+
+  /* PHOTO COLLAGE — 5 images per day */
+  .gallery{display:grid;gap:14px;margin-bottom:4rem}
+  .gallery figure{position:relative;overflow:hidden;border-radius:18px;box-shadow:0 14px 36px rgba(80,40,50,.14);background:#e8dcd0}
+  .gallery figure img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+  .gallery figure:hover img{transform:scale(1.07)}
+  .gallery figure .cap{position:absolute;bottom:14px;left:14px;background:rgba(255,255,255,.95);padding:6px 13px;border-radius:8px;font-size:.7rem;letter-spacing:2.5px;text-transform:uppercase;color:#2a1f24;font-weight:700;backdrop-filter:blur(8px)}
+  /* 5-image grid: big image left (spans both rows), 2 small top-right, 2 small bottom-right */
+  .gallery.g5{grid-template-columns:2fr 1fr 1fr;grid-template-rows:1fr 1fr;height:580px}
+  .gallery.g5 figure:nth-child(1){grid-row:1/3;grid-column:1/2}
+  .gallery.g5 figure:nth-child(2){grid-row:1/2;grid-column:2/3}
+  .gallery.g5 figure:nth-child(3){grid-row:1/2;grid-column:3/4}
+  .gallery.g5 figure:nth-child(4){grid-row:2/3;grid-column:2/3}
+  .gallery.g5 figure:nth-child(5){grid-row:2/3;grid-column:3/4}
+  .gallery.g3{grid-template-columns:1fr 1fr 1fr;height:340px}
+  @media(max-width:900px){.gallery.g5{grid-template-columns:1fr 1fr;grid-template-rows:auto;height:auto}.gallery.g5 figure{height:240px}.gallery.g5 figure:nth-child(1){grid-row:auto;grid-column:1/3;height:300px}.gallery.g5 figure:nth-child(4){grid-column:auto}.gallery.g3{grid-template-columns:1fr 1fr;height:auto}.gallery.g3 figure{height:240px}.gallery.g3 figure:nth-child(3){grid-column:1/3}}
+
+  /* ============ VERTICAL HOUR-BY-HOUR TIMELINE ============ */
+  .schedule{margin-bottom:4rem}
+  .sch-head{text-align:center;margin-bottom:2.5rem}
+  .sch-head .lbl{font-size:.75rem;letter-spacing:5px;text-transform:uppercase;color:#c4546a;font-weight:700;margin-bottom:.6rem}
+  .sch-head .title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;color:#2a1f24}
+
+  .rail{position:relative;max-width:780px;margin:0 auto;padding-left:60px}
+  .rail::before{content:'';position:absolute;left:18px;top:18px;bottom:18px;width:2px;background:linear-gradient(180deg,#c4546a 0%,#c4546a 100%);opacity:.3}
+  .rail.swiss::before{background:linear-gradient(180deg,#5d8eb9 0%,#5d8eb9 100%);opacity:.4}
+  .rail-item{position:relative;padding:18px 0 28px}
+  .rail-item::before{content:'';position:absolute;left:-50px;top:24px;width:18px;height:18px;border-radius:50%;background:#c4546a;border:4px solid #fdf9f3;box-shadow:0 0 0 1.5px #c4546a;z-index:2}
+  .rail.swiss .rail-item::before{background:#5d8eb9;box-shadow:0 0 0 1.5px #5d8eb9}
+  .rail-item .time{display:inline-block;font-size:.85rem;letter-spacing:3px;text-transform:uppercase;color:#c4546a;font-weight:700;margin-bottom:6px}
+  .rail.swiss .rail-item .time{color:#5d8eb9}
+  .rail-item .what{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:700;color:#2a1f24;line-height:1.2;margin-bottom:6px}
+  .rail-item .det{font-size:.95rem;color:#7a6a6c;font-weight:400}
+
+  /* ADVISOR */
+  .advisor{display:flex;gap:18px;background:#f5f0fa;border:1px solid #d6d0e0;border-radius:18px;padding:26px 28px;margin-bottom:1.4rem}
+  .advisor .icon{flex-shrink:0;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#7d6fa0,#5d8eb9);display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:#fff}
+  .advisor .body{flex:1}
+  .advisor .body .who{font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:#7d6fa0;font-weight:700;margin-bottom:8px}
+  .advisor .body p{font-size:.97rem;color:#3a2f32;font-weight:400;line-height:1.7}
+  .advisor .body p+p{margin-top:8px}
+  .advisor .body strong{color:#1a1014;font-weight:700}
+
+  /* ROMANTIC */
+  .romantic{padding:20px 26px;background:linear-gradient(135deg,#fde8eb,#fdf0d8);border-left:4px solid #c4546a;border-radius:0 14px 14px 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem;color:#7a3a48}
+  .romantic::before{content:'♡  ';color:#c4546a;font-style:normal;font-weight:bold}
+
+  /* CLOSING */
+  .closing{position:relative;min-height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:110px 30px;overflow:hidden}
+  .closing-bg{position:absolute;inset:0;background-size:cover;background-position:center}
+  .closing-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(rgba(255,245,235,.7),rgba(245,225,225,.85))}
+  .closing>.reveal{position:relative;z-index:2}
+  .closing .script{font-size:clamp(2rem,4.5vw,3rem)}
+  .closing h2{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(3rem,7.5vw,6rem);line-height:1.05;margin:1rem 0 1.5rem;color:#2a1f24}
+  .closing p{max-width:620px;margin:0 auto;font-size:1.15rem;color:#5a4a4c;font-weight:300;line-height:1.8;font-style:italic}
+  .heart-pulse{display:inline-block;animation:pulse 1.6s ease-in-out infinite;color:#c4546a;font-size:2.4rem;margin-top:2rem;filter:drop-shadow(0 2px 12px rgba(196,84,106,.5))}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
+
+  footer{text-align:center;padding:38px;color:#9a8a8c;font-size:.7rem;background:#faf5ef;letter-spacing:3px}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero-wrap">
+  <section class="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-content" id="heroContent">
+      <p class="script">for the love of my life</p>
+      <h1>Our European<br>Adventure</h1>
+      <p class="sub">Italy &nbsp;·&nbsp; Switzerland</p>
+      <div class="dates">August 17 — August 27, 2026</div>
+    </div>
+    <div class="scroll-cue">scroll to begin</div>
+  </section>
+</div>
+
+<!-- LETTER -->
+<section class="letter">
+  <div class="reveal">
+    <h2>My dearest,</h2>
+    <p>I’ve been planning this for us. Eleven days, two countries, eight cities — and a thousand small moments to call our own. Scroll slowly. This is just for you.</p>
+  </div>
+</section>
+
+<!-- AT A GLANCE -->
+<section class="glance">
+  <div class="reveal">
+    <p class="label">The Journey</p>
+    <h2>11 Days. 8 Stops.</h2>
+    <p class="sub">From the Roman Forum to the Swiss Alps.</p>
+    <div class="glance-grid">
+      <div class="glance-line"></div>
+      <div class="stop"><div class="dot"></div><div class="d">DAY 1–2</div><div class="n">Rome 🇮🇹</div></div>
+      <div class="stop"><div class="dot"></div><div class="d">DAY 3</div><div class="n">Florence</div></div>
+      <div class="stop"><div class="dot"></div><div class="d">DAY 4</div><div class="n">Lake Como</div></div>
+      <div class="stop swiss"><div class="dot"></div><div class="d">DAY 5–6</div><div class="n">Zermatt 🇨🇭</div></div>
+      <div class="stop swiss"><div class="dot"></div><div class="d">DAY 7</div><div class="n">Lauterbrunnen</div></div>
+      <div class="stop swiss"><div class="dot"></div><div class="d">DAY 8</div><div class="n">Grindelwald</div></div>
+      <div class="stop swiss"><div class="dot"></div><div class="d">DAY 9</div><div class="n">Bern</div></div>
+      <div class="stop swiss"><div class="dot"></div><div class="d">DAY 10</div><div class="n">Zürich</div></div>
+      <div class="stop"><div class="dot" style="background:#9a8a8c;box-shadow:0 0 0 1px #9a8a8c"></div><div class="d">DAY 11</div><div class="n">Home ✈️</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PHASE 1 -->
+<section class="phase-intro">
+  <div class="reveal">
+    <div class="flag">🇮🇹</div>
+    <p class="label">Phase One</p>
+    <h2>Italia.</h2>
+    <p class="tag">Ancient streets. Golden sunsets. A quiet lake to fall in love beside.</p>
+  </div>
+</section>
+
+<!-- ============ DAY 1 ROME ARRIVAL ============ -->
+<section class="reveal">
+  <div class="day-hero">
+    <img data-wf="Rome_Skyline.jpg" alt="Rome skyline">
+    <div class="day-hero-text">
+      <span class="num">Day 01 · Aug 17</span>
+      <h3>Rome.</h3>
+      <p class="where">Italy · Arrival Day</p>
+      <p class="date">Sunday Evening</p>
+    </div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+    <p class="feeling">Wheels down in Italy. Cobblestones, café air, and the start of us.</p>
+
+    <div class="gallery g3">
+      <figure><img data-wf="FCO_Terminal_3.jpg" alt="Fiumicino"><figcaption class="cap">Fiumicino</figcaption></figure>
+      <figure><img data-wf="Stazione_Termini_-_Roma.jpg" alt="Termini"><figcaption class="cap">Roma Termini</figcaption></figure>
+      <figure><img data-wf="Gelato_Italy.jpg" alt="Gelato"><figcaption class="cap">First Gelato</figcaption></figure>
+    </div>
+
+    <div class="schedule">
+      <div class="sch-head"><p class="lbl">Today’s Timeline</p><p class="title">An Easy Welcome</p></div>
+      <div class="rail">
+        <div class="rail-item"><div class="time">14:00 · Land</div><div class="what">Rome Fiumicino (FCO)</div><div class="det">Welcome to Italy. Pick up SIM card at the airport.</div></div>
+        <div class="rail-item"><div class="time">15:00 · Train</div><div class="what">Leonardo Express → Roma Termini</div><div class="det">32 minutes · €14 · buy on the Trenitalia app before landing</div></div>
+        <div class="rail-item"><div class="time">16:00 · Settle</div><div class="what">Check in near Termini</div><div class="det">YellowSquare Rome or The RomeHello</div></div>
+        <div class="rail-item"><div class="time">19:00 · Dinner</div><div class="what">Slow walk + first gelato</div><div class="det">No agenda tonight. We need rest.</div></div>
+      </div>
+    </div>
+
+    <div class="advisor"><div class="icon">💡</div><div class="body">
+      <p class="who">Advisor’s Note</p>
+      <p><strong>Don’t plan anything heavy on day one.</strong> Long-haul flight + 6-hour time difference will hit hard.</p>
+      <p><strong>Watch out:</strong> taxi scams at FCO. Only take white official taxis with “Roma Capitale” logo — flat €50 to city center.</p>
+    </div></div>
+    <div class="romantic">First gelato together. A tradition begins.</div>
+  </div></div>
+</section>
+
+<!-- ============ DAY 2 ROME ============ -->
+<section class="reveal">
+  <div class="day-hero">
+    <img data-wf="Colosseo_2020.jpg" alt="Colosseum">
+    <div class="day-hero-text">
+      <span class="num">Day 02 · Aug 18</span>
+      <h3>Rome.</h3>
+      <p class="where">Italy · Ancient Glory</p>
+      <p class="date">Monday</p>
+    </div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+    <p class="feeling">Two thousand years of history — and you, holding my hand through all of it.</p>
+
+    <div class="gallery g5">
+      <figure><img data-wf="Colosseum_in_Rome,_Italy_-_April_2007.jpg" alt="Colosseum"><figcaption class="cap">Colosseum</figcaption></figure>
+      <figure><img data-wf="Trevi_Fountain,_Rome,_Italy_2_-_May_2007.jpg" alt="Trevi"><figcaption class="cap">Trevi Fountain</figcaption></figure>
+      <figure><img data-wf="Rome-Pantheon-Exterior.jpg" alt="Pantheon"><figcaption class="cap">Pantheon</figcaption></figure>
+      <figure><img data-wf="Spanish_Steps,_Rome.jpg" alt="Spanish Steps"><figcaption class="cap">Spanish Steps</figcaption></figure>
+      <figure><img data-wf="Roman_Forum_-_April_2007.jpg" alt="Roman Forum"><figcaption class="cap">Roman Forum</figcaption></figure>
+    </div>
+
+    <div class="schedule">
+      <div class="sch-head"><p class="lbl">Today’s Timeline</p><p class="title">The Ancient City</p></div>
+      <div class="rail">
+        <div class="rail-item"><div class="time">07:00 · Magic Hour</div><div class="what">Trevi Fountain</div><div class="det">Empty streets. Toss a coin together — three coins for love.</div></div>
+        <div class="rail-item"><div class="time">09:00 · Iconic</div><div class="what">Colosseum + Roman Forum</div><div class="det">Combo ticket €18 · pre-book 2-3 weeks ahead</div></div>
+        <div class="rail-item"><div class="time">13:00 · Hide</div><div class="what">Long lunch in Trastevere</div><div class="det">Carbonara + nap. Escape the noon heat.</div></div>
+        <div class="rail-item"><div class="time">17:00 · Wander</div><div class="what">Pantheon → Piazza Navona</div><div class="det">Golden light through ancient columns</div></div>
+        <div class="rail-item"><div class="time">19:30 · Sunset</div><div class="what">Spanish Steps</div><div class="det">Sit, people-watch, eat focaccia from the bakery below</div></div>
+      </div>
+    </div>
+
+    <div class="advisor"><div class="icon">💡</div><div class="body">
+      <p class="who">Advisor’s Note — IMPORTANT</p>
+      <p><strong>August in Rome is brutal — 35–38°C and humid.</strong> Don’t do 5 monuments straight on foot. Mornings (before 11am) and evenings (after 5pm); rest at the hostel in the middle. Heatstroke ruins trips.</p>
+      <p><strong>Eat in Trastevere</strong>, never near the monuments. Tourist-strip food is overpriced and bad — a 15-min walk doubles the quality and halves the price.</p>
+    </div></div>
+    <div class="romantic">Walking, hand in hand, where emperors once stood.</div>
+  </div></div>
+</section>
+
+<!-- ============ DAY 3 FLORENCE ============ -->
+<section class="reveal">
+  <div class="day-hero">
+    <img data-wf="Florence_Duomo_from_Michelangelo_hill.jpg" alt="Florence">
+    <div class="day-hero-text">
+      <span class="num">Day 03 · Aug 19</span>
+      <h3>Florence.</h3>
+      <p class="where">Italy · Sunset &amp; Renaissance</p>
+      <p class="date">Tuesday</p>
+    </div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+    <p class="feeling">The most romantic sunset of your life. I promise.</p>
+
+    <div class="gallery g5">
+      <figure><img data-wf="Florence_-_Cathedral_-_Duomo_-_panoramio_(2).jpg" alt="Duomo"><figcaption class="cap">Duomo</figcaption></figure>
+      <figure><img data-wf="Ponte_Vecchio_at_dusk_(cropped).jpg" alt="Ponte Vecchio"><figcaption class="cap">Ponte Vecchio</figcaption></figure>
+      <figure><img data-wf="Piazza_della_Signoria_in_Florence.jpg" alt="Piazza della Signoria"><figcaption class="cap">Piazza Signoria</figcaption></figure>
+      <figure><img data-wf="Florence_seen_from_Piazzale_Michelangelo.jpg" alt="Piazzale Michelangelo"><figcaption class="cap">Piazzale Michelangelo</figcaption></figure>
+      <figure><img data-wf="Frecciarossa_1000_ETR_400.jpg" alt="Frecciarossa"><figcaption class="cap">Frecciarossa Train</figcaption></figure>
+    </div>
+
+    <div class="schedule">
+      <div class="sch-head"><p class="lbl">Today’s Timeline</p><p class="title">From Caesar to Da Vinci</p></div>
+      <div class="rail">
+        <div class="rail-item"><div class="time">08:00 · Train</div><div class="what">Roma → Firenze S.M.N.</div><div class="det">Frecciarossa or Italo · 1h 30m · book €19 advance fare</div></div>
+        <div class="rail-item"><div class="time">11:00 · Walk</div><div class="what">Duomo + Piazza della Signoria</div><div class="det">Outside views are enough — skip the queues</div></div>
+        <div class="rail-item"><div class="time">14:00 · Lunch</div><div class="what">Trattoria Mario or Sostanza</div><div class="det">Tuscan steak + Chianti, no reservation possible</div></div>
+        <div class="rail-item"><div class="time">16:00 · Stroll</div><div class="what">Ponte Vecchio + leather market</div><div class="det">Cross the Old Bridge as the sun lowers</div></div>
+        <div class="rail-item"><div class="time">19:30 · THE Moment</div><div class="what">Piazzale Michelangelo</div><div class="det">€4 Chianti from Conad + €3 focaccia + the whole city below us 🌅</div></div>
+      </div>
+    </div>
+
+    <div class="advisor"><div class="icon">💡</div><div class="body">
+      <p class="who">Advisor’s Note</p>
+      <p><strong>Book Italo or Frecciarossa 1–2 months ahead</strong> — same-day tickets are 3–4× more expensive (€19 vs €70+).</p>
+      <p><strong>Piazzale Michelangelo:</strong> arrive by 7pm, sit on the steps (not the main platform — too crowded). Stop at a Conad supermarket for wine + focaccia. This is the moment of the trip.</p>
+      <p><strong>Skip:</strong> Uffizi and Accademia unless pre-booked. Same-day is impossible in August.</p>
+    </div></div>
+    <div class="romantic">If you remember one moment from this trip — let it be this one.</div>
+  </div></div>
+</section>
+
+<!-- ============ DAY 4 LAKE COMO ============ -->
+<section class="reveal">
+  <div class="day-hero">
+    <img data-wf="Varenna_-_Lago_di_Como.jpg" alt="Varenna">
+    <div class="day-hero-text">
+      <span class="num">Day 04 · Aug 20</span>
+      <h3>Lake Como.</h3>
+      <p class="where">Italy · Milan → Varenna</p>
+      <p class="date">Wednesday</p>
+    </div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+    <p class="feeling">A lake so blue it doesn’t look real. Like you.</p>
+
+    <div class="gallery g5">
+      <figure><img data-wf="Milan_Cathedral_from_Piazza_del_Duomo.jpg" alt="Milan Duomo"><figcaption class="cap">Milan Duomo</figcaption></figure>
+      <figure><img data-wf="Varenna,_Lake_Como.jpg" alt="Varenna village"><figcaption class="cap">Varenna</figcaption></figure>
+      <figure><img data-wf="Bellagio_Lake_Como.JPG" alt="Bellagio"><figcaption class="cap">Bellagio</figcaption></figure>
+      <figure><img data-wf="Lago_di_Como_Italy.jpg" alt="Lake Como"><figcaption class="cap">Lake Como</figcaption></figure>
+      <figure><img data-wf="Como_ferry.jpg" alt="Como ferry"><figcaption class="cap">Lake Ferry</figcaption></figure>
+    </div>
+
+    <div class="schedule">
+      <div class="sch-head"><p class="lbl">Today’s Timeline</p><p class="title">From the City to the Lake</p></div>
+      <div class="rail">
+        <div class="rail-item"><div class="time">08:00 · Train</div><div class="what">Firenze → Milano Centrale</div><div class="det">~2 hours · book in advance</div></div>
+        <div class="rail-item"><div class="time">11:00 · Quick stop</div><div class="what">Milan Cathedral (1 hour)</div><div class="det">Just outside views. Roof access if you have energy.</div></div>
+        <div class="rail-item"><div class="time">14:00 · Train</div><div class="what">Milano → Varenna-Esino</div><div class="det">Sit on the LEFT side for the lake reveal</div></div>
+        <div class="rail-item"><div class="time">16:00 · Settle</div><div class="what">Check in · explore Varenna</div><div class="det">Pastel houses, narrow lakeside walk</div></div>
+        <div class="rail-item"><div class="time">18:30 · Ferry</div><div class="what">Sunset ferry to Bellagio</div><div class="det">Aperitivo at Bar Rossi · golden hour on the water</div></div>
+      </div>
+    </div>
+
+    <div class="advisor"><div class="icon">💡</div><div class="body">
+      <p class="who">Advisor’s Note — Honest Take</p>
+      <p><strong>Drop the Sentiero del Viandante hike.</strong> A long hike on a heavy travel day in summer heat = disaster. The magic of Como is the lake itself, not the trail.</p>
+      <p><strong>Stay in Varenna, not Bellagio.</strong> Bellagio is prettier but 3× the price and packed with day-trippers. Varenna is quiet and has the train station.</p>
+    </div></div>
+    <div class="romantic">Just us, the ferry, and the bluest water you’ve ever seen.</div>
+  </div></div>
+</section>
+
+<!-- PHASE 2 -->
+<section class="phase-intro swiss">
+  <div class="reveal">
+    <div class="flag">🇨🇭</div>
+    <p class="label">Phase Two</p>
+    <h2>Die Schweiz.</h2>
+    <p class="tag">The Alps. Alpine lakes. Views that stop your breath — and mine.</p>
+  </div>
+</section>
+
+<!-- ============ DAY 5 ZERMATT ============ -->
+<section class="reveal">
+  <div class="day-hero">
+    <img data-wf="Matterhorn_from_Domhütte_-_2.jpg" alt="Matterhorn">
+    <div class="day-hero-text">
+      <span class="num">Day 05 · Aug 21</span>
+      <h3>Zermatt.</h3>
+      <p class="where">Switzerland · Crossing Borders</p>
+      <p class="date">Thursday</p>
+    </div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+    <p class="feeling">First glimpse of the Matterhorn. First taste of mountain air.</p>
+
+    <div class="gallery g5">
+      <figure><img data-wf="Matterhorn_from_Zermatt.jpg" alt="Matterhorn from Zermatt"><figcaption class="cap">The Matterhorn</figcaption></figure>
+      <figure><img data-wf="Zermatt_-_Bahnhofstrasse.jpg" alt="Zermatt village"><figcaption class="cap">Zermatt Village</figcaption></figure>
+      <figure><img data-wf="Glacier_Express_above_Brig.jpg" alt="Mountain train"><figcaption class="cap">Mountain Train</figcaption></figure>
+      <figure><img data-wf="Kirchbrücke_Zermatt.jpg" alt="Kirchbrücke"><figcaption class="cap">Kirchbrücke Bridge</figcaption></figure>
+      <figure><img data-wf="Swiss_Alps_chalets.jpg" alt="Swiss chalets"><figcaption class="cap">Alpine Chalets</figcaption></figure>
+    </div>
+
+    <div class="schedule">
+      <div class="sch-head"><p class="lbl">Today’s Timeline</p><p class="title">A Long Travel Day</p></div>
+      <div class="rail swiss">
+        <div class="rail-item"><div class="time">07:00 · Train</div><div class="what">Como → Milano Centrale</div><div class="det">~1 hour</div></div>
+        <div class="rail-item"><div class="time">09:00 · Border</div><div class="what">Milano → Brig (Switzerland)</div><div class="det">Cross the Alps · ~3.5 hours · scenic</div></div>
+        <div class="rail-item"><div class="time">14:00 · Climb</div><div class="what">Brig → Zermatt</div><div class="det">Mountain train · 1h 20m · sit on the right for views</div></div>
+        <div class="rail-item"><div class="time">16:00 · Wander</div><div class="what">Car-free village + check in</div><div class="det">Wooden chalets, electric taxis only</div></div>
+        <div class="rail-item"><div class="time">19:00 · Sunset</div><div class="what">Kirchbrücke bridge</div><div class="det">The classic Matterhorn-over-the-river photo</div></div>
+      </div>
+    </div>
+
+    <div class="advisor"><div class="icon">💡</div><div class="body">
+      <p class="who">Advisor’s Note — CRITICAL</p>
+      <p><strong>Buy a Swiss Half Fare Card before crossing the border</strong> (CHF 120, valid 1 month). Switzerland is brutally expensive — every train, cable car, and lift is 50% off. You will save 3–4× the cost over Days 5–10.</p>
+      <p><strong>Bring snacks.</strong> Swiss train food is ridiculous (€8 sandwich). Stock up at Coop in Milan before leaving.</p>
+    </div></div>
+    <div class="romantic">A peak named for kings — and a girl named for forever.</div>
+  </div></div>
+</section>
+
+<!-- ============ DAY 6 FIVE LAKES ============ -->
+<section class="reveal">
+  <div class="day-hero">
+    <img data-wf="Stellisee_Reflection.jpg" alt="Stellisee">
+    <div class="day-hero-text">
+      <span class="num">Day 06 · Aug 22</span>
+      <h3>Stellisee.</h3>
+      <p class="where">Switzerland · Five Lakes Walk</p>
+      <p class="date">Friday</p>
+    </div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+    <p class="feeling">Stellisee — the Matterhorn’s perfect mirror. A photo of you here. Forever.</p>
+
+    <div class="gallery g3">
+      <figure><img data-wf="Sunnegga_funicular.jpg" alt="Sunnegga"><figcaption class="cap">Sunnegga</figcaption></figure>
+      <figure><img data-wf="Stellisee_with_Matterhorn.jpg" alt="Stellisee mirror"><figcaption class="cap">Stellisee Mirror</figcaption></figure>
+      <figure><img data-wf="Grindjisee.jpg" alt="Grindjisee"><figcaption class="cap">Grindjisee</figcaption></figure>
+    </div>
+
+    <div class="schedule">
+      <div class="sch-head"><p class="lbl">Today’s Timeline</p><p class="title">Above the Clouds</p></div>
+      <div class="rail swiss">
+        <div class="rail-item"><div class="time">06:30 · Up</div><div class="what">Funicular → Sunnegga</div><div class="det">Beat the tour groups. First train of the day.</div></div>
+        <div class="rail-item"><div class="time">07:30 · Higher</div><div class="what">Cable car → Blauherd (2,571m)</div><div class="det">Trail starts here</div></div>
+        <div class="rail-item"><div class="time">08:00 · Hike</div><div class="what">Stellisee FIRST</div><div class="det">Wind picks up by 11am — kills the reflection. Get the photo NOW.</div></div>
+        <div class="rail-item"><div class="time">10:00 · Walk</div><div class="what">Grindjisee → Grünsee → Moosjisee → Leisee</div><div class="det">9.3km · mostly downhill · 3 hours</div></div>
+        <div class="rail-item"><div class="time">14:00 · Lunch</div><div class="what">Findeln mountain restaurant</div><div class="det">Rösti + alpine cheese before descending</div></div>
+        <div class="rail-item"><div class="time">17:00 · Travel</div><div class="what">Train Zermatt → Interlaken Ost</div><div class="det">~2h 15m</div></div>
+      </div>
+    </div>
+
+    <div class="advisor"><div class="icon">💡</div><div class="body">
+      <p class="who">Advisor’s Note</p>
+      <p><strong>Get to Stellisee EARLY.</strong> The mirror reflection only happens when the lake is windless — usually before 10am. By noon it’s rippled and the photo is gone. This is the #1 reason people leave disappointed.</p>
+      <p><strong>Bring layers.</strong> It’s 10°C colder up there even in August. No hiking boots needed — sneakers are fine.</p>
+    </div></div>
+    <div class="romantic">Five lakes. One you. The reflection I’ll never forget.</div>
+  </div></div>
+</section>
+
+<!-- ============ DAY 7 LAUTERBRUNNEN ============ -->
+<section class="reveal">
+  <div class="day-hero">
+    <img data-wf="Lauterbrunnen_Valley.jpg" alt="Lauterbrunnen">
+    <div class="day-hero-text">
+      <span class="num">Day 07 · Aug 23</span>
+      <h3>Lauterbrunnen.</h3>
+      <p class="where">Switzerland · Valley of 72 Waterfalls</p>
+      <p class="date">Saturday</p>
+    </div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+    <p class="feeling">Falling asleep above the clouds, in a village clinging to a cliff.</p>
+
+    <div class="gallery g5">
+      <figure><img data-wf="Lauterbrunnen_-_2017.jpg" alt="Lauterbrunnen valley"><figcaption class="cap">The Valley</figcaption></figure>
+      <figure><img data-wf="Staubbach_Falls_2010.jpg" alt="Staubbach Falls"><figcaption class="cap">Staubbach Falls</figcaption></figure>
+      <figure><img data-wf="Mürren_Switzerland.jpg" alt="Mürren"><figcaption class="cap">Mürren</figcaption></figure>
+      <figure><img data-wf="Gimmelwald_Switzerland.jpg" alt="Gimmelwald"><figcaption class="cap">Gimmelwald</figcaption></figure>
+      <figure><img data-wf="Schilthorn_view.jpg" alt="Schilthorn"><figcaption class="cap">Schilthorn View</figcaption></figure>
+    </div>
+
+    <div class="schedule">
+      <div class="sch-head"><p class="lbl">Today’s Timeline</p><p class="title">Into the Valley</p></div>
+      <div class="rail swiss">
+        <div class="rail-item"><div class="time">09:00 · Train</div><div class="what">Interlaken Ost → Lauterbrunnen</div><div class="det">~20 min · scenic the whole way</div></div>
+        <div class="rail-item"><div class="time">10:00 · Walk</div><div class="what">Staubbach Falls (free)</div><div class="det">Europe’s tallest free-falling waterfall · 297m drop</div></div>
+        <div class="rail-item"><div class="time">12:30 · Lunch</div><div class="what">Hotel Oberland terrace</div><div class="det">Bratwurst with the cliffs above us</div></div>
+        <div class="rail-item"><div class="time">14:00 · Up</div><div class="what">Cable car → Mürren</div><div class="det">Walk down to Gimmelwald (45 min, easy)</div></div>
+        <div class="rail-item"><div class="time">17:00 · Settle</div><div class="what">Mountain Hostel Gimmelwald</div><div class="det">Dinner with the entire Lauterbrunnen valley below us</div></div>
+      </div>
+    </div>
+
+    <div class="advisor"><div class="icon">💡</div><div class="body">
+      <p class="who">Advisor’s Note — My Favorite Day</p>
+      <p><strong>Gimmelwald is my favorite stop in all of Switzerland.</strong> Tiny, car-free, fewer than 100 residents, glued to a 500m cliff. Most tourists never get past Mürren. You’ll have it almost to yourselves.</p>
+      <p><strong>BOOK MOUNTAIN HOSTEL GIMMELWALD 2–3 MONTHS AHEAD.</strong> Only ~40 beds. In August it sells out by May.</p>
+    </div></div>
+    <div class="romantic">A balcony in the sky, and you beside me at sunrise.</div>
+  </div></div>
+</section>
+
+<!-- ============ DAY 8 GRINDELWALD ============ -->
+<section class="reveal">
+  <div class="day-hero">
+    <img data-wf="Bachalpsee_reflection.jpg" alt="Bachalpsee">
+    <div class="day-hero-text">
+      <span class="num">Day 08 · Aug 24</span>
+      <h3>Bachalpsee.</h3>
+      <p class="where">Switzerland · Grindelwald-First</p>
+      <p class="date">Sunday</p>
+    </div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+    <p class="feeling">If we make it to the top — I owe you fondue.</p>
+
+    <div class="gallery g5">
+      <figure><img data-wf="First_cliff_walk.jpg" alt="First Cliff Walk"><figcaption class="cap">First Cliff Walk</figcaption></figure>
+      <figure><img data-wf="Bachalpsee_Switzerland.jpg" alt="Bachalpsee lake"><figcaption class="cap">Bachalpsee</figcaption></figure>
+      <figure><img data-wf="Faulhorn_summit.jpg" alt="Faulhorn"><figcaption class="cap">Faulhorn Summit</figcaption></figure>
+      <figure><img data-wf="First_gondola_Grindelwald.jpg" alt="First gondola"><figcaption class="cap">First Gondola</figcaption></figure>
+      <figure><img data-wf="Schynige_Platte.jpg" alt="Schynige Platte"><figcaption class="cap">Schynige Platte</figcaption></figure>
+    </div>
+
+    <div class="schedule">
+      <div class="sch-head"><p class="lbl">Today’s Timeline</p><p class="title">The Big Hike</p></div>
+      <div class="rail swiss">
+        <div class="rail-item"><div class="time">07:30 · Train</div><div class="what">Gimmelwald → Grindelwald</div><div class="det">Via Lauterbrunnen + Zweilütschinen</div></div>
+        <div class="rail-item"><div class="time">09:00 · Up</div><div class="what">Gondola → First (2,168m)</div><div class="det">Cliff Walk first if you’re not afraid of heights</div></div>
+        <div class="rail-item"><div class="time">10:00 · Hike</div><div class="what">First → Bachalpsee</div><div class="det">Easy 1h walk · alpine lake reward</div></div>
+        <div class="rail-item"><div class="time">12:00 · Decision</div><div class="what">Continue OR head back</div><div class="det">Hardcore: Faulhorn → Schynige Platte (6h, weather permitting)</div></div>
+        <div class="rail-item"><div class="time">17:00 · Reward</div><div class="what">Trottibike scooter down</div><div class="det">Way more fun than the gondola · book in advance</div></div>
+        <div class="rail-item"><div class="time">19:30 · Dinner</div><div class="what">Fondue in Interlaken</div><div class="det">Restaurant Bären · the best in town</div></div>
+      </div>
+    </div>
+
+    <div class="advisor"><div class="icon">💡</div><div class="body">
+      <p class="who">Advisor’s Note — Decision Point</p>
+      <p><strong>Decide on the morning of, based on weather.</strong> The Faulhorn → Schynige Platte hike is 16km, 6+ hours, with serious climbing. In rain or low cloud it’s dangerous and pointless (no view). Check meteoswiss.ch the night before.</p>
+      <p><strong>Easy version</strong> (First → Bachalpsee → back, 2 hours) is equally beautiful. Don’t feel like you have to be a hero.</p>
+    </div></div>
+    <div class="romantic">Hard climbs are easier when I’m climbing them with you.</div>
+  </div></div>
+</section>
+
+<!-- ============ DAY 9 BERN ============ -->
+<section class="reveal">
+  <div class="day-hero">
+    <img data-wf="Bern_Old_City_Pano.jpg" alt="Bern">
+    <div class="day-hero-text">
+      <span class="num">Day 09 · Aug 25</span>
+      <h3>Bern.</h3>
+      <p class="where">Switzerland · Lakes &amp; Capital</p>
+      <p class="date">Monday</p>
+    </div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+    <p class="feeling">A slow afternoon by impossibly blue water — then the storybook capital.</p>
+
+    <div class="gallery g5">
+      <figure><img data-wf="Iseltwald_Lake_Brienz.jpg" alt="Iseltwald"><figcaption class="cap">Iseltwald</figcaption></figure>
+      <figure><img data-wf="Lake_Brienz_Switzerland.jpg" alt="Lake Brienz"><figcaption class="cap">Lake Brienz</figcaption></figure>
+      <figure><img data-wf="Bern_Altstadt.jpg" alt="Bern Old Town"><figcaption class="cap">Bern Altstadt</figcaption></figure>
+      <figure><img data-wf="Zytglogge_Bern.jpg" alt="Zytglogge"><figcaption class="cap">Zytglogge</figcaption></figure>
+      <figure><img data-wf="Aare_River_Bern.jpg" alt="Aare River"><figcaption class="cap">Aare River</figcaption></figure>
+    </div>
+
+    <div class="schedule">
+      <div class="sch-head"><p class="lbl">Today’s Timeline</p><p class="title">From Lake to Capital</p></div>
+      <div class="rail swiss">
+        <div class="rail-item"><div class="time">10:00 · Boat</div><div class="what">Lake Brienz cruise → Iseltwald</div><div class="det">1-hour loop · turquoise water · K-drama spot</div></div>
+        <div class="rail-item"><div class="time">13:00 · Lunch</div><div class="what">Lakeside picnic</div><div class="det">Coop sandwich · feet in the water</div></div>
+        <div class="rail-item"><div class="time">14:30 · Train</div><div class="what">Interlaken Ost → Bern</div><div class="det">~1 hour</div></div>
+        <div class="rail-item"><div class="time">16:00 · Walk</div><div class="what">Old Town · Zytglogge clock tower</div><div class="det">UNESCO storybook arcades</div></div>
+        <div class="rail-item"><div class="time">19:00 · Sunset</div><div class="what">Rosengarten</div><div class="det">Best view of the city, free, with rosé and roses</div></div>
+      </div>
+    </div>
+
+    <div class="advisor"><div class="icon">💡</div><div class="body">
+      <p class="who">Advisor’s Note</p>
+      <p><strong>Iseltwald is the “Crash Landing on You” K-drama spot.</strong> Expect crowds and a CHF 5 fee at the famous pier. Honestly, Lake Brienz from the boat is more beautiful — do the loop instead of fighting for the photo.</p>
+      <p><strong>Bern hack:</strong> if it’s hot, locals float down the Aare river on inflatables — free, surreal, the most local thing you can do. Buy a “Wickelfisch” waterproof bag (CHF 35). This will be the most fun memory of the trip.</p>
+    </div></div>
+    <div class="romantic">Roses, a sunset, the river bending below us.</div>
+  </div></div>
+</section>
+
+<!-- ============ DAY 10 ZURICH ============ -->
+<section class="reveal">
+  <div class="day-hero">
+    <img data-wf="Zürich_-_Limmat.jpg" alt="Zurich">
+    <div class="day-hero-text">
+      <span class="num">Day 10 · Aug 26</span>
+      <h3>Zürich.</h3>
+      <p class="where">Switzerland · Final Stop</p>
+      <p class="date">Tuesday</p>
+    </div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+    <p class="feeling">One last sunset on the lake — together.</p>
+
+    <div class="gallery g5">
+      <figure><img data-wf="Zurich_lake.jpg" alt="Lake Zurich"><figcaption class="cap">Lake Zürich</figcaption></figure>
+      <figure><img data-wf="Bahnhofstrasse_Zurich.jpg" alt="Bahnhofstrasse"><figcaption class="cap">Bahnhofstrasse</figcaption></figure>
+      <figure><img data-wf="Lindenhof_Zurich.jpg" alt="Lindenhof"><figcaption class="cap">Lindenhof</figcaption></figure>
+      <figure><img data-wf="Zurich_old_town.jpg" alt="Niederdorf"><figcaption class="cap">Niederdorf</figcaption></figure>
+      <figure><img data-wf="Seebad_Enge.jpg" alt="Seebad Enge"><figcaption class="cap">Seebad Enge</figcaption></figure>
+    </div>
+
+    <div class="schedule">
+      <div class="sch-head"><p class="lbl">Today’s Timeline</p><p class="title">A Slow Last Day</p></div>
+      <div class="rail swiss">
+        <div class="rail-item"><div class="time">10:00 · Train</div><div class="what">Bern → Zurich HB</div><div class="det">~1 hour</div></div>
+        <div class="rail-item"><div class="time">12:00 · Walk</div><div class="what">Lake Zurich Promenade</div><div class="det">Slow walk, slower lunch by the water</div></div>
+        <div class="rail-item"><div class="time">14:00 · Swim</div><div class="what">Seebad Enge (if hot)</div><div class="det">CHF 8 · locals only · clean enough to drink</div></div>
+        <div class="rail-item"><div class="time">16:00 · Wander</div><div class="what">Niederdorf old town</div><div class="det">Cobblestones + coffee + window-shop Bahnhofstrasse</div></div>
+        <div class="rail-item"><div class="time">19:30 · Sunset</div><div class="what">Lindenhof hill</div><div class="det">Last sunset of the trip · old town glowing below</div></div>
+      </div>
+    </div>
+
+    <div class="advisor"><div class="icon">💡</div><div class="body">
+      <p class="who">Advisor’s Note</p>
+      <p><strong>Zürich is one of the most expensive cities in the world.</strong> Don’t shop on Bahnhofstrasse — just window shop. Eat at Markthalle Im Viadukt or grab Coop sushi (CHF 8) and picnic by the lake.</p>
+      <p><strong>Stay near Zurich HB</strong>, not the airport — only a 10-min train to ZRH the next morning.</p>
+    </div></div>
+    <div class="romantic">The last sunset of the trip. The first of many we’ll share.</div>
+  </div></div>
+</section>
+
+<!-- ============ DAY 11 DEPARTURE ============ -->
+<section class="reveal">
+  <div class="day-hero">
+    <img data-wf="Zurich_Airport_Aerial.jpg" alt="Zurich airport">
+    <div class="day-hero-text">
+      <span class="num">Day 11 · Aug 27</span>
+      <h3>Until next time.</h3>
+      <p class="where">Switzerland → Malaysia</p>
+      <p class="date">Wednesday</p>
+    </div>
+  </div>
+  <div class="day-body"><div class="day-body-inner">
+    <p class="feeling">Carry-on full of souvenirs. Heart full of memories.</p>
+
+    <div class="schedule">
+      <div class="sch-head"><p class="lbl">Today’s Timeline</p><p class="title">Going Home</p></div>
+      <div class="rail swiss">
+        <div class="rail-item"><div class="time">Morning · Pack</div><div class="what">Train → Zurich Airport (ZRH)</div><div class="det">~10 min from Zurich HB · be at the gate 3 hours early</div></div>
+        <div class="rail-item"><div class="time">Bring</div><div class="what">Photos · postcards · pressed flowers · Lindt</div><div class="det">Pieces of a perfect trip</div></div>
+        <div class="rail-item"><div class="time">Promise</div><div class="what">This is just the beginning</div><div class="det">First of many adventures, my love</div></div>
+      </div>
+    </div>
+
+    <div class="advisor"><div class="icon">💡</div><div class="body">
+      <p class="who">Advisor’s Final Note</p>
+      <p><strong>One last thing:</strong> on the flight home, write down 3 favorite moments before you sleep. You’ll thank yourself in 10 years.</p>
+    </div></div>
+    <div class="romantic">Eleven days isn’t enough. Good thing we have a lifetime.</div>
+  </div></div>
+</section>
+
+<!-- CLOSING -->
+<section class="closing">
+  <div class="closing-bg" id="closingBg"></div>
+  <div class="reveal">
+    <p class="script">somewhere between Rome &amp; the Alps...</p>
+    <h2>I’ll be holding<br>your hand.</h2>
+    <p>Eleven days. Two countries. Countless sunsets, train rides, gelatos, and quiet moments — all with you. Say yes, and let’s go make this real.</p>
+    <div class="heart-pulse">♥</div>
+  </div>
+</section>
+
+<footer>MADE WITH LOVE · AUG 17 — 27, 2026</footer>
+
+<script>
+  // ===== Image loader: Wikipedia REST API → real article images =====
+  // Maps each image to a Wikipedia article so we always get the right photo.
+  // Each slot maps to a UNIQUE Wikipedia article so we never get duplicate images.
+  const wikiMap = {
+    'hero': 'Colosseum',
+    'closing': 'Piazzale_Michelangelo',
+    // Day 1 Rome arrival
+    'Rome_Skyline.jpg': 'Rome',
+    'FCO_Terminal_3.jpg': 'Leonardo_da_Vinci–Fiumicino_Airport',
+    'Stazione_Termini_-_Roma.jpg': 'Roma_Termini_railway_station',
+    'Gelato_Italy.jpg': 'Gelato',
+    // Day 2 Rome (5 unique landmarks)
+    'Colosseo_2020.jpg': 'Colosseum',
+    'Colosseum_in_Rome,_Italy_-_April_2007.jpg': 'Roman_Forum',
+    'Trevi_Fountain,_Rome,_Italy_2_-_May_2007.jpg': 'Trevi_Fountain',
+    'Rome-Pantheon-Exterior.jpg': 'Pantheon,_Rome',
+    'Spanish_Steps,_Rome.jpg': 'Spanish_Steps',
+    'Roman_Forum_-_April_2007.jpg': 'Palatine_Hill',
+    // Day 3 Florence
+    'Florence_Duomo_from_Michelangelo_hill.jpg': 'Florence',
+    'Florence_-_Cathedral_-_Duomo_-_panoramio_(2).jpg': 'Florence_Cathedral',
+    'Ponte_Vecchio_at_dusk_(cropped).jpg': 'Ponte_Vecchio',
+    'Piazza_della_Signoria_in_Florence.jpg': 'Piazza_della_Signoria',
+    'Florence_seen_from_Piazzale_Michelangelo.jpg': 'Piazzale_Michelangelo',
+    'Frecciarossa_1000_ETR_400.jpg': 'Frecciarossa',
+    // Day 4 Lake Como — all unique
+    'Varenna_-_Lago_di_Como.jpg': 'Lake_Como',
+    'Milan_Cathedral_from_Piazza_del_Duomo.jpg': 'Milan_Cathedral',
+    'Varenna,_Lake_Como.jpg': 'Varenna',
+    'Bellagio_Lake_Como.JPG': 'Bellagio,_Lombardy',
+    'Lago_di_Como_Italy.jpg': 'Tremezzina',
+    'Como_ferry.jpg': 'Como',
+    // Day 5 Zermatt — all unique
+    'Matterhorn_from_Domhütte_-_2.jpg': 'Matterhorn',
+    'Matterhorn_from_Zermatt.jpg': 'Gornergrat',
+    'Zermatt_-_Bahnhofstrasse.jpg': 'Zermatt',
+    'Glacier_Express_above_Brig.jpg': 'Glacier_Express',
+    'Kirchbrücke_Zermatt.jpg': 'Riffelsee',
+    'Swiss_Alps_chalets.jpg': 'Swiss_chalet_style',
+    // Day 6 Stellisee — all unique
+    'Stellisee_Reflection.jpg': 'Stellisee',
+    'Sunnegga_funicular.jpg': 'Sunnegga',
+    'Stellisee_with_Matterhorn.jpg': 'Findeln',
+    'Grindjisee.jpg': 'Five_Lakes_Walk',
+    // Day 7 Lauterbrunnen — all unique
+    'Lauterbrunnen_Valley.jpg': 'Lauterbrunnen',
+    'Lauterbrunnen_-_2017.jpg': 'Lauterbrunnen_Valley',
+    'Staubbach_Falls_2010.jpg': 'Staubbach_Falls',
+    'Mürren_Switzerland.jpg': 'Mürren',
+    'Gimmelwald_Switzerland.jpg': 'Gimmelwald',
+    'Schilthorn_view.jpg': 'Schilthorn',
+    // Day 8 Grindelwald-First — all unique
+    'Bachalpsee_reflection.jpg': 'Bachalpsee',
+    'First_cliff_walk.jpg': 'First_(mountain)',
+    'Bachalpsee_Switzerland.jpg': 'Wetterhorn',
+    'Faulhorn_summit.jpg': 'Faulhorn',
+    'First_gondola_Grindelwald.jpg': 'Grindelwald',
+    'Schynige_Platte.jpg': 'Schynige_Platte',
+    // Day 9 Bern — all unique
+    'Bern_Old_City_Pano.jpg': 'Bern',
+    'Iseltwald_Lake_Brienz.jpg': 'Iseltwald',
+    'Lake_Brienz_Switzerland.jpg': 'Lake_Brienz',
+    'Bern_Altstadt.jpg': 'Old_City_of_Bern',
+    'Zytglogge_Bern.jpg': 'Zytglogge',
+    'Aare_River_Bern.jpg': 'Aare',
+    // Day 10 Zürich — all unique
+    'Zürich_-_Limmat.jpg': 'Zürich',
+    'Zurich_lake.jpg': 'Lake_Zurich',
+    'Bahnhofstrasse_Zurich.jpg': 'Bahnhofstrasse',
+    'Lindenhof_Zurich.jpg': 'Lindenhof,_Zürich',
+    'Zurich_old_town.jpg': 'Niederdorf_(Zürich)',
+    'Seebad_Enge.jpg': 'Limmat',
+    // Day 11
+    'Zurich_Airport_Aerial.jpg': 'Zurich_Airport',
+  };
+
+  async function fetchWikiImage(article){
+    try {
+      const r = await fetch('https://en.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(article));
+      if(!r.ok) return null;
+      const j = await r.json();
+      return (j.originalimage && j.originalimage.source) || (j.thumbnail && j.thumbnail.source) || null;
+    } catch(e){ return null; }
+  }
+  function picsumFor(seed){
+    const s = (seed||'travel').replace(/[^a-z0-9]/gi,'').slice(0,30);
+    return 'https://picsum.photos/seed/' + s + '/1600/1000';
+  }
+
+  // Load images — de-dup on the page so no two figures show the same photo
+  const usedUrls = new Set();
+  document.querySelectorAll('img[data-wf]').forEach(async img=>{
+    const fname = img.dataset.wf;
+    const article = wikiMap[fname];
+    let url = null;
+    if(article) url = await fetchWikiImage(article);
+    if(!url || usedUrls.has(url)) url = picsumFor(fname);
+    usedUrls.add(url);
+    img.src = url;
+  });
+
+  // Hero + closing backgrounds
+  const heroBg = document.getElementById('heroBg');
+  const closingBg = document.getElementById('closingBg');
+  (async()=>{
+    const heroUrl = await fetchWikiImage(wikiMap['hero']);
+    heroBg.style.backgroundImage = `url('${heroUrl || picsumFor('hero')}')`;
+    const closingUrl = await fetchWikiImage(wikiMap['closing']);
+    closingBg.style.backgroundImage = `url('${closingUrl || picsumFor('closing')}')`;
+  })();
+
+  // Hero parallax
+  const heroWrap=document.querySelector('.hero-wrap');
+  const heroContent=document.getElementById('heroContent');
+  function updateHero(){
+    const rect=heroWrap.getBoundingClientRect();
+    const total=heroWrap.offsetHeight-window.innerHeight;
+    const p=Math.min(Math.max(-rect.top,0),total)/total;
+    heroBg.style.transform=`scale(${1.1+p*0.25})`;
+    heroBg.style.opacity=1-p*0.3;
+    heroContent.style.opacity=1-p*1.4;
+    heroContent.style.transform=`translateY(${-p*80}px) scale(${1-p*0.08})`;
+  }
+  window.addEventListener('scroll',updateHero,{passive:true});
+  updateHero();
+
+  // Reveal
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
