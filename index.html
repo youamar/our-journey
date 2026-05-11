@@ -971,11 +971,11 @@
     'Gelato_Italy.jpg': 'Gelato',
     // Day 2 Rome (5 unique landmarks)
     'Colosseo_2020.jpg': 'Colosseum',
-    'Colosseum_in_Rome,_Italy_-_April_2007.jpg': 'Roman_Forum',
+    'Colosseum_in_Rome,_Italy_-_April_2007.jpg': 'Colosseum',
     'Trevi_Fountain,_Rome,_Italy_2_-_May_2007.jpg': 'Trevi_Fountain',
     'Rome-Pantheon-Exterior.jpg': 'Pantheon,_Rome',
     'Spanish_Steps,_Rome.jpg': 'Spanish_Steps',
-    'Roman_Forum_-_April_2007.jpg': 'Palatine_Hill',
+    'Roman_Forum_-_April_2007.jpg': 'Roman_Forum',
     // Day 3 Florence
     'Florence_Duomo_from_Michelangelo_hill.jpg': 'Florence',
     'Florence_-_Cathedral_-_Duomo_-_panoramio_(2).jpg': 'Florence_Cathedral',
@@ -988,20 +988,20 @@
     'Milan_Cathedral_from_Piazza_del_Duomo.jpg': 'Milan_Cathedral',
     'Varenna,_Lake_Como.jpg': 'Varenna',
     'Bellagio_Lake_Como.JPG': 'Bellagio,_Lombardy',
-    'Lago_di_Como_Italy.jpg': 'Tremezzina',
-    'Como_ferry.jpg': 'Como',
+    'Lago_di_Como_Italy.jpg': 'Lake_Como',
+    'Como_ferry.jpg': 'Navigazione_Lago_di_Como',
     // Day 5 Zermatt — all unique
     'Matterhorn_from_Domhütte_-_2.jpg': 'Matterhorn',
-    'Matterhorn_from_Zermatt.jpg': 'Gornergrat',
+    'Matterhorn_from_Zermatt.jpg': 'Matterhorn',
     'Zermatt_-_Bahnhofstrasse.jpg': 'Zermatt',
     'Glacier_Express_above_Brig.jpg': 'Glacier_Express',
-    'Kirchbrücke_Zermatt.jpg': 'Riffelsee',
+    'Kirchbrücke_Zermatt.jpg': 'Zermatt',
     'Swiss_Alps_chalets.jpg': 'Swiss_chalet_style',
     // Day 6 Stellisee — all unique
     'Stellisee_Reflection.jpg': 'Stellisee',
     'Sunnegga_funicular.jpg': 'Sunnegga',
-    'Stellisee_with_Matterhorn.jpg': 'Findeln',
-    'Grindjisee.jpg': 'Five_Lakes_Walk',
+    'Stellisee_with_Matterhorn.jpg': 'Stellisee',
+    'Grindjisee.jpg': 'Grindjisee',
     // Day 7 Lauterbrunnen — all unique
     'Lauterbrunnen_Valley.jpg': 'Lauterbrunnen',
     'Lauterbrunnen_-_2017.jpg': 'Lauterbrunnen_Valley',
@@ -1012,9 +1012,9 @@
     // Day 8 Grindelwald-First — all unique
     'Bachalpsee_reflection.jpg': 'Bachalpsee',
     'First_cliff_walk.jpg': 'First_(mountain)',
-    'Bachalpsee_Switzerland.jpg': 'Wetterhorn',
+    'Bachalpsee_Switzerland.jpg': 'Bachalpsee',
     'Faulhorn_summit.jpg': 'Faulhorn',
-    'First_gondola_Grindelwald.jpg': 'Grindelwald',
+    'First_gondola_Grindelwald.jpg': 'Firstbahn',
     'Schynige_Platte.jpg': 'Schynige_Platte',
     // Day 9 Bern — all unique
     'Bern_Old_City_Pano.jpg': 'Bern',
@@ -1029,7 +1029,7 @@
     'Bahnhofstrasse_Zurich.jpg': 'Bahnhofstrasse',
     'Lindenhof_Zurich.jpg': 'Lindenhof,_Zürich',
     'Zurich_old_town.jpg': 'Niederdorf_(Zürich)',
-    'Seebad_Enge.jpg': 'Limmat',
+    'Seebad_Enge.jpg': 'Seebad_Enge',
     // Day 11
     'Zurich_Airport_Aerial.jpg': 'Zurich_Airport',
   };
@@ -1046,16 +1046,19 @@
     const s = (seed||'travel').replace(/[^a-z0-9]/gi,'').slice(0,30);
     return 'https://picsum.photos/seed/' + s + '/1600/1000';
   }
+  function commonsFileUrl(fname){
+    // Try literal Wikimedia Commons file. Special:FilePath 302-redirects to the file.
+    return 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(fname) + '?width=1600';
+  }
 
-  // Load images — de-dup on the page so no two figures show the same photo
-  const usedUrls = new Set();
+  // Load images — caption-first matching. No dedup (better to repeat than to mismatch).
   document.querySelectorAll('img[data-wf]').forEach(async img=>{
     const fname = img.dataset.wf;
     const article = wikiMap[fname];
-    let url = null;
-    if(article) url = await fetchWikiImage(article);
-    if(!url || usedUrls.has(url)) url = picsumFor(fname);
-    usedUrls.add(url);
+    let url = article ? await fetchWikiImage(article) : null;
+    // Fallback chain: article image → literal Commons file → picsum on error
+    if(!url) url = commonsFileUrl(fname);
+    img.onerror = function(){ if(img.dataset.fb !== '1'){ img.dataset.fb='1'; img.src = picsumFor(fname); } };
     img.src = url;
   });
 
