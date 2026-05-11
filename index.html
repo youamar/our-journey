@@ -236,6 +236,31 @@
   .bk-form .clear{background:#f0e6d8;color:#7a6a6c}
   .bk-form .clear:hover{background:#e0d4c0}
 
+  /* ============ JUMP MENU (FAB) ============ */
+  .jump-fab{position:fixed;right:18px;bottom:22px;z-index:80;width:56px;height:56px;border-radius:50%;background:#2a1f24;color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 28px rgba(0,0,0,.28);transition:all .25s}
+  .jump-fab:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(0,0,0,.35)}
+  .jump-fab:active{transform:scale(.94)}
+  .jump-fab svg{width:22px;height:22px}
+  .jump-overlay{position:fixed;inset:0;background:rgba(20,12,18,.55);backdrop-filter:blur(6px);z-index:90;opacity:0;pointer-events:none;transition:opacity .25s}
+  .jump-overlay.open{opacity:1;pointer-events:auto}
+  .jump-sheet{position:fixed;right:18px;bottom:22px;z-index:91;background:#fdf9f3;border-radius:22px;box-shadow:0 24px 60px rgba(0,0,0,.35);padding:22px 22px 18px;width:min(360px,calc(100vw - 36px));max-height:min(78vh,720px);overflow-y:auto;transform:scale(.85) translateY(20px);transform-origin:bottom right;opacity:0;pointer-events:none;transition:all .25s cubic-bezier(.16,1,.3,1)}
+  .jump-sheet.open{transform:none;opacity:1;pointer-events:auto}
+  .jump-sheet .jump-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid #ead8c8}
+  .jump-sheet .jump-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:#2a1f24}
+  .jump-sheet .jump-close{background:none;border:none;color:#7a6a6c;font-size:1.5rem;cursor:pointer;line-height:1;padding:4px 8px}
+  .jump-sheet .jump-group{margin-bottom:14px}
+  .jump-sheet .jump-group-title{font-size:.65rem;letter-spacing:3px;text-transform:uppercase;color:#c4546a;font-weight:700;margin-bottom:8px;padding-left:2px}
+  .jump-sheet .jump-group.swiss .jump-group-title{color:#5d8eb9}
+  .jump-sheet .jump-group.tools .jump-group-title{color:#7d6fa0}
+  .jump-sheet .jump-links{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+  .jump-sheet .jump-link{display:block;padding:10px 12px;background:#fff;border:1px solid #ead8c8;border-radius:10px;text-decoration:none;color:#2a1f24;font-size:.85rem;font-weight:500;line-height:1.3;transition:all .15s}
+  .jump-sheet .jump-link:hover{background:#c4546a;color:#fff;border-color:#c4546a;transform:translateY(-1px)}
+  .jump-sheet .jump-group.swiss .jump-link:hover{background:#5d8eb9;border-color:#5d8eb9}
+  .jump-sheet .jump-group.tools .jump-link:hover{background:#7d6fa0;border-color:#7d6fa0}
+  .jump-sheet .jump-link.wide{grid-column:1/3}
+  .jump-sheet .jump-link .lbl{display:block;font-size:.62rem;letter-spacing:1.5px;text-transform:uppercase;color:#9a8a8c;font-weight:700;margin-bottom:2px}
+  .jump-sheet .jump-link:hover .lbl{color:rgba(255,255,255,.7)}
+
   /* ============ FLOATING DAY NAV ============ */
   .day-nav{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:4px;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);padding:12px 9px;border-radius:30px;box-shadow:0 8px 24px rgba(80,40,50,.14);border:1px solid rgba(196,84,106,.15);opacity:0;pointer-events:none;transition:opacity .4s}
   .day-nav.show{opacity:1;pointer-events:auto}
@@ -260,6 +285,57 @@
 </head>
 <body>
 
+<!-- JUMP MENU FAB -->
+<button class="jump-fab" id="jumpFab" aria-label="Jump to section">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
+</button>
+<div class="jump-overlay" id="jumpOverlay"></div>
+<aside class="jump-sheet" id="jumpSheet" role="dialog" aria-label="Section menu">
+  <div class="jump-head">
+    <div class="jump-title">Jump to…</div>
+    <button class="jump-close" id="jumpClose" aria-label="Close">×</button>
+  </div>
+  <div class="jump-group">
+    <div class="jump-group-title">Overview</div>
+    <div class="jump-links">
+      <a class="jump-link" href="#top"><span class="lbl">Top</span>Hero</a>
+      <a class="jump-link" href="#glance"><span class="lbl">Map</span>11 Days · 8 Stops</a>
+    </div>
+  </div>
+  <div class="jump-group">
+    <div class="jump-group-title">🇮🇹 Italy</div>
+    <div class="jump-links">
+      <a class="jump-link" href="#italy"><span class="lbl">Phase 1</span>Italia Intro</a>
+      <a class="jump-link" href="#d1"><span class="lbl">Aug 17 · Sun</span>Day 1 · Rome</a>
+      <a class="jump-link" href="#d2"><span class="lbl">Aug 18 · Mon</span>Day 2 · Rome</a>
+      <a class="jump-link" href="#d3"><span class="lbl">Aug 19 · Tue</span>Day 3 · Florence</a>
+      <a class="jump-link wide" href="#d4"><span class="lbl">Aug 20 · Wed</span>Day 4 · Milan → Lake Como</a>
+    </div>
+  </div>
+  <div class="jump-group swiss">
+    <div class="jump-group-title">🇨🇭 Switzerland</div>
+    <div class="jump-links">
+      <a class="jump-link" href="#swiss"><span class="lbl">Phase 2</span>Schweiz Intro</a>
+      <a class="jump-link" href="#d5"><span class="lbl">Aug 21 · Thu</span>Day 5 · Zermatt</a>
+      <a class="jump-link" href="#d6"><span class="lbl">Aug 22 · Fri</span>Day 6 · Five Lakes</a>
+      <a class="jump-link" href="#d7"><span class="lbl">Aug 23 · Sat</span>Day 7 · Lauterbrunnen</a>
+      <a class="jump-link" href="#d8"><span class="lbl">Aug 24 · Sun ⭐</span>Day 8 · Faulhorn</a>
+      <a class="jump-link" href="#d9"><span class="lbl">Aug 25 · Mon</span>Day 9 · Bern → Lucerne</a>
+      <a class="jump-link" href="#d10"><span class="lbl">Aug 26 · Tue</span>Day 10 · Lucerne · Rigi</a>
+      <a class="jump-link wide" href="#d11"><span class="lbl">Aug 27 · Wed ⭐</span>Day 11 · Pilatus → Home</a>
+    </div>
+  </div>
+  <div class="jump-group tools">
+    <div class="jump-group-title">Planning Tools</div>
+    <div class="jump-links">
+      <a class="jump-link" href="#bookings"><span class="lbl">Reservations</span>Bookings Tracker</a>
+      <a class="jump-link" href="#prep"><span class="lbl">To-do</span>Pre-Trip Checklist</a>
+      <a class="jump-link" href="#budget"><span class="lbl">Money</span>Budget Breakdown</a>
+      <a class="jump-link" href="#closing"><span class="lbl">Goodbye</span>Closing</a>
+    </div>
+  </div>
+</aside>
+
 <!-- FLOATING DAY NAV -->
 <nav class="day-nav" id="dayNav">
   <a href="#d1">D1</a>
@@ -276,7 +352,7 @@
 </nav>
 
 <!-- HERO -->
-<div class="hero-wrap">
+<div class="hero-wrap" id="top">
   <section class="hero">
     <div class="hero-bg" id="heroBg"></div>
     <div class="hero-content" id="heroContent">
@@ -298,7 +374,7 @@
 </section>
 
 <!-- AT A GLANCE -->
-<section class="glance">
+<section class="glance" id="glance">
   <div class="reveal">
     <p class="label">The Journey</p>
     <h2>11 Days. 8 Stops.</h2>
@@ -319,7 +395,7 @@
 </section>
 
 <!-- PHASE 1 -->
-<section class="phase-intro">
+<section class="phase-intro" id="italy">
   <div class="reveal">
     <div class="flag">🇮🇹</div>
     <p class="label">Phase One</p>
@@ -523,7 +599,7 @@
 </section>
 
 <!-- PHASE 2 -->
-<section class="phase-intro swiss">
+<section class="phase-intro swiss" id="swiss">
   <div class="reveal">
     <div class="flag">🇨🇭</div>
     <p class="label">Phase Two</p>
@@ -970,7 +1046,7 @@
 </section>
 
 <!-- CLOSING -->
-<section class="closing">
+<section class="closing" id="closing">
   <div class="closing-bg" id="closingBg"></div>
   <div class="reveal">
     <p class="script">somewhere between Rome &amp; the Alps...</p>
@@ -1280,6 +1356,19 @@
     }
   });
   renderBookings();
+
+  // ===== Jump Menu (FAB) =====
+  const jumpFab=document.getElementById('jumpFab');
+  const jumpSheet=document.getElementById('jumpSheet');
+  const jumpOverlay=document.getElementById('jumpOverlay');
+  const jumpClose=document.getElementById('jumpClose');
+  function openJump(){jumpSheet.classList.add('open');jumpOverlay.classList.add('open');}
+  function closeJump(){jumpSheet.classList.remove('open');jumpOverlay.classList.remove('open');}
+  jumpFab.addEventListener('click',openJump);
+  jumpOverlay.addEventListener('click',closeJump);
+  jumpClose.addEventListener('click',closeJump);
+  jumpSheet.querySelectorAll('.jump-link').forEach(a=>a.addEventListener('click',()=>setTimeout(closeJump,150)));
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeJump(); });
 
   // Register Service Worker for offline support
   if('serviceWorker' in navigator){
