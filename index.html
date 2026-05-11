@@ -183,8 +183,9 @@
 
   /* ============ TIMELINE MAP PIN ============ */
   .rail-item{padding-right:42px}
-  .rail-item .map-pin{position:absolute;right:0;top:20px;display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#c4546a;color:#fff;text-decoration:none;transition:transform .2s,background .2s;box-shadow:0 4px 12px rgba(196,84,106,.4)}
-  .rail.swiss .rail-item .map-pin{background:#5d8eb9;box-shadow:0 4px 12px rgba(93,142,185,.4)}
+  .rail-item .map-pin{position:absolute;right:0;top:20px;display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#3d4a5c;color:#fff;text-decoration:none;transition:transform .2s,background .2s;box-shadow:0 4px 12px rgba(40,50,70,.35);border:2px solid #fff}
+  .rail.swiss .rail-item .map-pin{background:#3d4a5c;box-shadow:0 4px 12px rgba(40,50,70,.35)}
+  .rail-item .map-pin:hover{background:#2a3445}
   .rail-item .map-pin:hover{transform:scale(1.12)}
   .rail-item .map-pin:active{transform:scale(.95)}
   .rail-item .map-pin svg{width:15px;height:15px}
@@ -1096,20 +1097,11 @@
   const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
   function openInMaps(query){
     const q=encodeURIComponent(query);
-    const webUrl='https://www.google.com/maps/search/?api=1&query='+q;
     if(isIOS){
-      // Try Google Maps iOS app first; fall back to Apple Maps / web
-      const appUrl='comgooglemaps://?q='+q;
-      const start=Date.now();
-      const t=setTimeout(()=>{
-        // If app didn't open within 600ms, send to Apple Maps (always installed on iOS)
-        if(Date.now()-start<1500) window.location.href='maps://?q='+q;
-      },600);
-      window.location.href=appUrl;
-      // If user comes back (page hidden then visible), they cancelled; clear timer
-      document.addEventListener('visibilitychange',()=>{ if(document.hidden) clearTimeout(t); },{once:true});
+      // Apple Maps universal link → opens the Maps app directly, no Safari prompt
+      window.location.href='https://maps.apple.com/?q='+q;
     } else {
-      window.open(webUrl,'_blank','noopener');
+      window.open('https://www.google.com/maps/search/?api=1&query='+q,'_blank','noopener');
     }
   }
   // Wire up every .maplink and (after injection) every .map-pin via delegation
