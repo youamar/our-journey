@@ -1,4 +1,4 @@
-const CACHE = 'our-journey-v1';
+const CACHE = 'our-journey-v2';
 const CORE = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', e => {
@@ -16,9 +16,28 @@ self.addEventListener('activate', e => {
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
   const url = new URL(e.request.url);
-  // Don't cache analytics or maps API calls
   if (url.hostname.includes('google-analytics')) return;
 
+  const isHTML = e.request.mode === 'navigate' ||
+                 (e.request.destination === 'document') ||
+                 e.request.url.endsWith('.html') ||
+                 e.request.url.endsWith('/');
+
+  if (isHTML) {
+    // Network-first for HTML: always fetch fresh, fall back to cache offline
+    e.respondWith(
+      fetch(e.request).then(res => {
+        if (res && res.ok) {
+          const clone = res.clone();
+          caches.open(CACHE).then(c => c.put(e.request, clone)).catch(() => {});
+        }
+        return res;
+      }).catch(() => caches.match(e.request).then(c => c || caches.match('./')))
+    );
+    return;
+  }
+
+  // Cache-first for everything else (images, css, js, manifest)
   e.respondWith(
     caches.match(e.request).then(cached => {
       const fetchPromise = fetch(e.request).then(res => {
