@@ -1,4 +1,4 @@
-const CACHE = 'our-journey-v2';
+const CACHE = 'our-journey-v3';
 const CORE = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', e => {
