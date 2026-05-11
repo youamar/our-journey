@@ -9,6 +9,14 @@
 <!-- Heart favicon (browser tab icon) -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9D%A4%EF%B8%8F%3C/text%3E%3C/svg%3E" />
 
+<!-- PWA: installable + offline -->
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#c4546a" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Our Journey" />
+<link rel="apple-touch-icon" href="icon-192.png" />
+
 <!-- Social share preview (WhatsApp / Instagram / Messenger) -->
 <meta property="og:title" content="Our Journey · Italy & Switzerland 💕" />
 <meta property="og:description" content="11 days, 2 countries, a thousand small moments — a trip planned just for you." />
@@ -173,6 +181,59 @@
   .check-item .body .d{font-size:.88rem;color:#7a6a6c;line-height:1.55}
   @media(max-width:760px){.checklist{grid-template-columns:1fr}}
 
+  /* ============ TIMELINE MAP PIN ============ */
+  .rail-item .what{position:relative}
+  .rail-item .map-pin{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:#c4546a;color:#fff;margin-left:8px;text-decoration:none;vertical-align:middle;transition:transform .2s,background .2s;box-shadow:0 4px 10px rgba(196,84,106,.35)}
+  .rail.swiss .rail-item .map-pin{background:#5d8eb9;box-shadow:0 4px 10px rgba(93,142,185,.35)}
+  .rail-item .map-pin:hover{transform:scale(1.15)}
+  .rail-item .map-pin svg{width:13px;height:13px}
+
+  /* ============ LOGISTICS BOOKING LINK ============ */
+  .logistics .item .book{display:inline-block;margin-top:8px;font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:#c4546a;text-decoration:none;font-weight:700;border-bottom:1.5px solid #c4546a;padding-bottom:1px;transition:all .2s}
+  .logistics.swiss .item .book{color:#5d8eb9;border-bottom-color:#5d8eb9}
+  .logistics .item .book:hover{opacity:.7;letter-spacing:2px}
+
+  /* ============ BOOKINGS TRACKER ============ */
+  .bookings-section{padding:130px 6vw;background:linear-gradient(180deg,#f5ebde,#fdf9f3)}
+  .bookings-section .wrap{max-width:1080px;margin:0 auto}
+  .bookings-section .head{text-align:center;margin-bottom:2rem}
+  .bookings-section .head .lbl{font-size:.78rem;letter-spacing:6px;text-transform:uppercase;color:#7d6fa0;font-weight:700}
+  .bookings-section .head h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,4.4rem);color:#2a1f24;margin:.6rem 0 .5rem;line-height:1}
+  .bookings-section .head .sub{color:#7a6a6c;font-size:1.05rem;max-width:620px;margin:0 auto}
+  .bk-progress{max-width:560px;margin:2.4rem auto 3rem}
+  .bk-progress .bar{height:10px;background:#eadfd1;border-radius:100px;overflow:hidden}
+  .bk-progress .fill{height:100%;background:linear-gradient(90deg,#c4546a,#7d6fa0);border-radius:100px;width:0;transition:width .6s ease}
+  .bk-progress .count{text-align:center;margin-top:10px;font-size:.85rem;color:#7a6a6c;letter-spacing:1px}
+  .bk-progress .count b{color:#2a1f24;font-size:1rem}
+  .bk-group{margin-bottom:2rem}
+  .bk-group .group-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:#2a1f24;margin-bottom:1rem;padding-left:4px;display:flex;align-items:center;gap:12px}
+  .bk-group .group-title .emoji{font-size:1.5rem}
+  .bk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+  .bk-card{background:#fff;border:1px solid #ead8c8;border-radius:14px;padding:18px 20px;box-shadow:0 8px 22px rgba(80,40,50,.06);transition:all .25s;cursor:pointer}
+  .bk-card.booked{background:linear-gradient(135deg,#eaf5ea,#fff);border-color:#a8d4a8}
+  .bk-card:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(80,40,50,.12)}
+  .bk-card .row1{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px}
+  .bk-card .name{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:#2a1f24;line-height:1.25;flex:1}
+  .bk-card .badge{flex-shrink:0;font-size:.62rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;padding:4px 9px;border-radius:100px;background:#f0e6d8;color:#9a8a6c}
+  .bk-card.booked .badge{background:#4caf50;color:#fff}
+  .bk-card .hint{font-size:.8rem;color:#7a6a6c;line-height:1.45}
+  .bk-card .summary{margin-top:8px;font-size:.82rem;color:#5a4a4c;padding-top:8px;border-top:1px dashed #d6c4b0;line-height:1.5;display:none}
+  .bk-card.booked .summary{display:block}
+  .bk-card .summary b{color:#2a1f24;font-weight:600}
+
+  .bk-form{display:none;margin-top:14px;padding-top:14px;border-top:1px dashed #d6c4b0;gap:10px;flex-direction:column}
+  .bk-card.editing .bk-form{display:flex}
+  .bk-form label{display:flex;flex-direction:column;font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;color:#7a6a6c;font-weight:700;gap:5px}
+  .bk-form input,.bk-form textarea{font-family:'Inter',sans-serif;font-size:.92rem;color:#2a1f24;padding:9px 12px;border:1px solid #d6c4b0;border-radius:8px;background:#fdfaf5;text-transform:none;letter-spacing:0;font-weight:400;outline:none;transition:border-color .2s}
+  .bk-form input:focus,.bk-form textarea:focus{border-color:#c4546a}
+  .bk-form textarea{resize:vertical;min-height:60px;font-family:inherit}
+  .bk-form .actions{display:flex;gap:8px;margin-top:4px}
+  .bk-form .actions button{flex:1;padding:10px 14px;border:none;border-radius:8px;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;cursor:pointer;transition:all .2s}
+  .bk-form .save{background:#c4546a;color:#fff}
+  .bk-form .save:hover{background:#a73a51}
+  .bk-form .clear{background:#f0e6d8;color:#7a6a6c}
+  .bk-form .clear:hover{background:#e0d4c0}
+
   /* ============ FLOATING DAY NAV ============ */
   .day-nav{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:4px;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);padding:12px 9px;border-radius:30px;box-shadow:0 8px 24px rgba(80,40,50,.14);border:1px solid rgba(196,84,106,.15);opacity:0;pointer-events:none;transition:opacity .4s}
   .day-nav.show{opacity:1;pointer-events:auto}
@@ -266,7 +327,7 @@
 </section>
 
 <!-- ============ DAY 1 ROME ARRIVAL ============ -->
-<section class="reveal" id="d1">
+<section class="reveal" id="d1" data-city="Rome, Italy">
   <div class="day-hero">
     <img data-wf="Rome_Skyline.jpg" alt="Rome skyline">
     <div class="day-hero-text">
@@ -288,7 +349,7 @@
 
     <div class="logistics">
       <div class="item"><div class="k">Stay</div><div class="v">YellowSquare Rome</div><div class="s">Near Termini · book non-refundable for 10% off</div></div>
-      <div class="item"><div class="k">Transit</div><div class="v">Leonardo Express</div><div class="s">FCO → Roma Termini · 32 min · €14</div></div>
+      <div class="item"><div class="k">Transit</div><div class="v">Leonardo Express</div><div class="s">FCO → Roma Termini · 32 min · €14</div><a class="book" href="https://www.trenitalia.com/en.html" target="_blank" rel="noopener">Book on Trenitalia →</a></div>
       <div class="item"><div class="k">Today’s Budget</div><div class="v">€25 / RM 130</div><div class="s">Food &amp; misc, per person</div></div>
     </div>
 
@@ -312,7 +373,7 @@
 </section>
 
 <!-- ============ DAY 2 ROME ============ -->
-<section class="reveal" id="d2">
+<section class="reveal" id="d2" data-city="Rome, Italy">
   <div class="day-hero">
     <img data-wf="Colosseo_2020.jpg" alt="Colosseum">
     <div class="day-hero-text">
@@ -361,7 +422,7 @@
 </section>
 
 <!-- ============ DAY 3 FLORENCE ============ -->
-<section class="reveal" id="d3">
+<section class="reveal" id="d3" data-city="Florence, Italy">
   <div class="day-hero">
     <img data-wf="Florence_Duomo_from_Michelangelo_hill.jpg" alt="Florence">
     <div class="day-hero-text">
@@ -385,7 +446,7 @@
 
     <div class="logistics">
       <div class="item"><div class="k">Stay</div><div class="v">PLUS Florence</div><div class="s">Hostel + pool · 15-min walk from S.M.N. station</div></div>
-      <div class="item"><div class="k">Transit</div><div class="v">Roma → Firenze (1.5h)</div><div class="s">Frecciarossa or Italo · €19 if booked 60+ days ahead</div></div>
+      <div class="item"><div class="k">Transit</div><div class="v">Roma → Firenze (1.5h)</div><div class="s">Frecciarossa or Italo · €19 if booked 60+ days ahead</div><a class="book" href="https://www.italotreno.it/en" target="_blank" rel="noopener">Book on Italo →</a></div>
       <div class="item"><div class="k">Today’s Budget</div><div class="v">€30 / RM 150</div><div class="s">Add €19 train + €4 Conad wine/focaccia</div></div>
     </div>
 
@@ -411,7 +472,7 @@
 </section>
 
 <!-- ============ DAY 4 LAKE COMO ============ -->
-<section class="reveal" id="d4">
+<section class="reveal" id="d4" data-city="Varenna, Lake Como, Italy">
   <div class="day-hero">
     <img data-wf="Varenna_-_Lago_di_Como.jpg" alt="Varenna">
     <div class="day-hero-text">
@@ -435,7 +496,7 @@
 
     <div class="logistics">
       <div class="item"><div class="k">Stay</div><div class="v">Ostello Menaggio (Lake Como)</div><div class="s">Lakeside hostel · book direct for best rate</div></div>
-      <div class="item"><div class="k">Transit</div><div class="v">Firenze → Milano → Varenna</div><div class="s">2h + 1h · sit LEFT on the Varenna leg</div></div>
+      <div class="item"><div class="k">Transit</div><div class="v">Firenze → Milano → Varenna</div><div class="s">2h + 1h · sit LEFT on the Varenna leg</div><a class="book" href="https://www.trenitalia.com/en.html" target="_blank" rel="noopener">Book on Trenitalia →</a></div>
       <div class="item"><div class="k">Today’s Budget</div><div class="v">€35 / RM 180</div><div class="s">Plus €15 Milan–Varenna regional train</div></div>
     </div>
 
@@ -470,7 +531,7 @@
 </section>
 
 <!-- ============ DAY 5 ZERMATT ============ -->
-<section class="reveal" id="d5">
+<section class="reveal" id="d5" data-city="Zermatt, Switzerland">
   <div class="day-hero">
     <img data-wf="Matterhorn_from_Domhütte_-_2.jpg" alt="Matterhorn">
     <div class="day-hero-text">
@@ -494,7 +555,7 @@
 
     <div class="logistics swiss">
       <div class="item"><div class="k">Stay</div><div class="v">Zermatt Youth Hostel</div><div class="s">5-min walk from station · breakfast included</div></div>
-      <div class="item"><div class="k">Transit</div><div class="v">Varenna → Zermatt via Visp</div><div class="s">~4.5h · Half Fare Card cuts the Swiss leg by 50%</div></div>
+      <div class="item"><div class="k">Transit</div><div class="v">Varenna → Zermatt via Visp</div><div class="s">~4.5h · Half Fare Card cuts the Swiss leg by 50%</div><a class="book" href="https://www.sbb.ch/en/" target="_blank" rel="noopener">Plan on SBB →</a></div>
       <div class="item"><div class="k">Today’s Budget</div><div class="v">CHF 30 / RM 160</div><div class="s">Plus CHF 120 Half Fare Card (one-time, covers D5–10)</div></div>
     </div>
 
@@ -519,7 +580,7 @@
 </section>
 
 <!-- ============ DAY 6 FIVE LAKES ============ -->
-<section class="reveal" id="d6">
+<section class="reveal" id="d6" data-city="Zermatt, Switzerland">
   <div class="day-hero">
     <img data-wf="Stellisee_Reflection.jpg" alt="Stellisee">
     <div class="day-hero-text">
@@ -541,7 +602,7 @@
 
     <div class="logistics swiss">
       <div class="item"><div class="k">Stay</div><div class="v">Balmers Hostel · Interlaken</div><div class="s">Legendary backpacker spot · book months ahead in Aug</div></div>
-      <div class="item"><div class="k">Transit</div><div class="v">Zermatt → Interlaken Ost</div><div class="s">~2h 15m after the hike · scenic the whole way</div></div>
+      <div class="item"><div class="k">Transit</div><div class="v">Zermatt → Interlaken Ost</div><div class="s">~2h 15m after the hike · scenic the whole way</div><a class="book" href="https://www.sbb.ch/en/" target="_blank" rel="noopener">Plan on SBB →</a></div>
       <div class="item"><div class="k">Today’s Budget</div><div class="v">CHF 40 / RM 210</div><div class="s">Funicular + cable car CHF ~50 (Half Fare halves it)</div></div>
     </div>
 
@@ -567,7 +628,7 @@
 </section>
 
 <!-- ============ DAY 7 LAUTERBRUNNEN ============ -->
-<section class="reveal" id="d7">
+<section class="reveal" id="d7" data-city="Lauterbrunnen, Switzerland">
   <div class="day-hero">
     <img data-wf="Lauterbrunnen_Valley.jpg" alt="Lauterbrunnen">
     <div class="day-hero-text">
@@ -616,7 +677,7 @@
 </section>
 
 <!-- ============ DAY 8 GRINDELWALD ============ -->
-<section class="reveal" id="d8">
+<section class="reveal" id="d8" data-city="Grindelwald, Switzerland">
   <div class="day-hero">
     <img data-wf="Bachalpsee_reflection.jpg" alt="Bachalpsee">
     <div class="day-hero-text">
@@ -666,7 +727,7 @@
 </section>
 
 <!-- ============ DAY 9 BERN ============ -->
-<section class="reveal" id="d9">
+<section class="reveal" id="d9" data-city="Bern, Switzerland">
   <div class="day-hero">
     <img data-wf="Bern_Old_City_Pano.jpg" alt="Bern">
     <div class="day-hero-text">
@@ -715,7 +776,7 @@
 </section>
 
 <!-- ============ DAY 10 ZURICH ============ -->
-<section class="reveal" id="d10">
+<section class="reveal" id="d10" data-city="Zürich, Switzerland">
   <div class="day-hero">
     <img data-wf="Zürich_-_Limmat.jpg" alt="Zurich">
     <div class="day-hero-text">
@@ -739,7 +800,7 @@
 
     <div class="logistics swiss">
       <div class="item"><div class="k">Stay</div><div class="v">Hostel Otter · near Zurich HB</div><div class="s">10-min train to airport next morning</div></div>
-      <div class="item"><div class="k">Transit</div><div class="v">Bern → Zurich HB</div><div class="s">~1h direct · IC trains every 30 min</div></div>
+      <div class="item"><div class="k">Transit</div><div class="v">Bern → Zurich HB</div><div class="s">~1h direct · IC trains every 30 min</div><a class="book" href="https://www.sbb.ch/en/" target="_blank" rel="noopener">Plan on SBB →</a></div>
       <div class="item"><div class="k">Today’s Budget</div><div class="v">CHF 40 / RM 210</div><div class="s">Most expensive city · Coop sushi CHF 8 saves your wallet</div></div>
     </div>
 
@@ -764,7 +825,7 @@
 </section>
 
 <!-- ============ DAY 11 DEPARTURE ============ -->
-<section class="reveal" id="d11">
+<section class="reveal" id="d11" data-city="Zürich, Switzerland">
   <div class="day-hero">
     <img data-wf="Zurich_Airport_Aerial.jpg" alt="Zurich airport">
     <div class="day-hero-text">
@@ -800,6 +861,24 @@
     </div></div>
     <div class="romantic">Eleven days isn’t enough. Good thing we have a lifetime.</div>
   </div></div>
+</section>
+
+<!-- ============ BOOKINGS TRACKER ============ -->
+<section class="bookings-section reveal" id="bookings">
+  <div class="wrap">
+    <div class="head">
+      <p class="lbl">The Paperwork</p>
+      <h2>Bookings Tracker.</h2>
+      <p class="sub">A live checklist of every reservation. Tap a card → fill in the confirmation number, date, cost, and notes once you book it. Saves automatically in your browser — no account needed.</p>
+    </div>
+
+    <div class="bk-progress">
+      <div class="bar"><div class="fill" id="bkFill"></div></div>
+      <div class="count"><b id="bkDone">0</b> of <b id="bkTotal">0</b> booked</div>
+    </div>
+
+    <div id="bkGroups"></div>
+  </div>
 </section>
 
 <!-- ============ PRE-TRIP CHECKLIST ============ -->
@@ -1008,6 +1087,140 @@
   // Reveal
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:0.1});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Inject Google Maps pin on every timeline event (.rail-item)
+  const mapSvg='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>';
+  document.querySelectorAll('section[data-city]').forEach(sec=>{
+    const city=sec.dataset.city;
+    sec.querySelectorAll('.rail-item').forEach(item=>{
+      const whatEl=item.querySelector('.what');
+      if(!whatEl) return;
+      const place=whatEl.textContent.trim();
+      // Skip non-location items (decisions, reminders, "bring"-style items)
+      if(/^(decision|bring|promise|continue|reward|hide|magic hour)/i.test(item.querySelector('.time')?.textContent||'')) return;
+      const q=encodeURIComponent(place+', '+city);
+      const a=document.createElement('a');
+      a.className='map-pin';
+      a.href='https://www.google.com/maps/search/?api=1&query='+q;
+      a.target='_blank';
+      a.rel='noopener';
+      a.title='Open '+place+' in Google Maps';
+      a.innerHTML=mapSvg;
+      whatEl.appendChild(a);
+    });
+  });
+
+  // ===== Bookings Tracker (localStorage) =====
+  const BK_KEY='ourJourneyBookings_v1';
+  const bookings=[
+    {g:'Flights',e:'✈️',items:[
+      {id:'flight-out',name:'KUL → FCO (Rome)',hint:'~13–16h with transit · book 3–4 months ahead'},
+      {id:'flight-back',name:'ZRH → KUL (Return)',hint:'Consider open-jaw ticket: in via Rome, out via Zurich'},
+      {id:'insurance',name:'Travel Insurance',hint:'AXA / Allianz · ~RM 200 for 11 days · keep policy # handy'},
+    ]},
+    {g:'Hostels · Italy',e:'🇮🇹',items:[
+      {id:'stay-d1',name:'YellowSquare Rome (Nights 1–2)',hint:'Near Termini · book non-refundable rate for 10% off'},
+      {id:'stay-d3',name:'PLUS Florence (Night 3)',hint:'15-min walk from S.M.N. station'},
+      {id:'stay-d4',name:'Ostello Menaggio · Lake Como (Night 4)',hint:'Lakeside hostel · book direct'},
+    ]},
+    {g:'Hostels · Switzerland',e:'🇨🇭',items:[
+      {id:'stay-d5',name:'Zermatt Youth Hostel (Night 5)',hint:'SYHA · breakfast included'},
+      {id:'stay-d6',name:'Balmers Interlaken (Night 6)',hint:'Books out fastest in August'},
+      {id:'stay-d7',name:'Mountain Hostel Gimmelwald (Nights 7–8)',hint:'Cliffside · cash preferred · 2 nights'},
+      {id:'stay-d9',name:'Bern Youth Hostel (Night 9)',hint:'SYHA · 10 min from Bern station'},
+      {id:'stay-d10',name:'Hostel Otter Zurich (Night 10)',hint:'Near Zurich HB for easy airport access'},
+    ]},
+    {g:'Trains & Transit',e:'🚆',items:[
+      {id:'tr-1',name:'Roma → Firenze · Day 3',hint:'Frecciarossa or Italo · book 60+ days ahead · €19 advance'},
+      {id:'tr-2',name:'Firenze → Milano · Day 4',hint:'Trenitalia · ~2h · book together with Milano → Varenna'},
+      {id:'tr-3',name:'Milano → Varenna · Day 4',hint:'Regional · ~1h · sit LEFT for lake reveal'},
+      {id:'tr-4',name:'Varenna → Zermatt (via Visp) · Day 5',hint:'~4.5h crossing the Alps · half-Italy half-Swiss'},
+      {id:'tr-halffare',name:'Swiss Half Fare Card',hint:'CHF 120 · cuts Days 5–11 trains/cable cars by 50%'},
+    ]},
+    {g:'Attractions & Tickets',e:'🎟️',items:[
+      {id:'tk-colosseum',name:'Colosseum + Forum Combo',hint:'€18 · coopculture.it · book 30+ days ahead for August'},
+      {id:'tk-vatican',name:'Vatican Museums (optional)',hint:'Slots open 60 days ahead · skip-the-line essential'},
+    ]},
+    {g:'Other',e:'📱',items:[
+      {id:'esim',name:'Airalo eSIM (Europe)',hint:'10GB ~RM 80 · install before flying'},
+      {id:'wise',name:'Wise / Revolut Card',hint:'Load EUR + CHF · best FX rates · skip Malaysian bank cards'},
+    ]},
+  ];
+
+  function loadBkData(){ try{return JSON.parse(localStorage.getItem(BK_KEY)||'{}');}catch(e){return {};} }
+  function saveBkData(d){ localStorage.setItem(BK_KEY,JSON.stringify(d)); }
+
+  function renderBookings(){
+    const data=loadBkData();
+    const root=document.getElementById('bkGroups');
+    root.innerHTML='';
+    let total=0,done=0;
+    bookings.forEach(group=>{
+      const gEl=document.createElement('div');
+      gEl.className='bk-group';
+      gEl.innerHTML=`<div class="group-title"><span class="emoji">${group.e}</span>${group.g}</div><div class="bk-grid"></div>`;
+      const grid=gEl.querySelector('.bk-grid');
+      group.items.forEach(it=>{
+        total++;
+        const saved=data[it.id]||{};
+        const booked=!!saved.booked;
+        if(booked) done++;
+        const card=document.createElement('div');
+        card.className='bk-card'+(booked?' booked':'');
+        card.dataset.id=it.id;
+        const summary=booked?`<div class="summary">${saved.conf?`<b>Ref:</b> ${escapeHtml(saved.conf)}<br>`:''}${saved.date?`<b>Date:</b> ${escapeHtml(saved.date)}<br>`:''}${saved.cost?`<b>Cost:</b> ${escapeHtml(saved.cost)}<br>`:''}${saved.notes?`<b>Notes:</b> ${escapeHtml(saved.notes)}`:''}</div>`:'';
+        card.innerHTML=`
+          <div class="row1"><div class="name">${it.name}</div><div class="badge">${booked?'Booked':'To Book'}</div></div>
+          <div class="hint">${it.hint}</div>
+          ${summary}
+          <form class="bk-form" onsubmit="return false">
+            <label>Confirmation # <input name="conf" value="${escapeAttr(saved.conf||'')}" placeholder="e.g. ABC123" /></label>
+            <label>Date / Time <input name="date" value="${escapeAttr(saved.date||'')}" placeholder="e.g. 17 Aug 2026, 14:30" /></label>
+            <label>Cost <input name="cost" value="${escapeAttr(saved.cost||'')}" placeholder="e.g. €42 / RM 200" /></label>
+            <label>Notes <textarea name="notes" placeholder="Hostel address, train carriage, contact, etc.">${escapeHtml(saved.notes||'')}</textarea></label>
+            <div class="actions"><button type="button" class="save">Save</button><button type="button" class="clear">Clear</button></div>
+          </form>`;
+        grid.appendChild(card);
+      });
+      root.appendChild(gEl);
+    });
+    document.getElementById('bkTotal').textContent=total;
+    document.getElementById('bkDone').textContent=done;
+    document.getElementById('bkFill').style.width=(total?(done/total*100):0)+'%';
+  }
+  function escapeHtml(s){return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+  function escapeAttr(s){return String(s).replace(/"/g,'&quot;').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+  document.addEventListener('click',e=>{
+    const card=e.target.closest('.bk-card');
+    if(!card) return;
+    if(e.target.classList.contains('save')){
+      const data=loadBkData();
+      const f=card.querySelector('.bk-form');
+      data[card.dataset.id]={booked:true,conf:f.conf.value.trim(),date:f.date.value.trim(),cost:f.cost.value.trim(),notes:f.notes.value.trim()};
+      saveBkData(data);
+      renderBookings();
+      return;
+    }
+    if(e.target.classList.contains('clear')){
+      const data=loadBkData();
+      delete data[card.dataset.id];
+      saveBkData(data);
+      renderBookings();
+      return;
+    }
+    if(!e.target.closest('.bk-form')){
+      document.querySelectorAll('.bk-card.editing').forEach(c=>{if(c!==card)c.classList.remove('editing');});
+      card.classList.toggle('editing');
+    }
+  });
+  renderBookings();
+
+  // Register Service Worker for offline support
+  if('serviceWorker' in navigator){
+    window.addEventListener('load',()=>{
+      navigator.serviceWorker.register('sw.js').catch(()=>{});
+    });
+  }
 
   // Floating day-nav: show after the hero, highlight active day
   const dayNav=document.getElementById('dayNav');
