@@ -182,11 +182,12 @@
   @media(max-width:760px){.checklist{grid-template-columns:1fr}}
 
   /* ============ TIMELINE MAP PIN ============ */
-  .rail-item .what{position:relative}
-  .rail-item .map-pin{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:#c4546a;color:#fff;margin-left:8px;text-decoration:none;vertical-align:middle;transition:transform .2s,background .2s;box-shadow:0 4px 10px rgba(196,84,106,.35)}
-  .rail.swiss .rail-item .map-pin{background:#5d8eb9;box-shadow:0 4px 10px rgba(93,142,185,.35)}
-  .rail-item .map-pin:hover{transform:scale(1.15)}
-  .rail-item .map-pin svg{width:13px;height:13px}
+  .rail-item{padding-right:42px}
+  .rail-item .map-pin{position:absolute;right:0;top:20px;display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#c4546a;color:#fff;text-decoration:none;transition:transform .2s,background .2s;box-shadow:0 4px 12px rgba(196,84,106,.4)}
+  .rail.swiss .rail-item .map-pin{background:#5d8eb9;box-shadow:0 4px 12px rgba(93,142,185,.4)}
+  .rail-item .map-pin:hover{transform:scale(1.12)}
+  .rail-item .map-pin:active{transform:scale(.95)}
+  .rail-item .map-pin svg{width:15px;height:15px}
 
   /* ============ LOGISTICS BOOKING LINK ============ */
   .logistics .item .book{display:inline-block;margin-top:8px;font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:#c4546a;text-decoration:none;font-weight:700;border-bottom:1.5px solid #c4546a;padding-bottom:1px;transition:all .2s}
@@ -1091,7 +1092,45 @@
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:0.1});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-  // Inject Google Maps pin on every timeline event (.rail-item)
+  // ===== Maps helper: open Google Maps app on iOS, web elsewhere =====
+  const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  function openInMaps(query){
+    const q=encodeURIComponent(query);
+    const webUrl='https://www.google.com/maps/search/?api=1&query='+q;
+    if(isIOS){
+      // Try Google Maps iOS app first; fall back to Apple Maps / web
+      const appUrl='comgooglemaps://?q='+q;
+      const start=Date.now();
+      const t=setTimeout(()=>{
+        // If app didn't open within 600ms, send to Apple Maps (always installed on iOS)
+        if(Date.now()-start<1500) window.location.href='maps://?q='+q;
+      },600);
+      window.location.href=appUrl;
+      // If user comes back (page hidden then visible), they cancelled; clear timer
+      document.addEventListener('visibilitychange',()=>{ if(document.hidden) clearTimeout(t); },{once:true});
+    } else {
+      window.open(webUrl,'_blank','noopener');
+    }
+  }
+  // Wire up every .maplink and (after injection) every .map-pin via delegation
+  document.addEventListener('click',e=>{
+    const link=e.target.closest('.maplink, .map-pin');
+    if(!link) return;
+    const q=link.dataset.query;
+    if(!q) return;
+    e.preventDefault();
+    openInMaps(q);
+  });
+  // Convert existing static .maplink anchors → use the iOS-aware handler
+  document.querySelectorAll('.maplink').forEach(a=>{
+    try{
+      const u=new URL(a.href);
+      const q=u.searchParams.get('query');
+      if(q) a.dataset.query=q;
+    }catch(e){}
+  });
+
+  // Inject map pin on every timeline event (.rail-item)
   const mapSvg='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>';
   document.querySelectorAll('section[data-city]').forEach(sec=>{
     const city=sec.dataset.city;
@@ -1101,15 +1140,13 @@
       const place=whatEl.textContent.trim();
       // Skip non-location items (decisions, reminders, "bring"-style items)
       if(/^(decision|bring|promise|continue|reward|hide|magic hour)/i.test(item.querySelector('.time')?.textContent||'')) return;
-      const q=encodeURIComponent(place+', '+city);
       const a=document.createElement('a');
       a.className='map-pin';
-      a.href='https://www.google.com/maps/search/?api=1&query='+q;
-      a.target='_blank';
-      a.rel='noopener';
-      a.title='Open '+place+' in Google Maps';
+      a.href='#';
+      a.dataset.query=place+', '+city;
+      a.title='Open '+place+' in Maps';
       a.innerHTML=mapSvg;
-      whatEl.appendChild(a);
+      item.appendChild(a);
     });
   });
 
