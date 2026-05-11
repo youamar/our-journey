@@ -236,6 +236,81 @@
   .bk-form .clear{background:#f0e6d8;color:#7a6a6c}
   .bk-form .clear:hover{background:#e0d4c0}
 
+  /* ============ GENERIC CONTENT SECTION ============ */
+  .content-section{padding:130px 6vw;background:#faf5ef}
+  .content-section.alt{background:linear-gradient(180deg,#fdf9f3,#f5ebde)}
+  .content-section .wrap{max-width:1080px;margin:0 auto}
+  .content-section .head{text-align:center;margin-bottom:3rem}
+  .content-section .head .lbl{font-size:.78rem;letter-spacing:6px;text-transform:uppercase;font-weight:700}
+  .content-section .head h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5.5vw,4rem);color:#2a1f24;margin:.6rem 0 .5rem;line-height:1}
+  .content-section .head .sub{color:#7a6a6c;font-size:1rem;max-width:620px;margin:0 auto;line-height:1.6}
+  .content-section.docs .head .lbl{color:#a73a51}
+  .content-section.planb .head .lbl{color:#b07025}
+  .content-section.packing .head .lbl{color:#4a8b6f}
+  .content-section.dining .head .lbl{color:#c08e3a}
+
+  /* Callouts */
+  .callout{border-radius:12px;padding:16px 20px;margin:14px 0;font-size:.92rem;line-height:1.65}
+  .callout .callout-title{font-weight:700;margin-bottom:6px;font-size:.7rem;text-transform:uppercase;letter-spacing:2px}
+  .callout strong{font-weight:700;color:#2a1f24}
+  .callout-warn{background:#fff8e7;border-left:4px solid #d4951e;color:#7d4e00}
+  .callout-warn .callout-title{color:#a06520}
+  .callout-fix{background:#fff0f0;border-left:4px solid #c4546a;color:#7a3a48}
+  .callout-fix .callout-title{color:#a73a51}
+  .callout-tip{background:#eaf4ff;border-left:4px solid #5d8eb9;color:#1a4a72}
+  .callout-tip .callout-title{color:#3266a3}
+
+  /* Emergency contacts grid */
+  .emerg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:1.4rem}
+  .emerg-card{background:#fff;border:1px solid #ead8c8;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:5px;box-shadow:0 6px 18px rgba(80,40,50,.05)}
+  .emerg-card.critical{background:linear-gradient(135deg,#fff0f0,#fff);border-color:#e8b8b8;box-shadow:0 8px 22px rgba(196,84,106,.1)}
+  .emerg-card .role{font-size:.62rem;letter-spacing:2.5px;text-transform:uppercase;color:#7a6a6c;font-weight:700}
+  .emerg-card.critical .role{color:#a73a51}
+  .emerg-card .num{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;color:#2a1f24;line-height:1;letter-spacing:.5px}
+  .emerg-card.critical .num{color:#a73a51}
+  .emerg-card .desc{font-size:.8rem;color:#7a6a6c;line-height:1.5}
+  .emerg-card a{color:inherit;text-decoration:none}
+  .emerg-card a:hover .num{color:#c4546a}
+
+  /* Document cards */
+  .doc-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:1rem}
+  .doc-card{background:#fff;border:1px solid #ead8c8;border-radius:14px;padding:20px 22px;display:flex;gap:14px;box-shadow:0 6px 18px rgba(80,40,50,.05)}
+  .doc-card.urgent{background:linear-gradient(135deg,#fff8e7,#fff);border-color:#e8d488}
+  .doc-card .ico{flex-shrink:0;font-size:1.6rem;line-height:1}
+  .doc-card .body .t{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:#2a1f24;line-height:1.3;margin-bottom:6px}
+  .doc-card .body .d{font-size:.86rem;color:#5a4a4c;line-height:1.55}
+  .doc-card .body .d strong{color:#2a1f24}
+  .doc-card .body .d a{color:#c4546a;font-weight:600}
+  @media(max-width:760px){.doc-grid{grid-template-columns:1fr}}
+
+  /* Plan B scenarios */
+  .scenario-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:1rem}
+  .scenario{background:#fff;border:1px solid #ead8c8;border-radius:14px;padding:18px 22px;box-shadow:0 6px 18px rgba(80,40,50,.05)}
+  .scenario .what{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:#b07025;font-weight:700;margin-bottom:6px}
+  .scenario .title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#2a1f24;margin-bottom:8px;line-height:1.3}
+  .scenario .plan{font-size:.88rem;color:#5a4a4c;line-height:1.6}
+  .scenario .plan strong{color:#2a1f24;font-weight:700}
+  @media(max-width:760px){.scenario-grid{grid-template-columns:1fr}}
+
+  /* Packing categories */
+  .pack-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:1rem}
+  .pack-cat{background:#fff;border:1px solid #ead8c8;border-radius:14px;padding:18px 22px;box-shadow:0 6px 18px rgba(80,40,50,.05)}
+  .pack-cat .head-row{display:flex;align-items:center;gap:10px;font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:#2a1f24;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid #ead8c8}
+  .pack-cat .head-row .ico{font-size:1.2rem}
+  .pack-cat .row{display:flex;align-items:flex-start;gap:8px;font-size:.84rem;color:#5a4a4c;padding:5px 0;line-height:1.5}
+  .pack-cat .row::before{content:"—";color:#c8b8a8;flex-shrink:0;font-weight:700}
+  .pack-cat .row strong{color:#2a1f24;font-weight:600}
+
+  /* Dining list */
+  .dining-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:1rem}
+  .dining-item{display:flex;gap:14px;background:#fff;border:1px solid #ead8c8;border-radius:14px;padding:16px 20px;box-shadow:0 6px 18px rgba(80,40,50,.05)}
+  .dining-item .flag{flex-shrink:0;width:30px;font-size:1.2rem;text-align:center;padding-top:2px}
+  .dining-item .body{flex:1}
+  .dining-item .body .t{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:#2a1f24;margin-bottom:4px;line-height:1.3}
+  .dining-item .body .d{font-size:.84rem;color:#5a4a4c;line-height:1.55}
+  .dining-item .body .d strong{color:#2a1f24;font-weight:600}
+  @media(max-width:760px){.dining-list{grid-template-columns:1fr}}
+
   /* ============ JUMP MENU (FAB) ============ */
   .jump-fab{position:fixed;right:18px;bottom:22px;z-index:80;width:56px;height:56px;border-radius:50%;background:#2a1f24;color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 28px rgba(0,0,0,.28);transition:all .25s}
   .jump-fab:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(0,0,0,.35)}
@@ -330,7 +405,11 @@
     <div class="jump-links">
       <a class="jump-link" href="#bookings"><span class="lbl">Reservations</span>Bookings Tracker</a>
       <a class="jump-link" href="#prep"><span class="lbl">To-do</span>Pre-Trip Checklist</a>
-      <a class="jump-link" href="#budget"><span class="lbl">Money</span>Budget Breakdown</a>
+      <a class="jump-link" href="#docs"><span class="lbl">Critical</span>Docs &amp; Emergency</a>
+      <a class="jump-link" href="#planb"><span class="lbl">Backup</span>Plan B Playbook</a>
+      <a class="jump-link" href="#packing"><span class="lbl">Bags</span>Packing List</a>
+      <a class="jump-link" href="#dining"><span class="lbl">Food</span>Eating Smart</a>
+      <a class="jump-link" href="#budget"><span class="lbl">Money</span>Budget</a>
       <a class="jump-link" href="#closing"><span class="lbl">Goodbye</span>Closing</a>
     </div>
   </div>
@@ -999,6 +1078,294 @@
       <div class="check-item"><div class="when">14 days</div><div class="body"><div class="t">Download offline tools</div><div class="d">SBB Mobile (Swiss trains) · Trenitalia/Italo (Italy) · MeteoSwiss (weather) · Google Maps offline regions for Italy + Switzerland.</div></div></div>
       <div class="check-item"><div class="when">7 days</div><div class="body"><div class="t">Print passport copies + docs</div><div class="d">Upload to Google Drive (offline access on). Print 2 paper copies of passport, insurance, ETIAS, hostel confirmations. Keep one in bag, one in backpack.</div></div></div>
       <div class="check-item"><div class="when">3 days</div><div class="body"><div class="t">Pack light · layers · grippy shoes</div><div class="d">Carry-on only. Alps drop to 5–12°C at 2,500m even in August. <strong>Day 8 requires grip-soled shoes</strong> — pure sneakers slip on rock. 2 wool socks min.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOCUMENTS & EMERGENCY ============ -->
+<section class="content-section docs reveal" id="docs">
+  <div class="wrap">
+    <div class="head">
+      <p class="lbl">Don’t Leave Home Without</p>
+      <h2>Documents &amp; Emergency.</h2>
+      <p class="sub">Five critical pieces of paperwork, four critical phone numbers. Apply for ETIAS before you book anything else.</p>
+    </div>
+
+    <div class="callout callout-fix">
+      <div class="callout-title">⚠️ ETIAS — Most Urgent</div>
+      From <strong>2026</strong>, Malaysian passports need ETIAS travel authorization to enter the Schengen area. Apply on the official site <a href="https://travel-europe.europa.eu" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">travel-europe.europa.eu</a> — €7, usually approved within 72 hours. <strong>Apply 2+ months before departure</strong>, never wait until the last month. Without ETIAS, you don’t board the plane.
+    </div>
+
+    <div class="doc-grid">
+      <div class="doc-card urgent">
+        <div class="ico">🛂</div>
+        <div class="body">
+          <div class="t">ETIAS Authorization</div>
+          <div class="d">€7 · travel-europe.europa.eu · 72h processing · valid 3 years. <strong>Submit by June 2026.</strong></div>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="ico">📘</div>
+        <div class="body">
+          <div class="t">Passport Validity</div>
+          <div class="d">Must be valid past <strong>February 2027</strong> — Schengen requires 3+ months remaining after your exit date (Aug 27).</div>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="ico">🏥</div>
+        <div class="body">
+          <div class="t">Travel Insurance · Alpine Cover</div>
+          <div class="d">Must cover <strong>high-altitude hiking ≥2,500m + mountain rescue</strong>. AXA Smart Traveller or MSIG TravelEasy Premier. Min €50,000 medical.</div>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="ico">☁️</div>
+        <div class="body">
+          <div class="t">Offline Document Backup</div>
+          <div class="d">Upload to Google Drive: passport photo page, insurance policy, hostel confirmations, ETIAS approval, flight tickets. Set <strong>offline-available</strong> in the Drive app.</div>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="ico">📄</div>
+        <div class="body">
+          <div class="t">Paper Copies</div>
+          <div class="d">Print 2 sets of all documents. One in your day bag, one in the main suitcase. Insurance policy number + embassy contacts on a card in your wallet.</div>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="ico">💉</div>
+        <div class="body">
+          <div class="t">Vaccinations &amp; Health</div>
+          <div class="d">No special vaccines required for Italy/Switzerland. Bring prescription meds in original packaging. EU pharmacies stock all common OTC drugs.</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:#2a1f24;margin:3rem 0 .5rem;text-align:center">Emergency Numbers · Save to Phone</h3>
+    <p style="text-align:center;color:#7a6a6c;font-size:.92rem;max-width:520px;margin:0 auto 1rem">Save these <strong>before you fly</strong> — store all 4 in your contacts so you can dial without internet.</p>
+
+    <div class="emerg-grid">
+      <div class="emerg-card critical">
+        <div class="role">EU Emergency</div>
+        <a href="tel:112"><div class="num">112</div></a>
+        <div class="desc">Works in both Italy &amp; Switzerland · police, fire, ambulance · operators speak English</div>
+      </div>
+      <div class="emerg-card critical">
+        <div class="role">Swiss Mountain Rescue</div>
+        <a href="tel:144"><div class="num">144</div></a>
+        <div class="desc">Direct alpine rescue line · use for any injury on a hike · 1414 (REGA) for helicopter</div>
+      </div>
+      <div class="emerg-card">
+        <div class="role">Malaysian Embassy · Rome</div>
+        <a href="tel:+39068840458"><div class="num">+39 06 8840 4258</div></a>
+        <div class="desc">Lost passport, legal trouble, repatriation · Via Nomentana 297</div>
+      </div>
+      <div class="emerg-card">
+        <div class="role">Malaysian Embassy · Bern</div>
+        <a href="tel:+41313804750"><div class="num">+41 31 380 4750</div></a>
+        <div class="desc">Switzerland consular services · Jubiläumsstrasse 41</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLAN B PLAYBOOK ============ -->
+<section class="content-section planb alt reveal" id="planb">
+  <div class="wrap">
+    <div class="head">
+      <p class="lbl">When Things Don’t Go to Plan</p>
+      <h2>Plan B Playbook.</h2>
+      <p class="sub">Seven scenarios that can derail this trip — and exactly what to do when they happen. Read once now, refer back when needed.</p>
+    </div>
+
+    <div class="scenario-grid">
+      <div class="scenario">
+        <div class="what">Day 8 · Faulhorn Hike</div>
+        <div class="title">Rain or low cloud on hike day</div>
+        <div class="plan">Check <strong>MeteoSwiss</strong> the night before at 20:00. If &gt;50% rain forecast → cancel the 16km hike. Drop to: <strong>Bern Old Town half-day</strong> (arcades + Bear Park) OR <strong>Lindt Chocolate Museum</strong> in Kilchberg (20 min from Zurich, free entry).</div>
+      </div>
+      <div class="scenario">
+        <div class="what">Day 3 / 4 · Italy</div>
+        <div class="title">Italian rail strike (sciopero)</div>
+        <div class="plan">Italy has one-day rail strikes ~monthly. Check Trenitalia status 1 week out + Google News. If a strike hits your travel day: book <strong>FlixBus</strong> immediately (Roma → Firenze €20, 3.5h) or <strong>Blablacar</strong> for a ride share.</div>
+      </div>
+      <div class="scenario">
+        <div class="what">Day 5 · Cross-Country</div>
+        <div class="title">Visp → Zermatt train sold out</div>
+        <div class="plan">August is peak season — this leg sells out fast. <strong>Book 60 days ahead</strong> the day reservations open. Backup: take any earlier Visp-Brig train and hop the next Zermatt connection (regular service runs every 60 min).</div>
+      </div>
+      <div class="scenario">
+        <div class="what">Day 7–8 · Cliff Village</div>
+        <div class="title">Mountain Hostel Gimmelwald cancels</div>
+        <div class="plan">Switch to <strong>Mürren Eiger Guesthouse</strong> (same cliff, 45-min walk from Gimmelwald, similar view) or <strong>Esther’s Guest House</strong> in Lauterbrunnen valley (cheaper, less view). Don’t cancel the whole leg.</div>
+      </div>
+      <div class="scenario">
+        <div class="what">Day 11 · Departure</div>
+        <div class="title">Miss the 08:00 Lucerne boat</div>
+        <div class="plan">Switch to <strong>bus + cogwheel direct from Kriens → Pilatus</strong> (~3h round-trip instead of 4h). You lose the lake leg but keep the summit. If totally late: skip Pilatus, take 13:00 train to ZRH, relax at airport.</div>
+      </div>
+      <div class="scenario">
+        <div class="what">Anywhere</div>
+        <div class="title">Cards declined / cash short</div>
+        <div class="plan">Carry <strong>2 cards from different banks</strong> (Visa + Mastercard). Some Swiss mountain stations take only Maestro or cash. ATMs at every train station — use those, not airport kiosks (worst rates).</div>
+      </div>
+      <div class="scenario">
+        <div class="what">Anywhere</div>
+        <div class="title">Injury on a hike</div>
+        <div class="plan">Dial <strong>144</strong> (Swiss mountain rescue) or <strong>1414</strong> (REGA helicopter). Stay where you are if possible. Your insurance MUST cover alpine rescue — REGA can charge CHF 3,000+ without it.</div>
+      </div>
+      <div class="scenario">
+        <div class="what">Catastrophic</div>
+        <div class="title">Lost passport</div>
+        <div class="plan">Police report first (any local station, free), then call <strong>Malaysian Embassy Rome or Bern</strong> for emergency travel document. Process takes 2–3 days. Keep digital scan in Google Drive offline-available.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PACKING LIST ============ -->
+<section class="content-section packing reveal" id="packing">
+  <div class="wrap">
+    <div class="head">
+      <p class="lbl">Carry-on Only</p>
+      <h2>The Packing List.</h2>
+      <p class="sub">Everything you need fits in carry-on. Day 8 is the gear-test — pack with that hike in mind, the rest is easy.</p>
+    </div>
+
+    <div class="pack-grid">
+      <div class="pack-cat">
+        <div class="head-row"><span class="ico">🔌</span>Power &amp; Digital</div>
+        <div class="row"><strong>EU Type C/F adapter</strong> ×2–3 (Italy + Switzerland same plug)</div>
+        <div class="row"><strong>10,000mAh power bank</strong> (carry-on, never checked)</div>
+        <div class="row"><strong>Folding electric kettle</strong> — Maggi savior in Gimmelwald</div>
+        <div class="row">USB-C cables ×2 + USB-A adapter</div>
+        <div class="row">eSIM activated (Airalo Europe)</div>
+      </div>
+      <div class="pack-cat">
+        <div class="head-row"><span class="ico">👟</span>Clothing &amp; Shoes</div>
+        <div class="row"><strong>Grippy hiking shoes</strong> — Day 8 essential, not plain sneakers</div>
+        <div class="row"><strong>Light down vest/jacket</strong> — Faulhorn summit 5–12°C in August</div>
+        <div class="row">Sunglasses (high-UV alpine reflection)</div>
+        <div class="row">2× quick-dry shorts + 1× lightweight long pants</div>
+        <div class="row">Lightweight rain shell (non-cotton)</div>
+        <div class="row">2× wool hiking socks + 2× regular socks</div>
+        <div class="row">Hiking poles (optional, easy on knees Day 8)</div>
+      </div>
+      <div class="pack-cat">
+        <div class="head-row"><span class="ico">🎒</span>Bags &amp; Outdoor</div>
+        <div class="row"><strong>25–30L day pack</strong> for Day 8 + city days</div>
+        <div class="row">Carry-on suitcase (40L max — Ryanair safe)</div>
+        <div class="row">2× luggage locks (hostel lockers)</div>
+        <div class="row"><strong>1L refillable water bottles ×2</strong> — Day 8 needs 2.5L each</div>
+        <div class="row">Wet wipes (Gimmelwald shower time is limited)</div>
+        <div class="row">Quick-dry travel towel</div>
+      </div>
+      <div class="pack-cat">
+        <div class="head-row"><span class="ico">💊</span>Medical &amp; First Aid</div>
+        <div class="row">Ibuprofen (pain + post-hike inflammation)</div>
+        <div class="row"><strong>Blister plasters · stockpile</strong> (Compeed ×10)</div>
+        <div class="row">Voltaren muscle gel (post-Day 8 lifesaver)</div>
+        <div class="row">SPF 50+ sunscreen (alpine UV is brutal)</div>
+        <div class="row">Anti-diarrhea + antacid tablets</div>
+        <div class="row">Personal prescriptions in original packaging</div>
+      </div>
+      <div class="pack-cat">
+        <div class="head-row"><span class="ico">🍜</span>Food from Home</div>
+        <div class="row"><strong>Maggi or Mamee instant noodles ×10</strong></div>
+        <div class="row">Energy bars ×10 (Day 8 trail food)</div>
+        <div class="row">Mixed nuts in sealed bags</div>
+        <div class="row">3-in-1 instant coffee sachets</div>
+        <div class="row">Local snacks for hostel kitchen barters 😉</div>
+      </div>
+      <div class="pack-cat">
+        <div class="head-row"><span class="ico">📱</span>Essential Apps</div>
+        <div class="row"><strong>SBB Mobile</strong> — Swiss train master app</div>
+        <div class="row"><strong>Trenitalia + Italo</strong> — Italian high-speed tickets</div>
+        <div class="row"><strong>MeteoSwiss</strong> — definitive Swiss weather (esp. Day 8)</div>
+        <div class="row"><strong>Google Maps</strong> — pre-download Italy + Switzerland offline regions</div>
+        <div class="row"><strong>XE Currency</strong> — CHF/EUR/MYR live rate</div>
+        <div class="row"><strong>Google Translate</strong> — IT + DE offline packs</div>
+      </div>
+    </div>
+
+    <div class="callout callout-tip">
+      <div class="callout-title">💡 Pre-Trip Training</div>
+      Day 8 (First → Faulhorn → Schynige Platte) is <strong>16km, 6–7 hours, 700m elevation gain</strong>. In the month before flying, train: hike <strong>Bukit Tabur</strong> or <strong>Broga Hill</strong> 2–3 times, or run 5km daily. Wear your hiking shoes for at least 2 weeks before departure to <strong>prevent blisters</strong> — fresh boots on Day 8 = trip ruined.
+    </div>
+  </div>
+</section>
+
+<!-- ============ EATING SMART ============ -->
+<section class="content-section dining alt reveal" id="dining">
+  <div class="wrap">
+    <div class="head">
+      <p class="lbl">RM 1,800 for 11 Days</p>
+      <h2>Eating Smart.</h2>
+      <p class="sub">Switzerland is brutal on the wallet — restaurants start at CHF 25/meal. Supermarkets keep this trip under budget without sacrificing flavor.</p>
+    </div>
+
+    <div class="dining-list">
+      <div class="dining-item">
+        <div class="flag">🇮🇹</div>
+        <div class="body">
+          <div class="t">Italy: Pizza al Taglio &amp; Forno bakeries</div>
+          <div class="d"><strong>Pizza by weight</strong> €3–5 fills you up. Bakery breakfast €2. Walk 2 streets away from any monument — prices halve and quality doubles.</div>
+        </div>
+      </div>
+      <div class="dining-item">
+        <div class="flag">🇮🇹</div>
+        <div class="body">
+          <div class="t">Italian Supermarkets — Lidl, Carrefour, Conad</div>
+          <div class="d">Mozzarella + bread + tomatoes = <strong>€4 picnic meal</strong>. Italian supermarkets stock excellent fresh produce — quality is high even at discount stores.</div>
+        </div>
+      </div>
+      <div class="dining-item">
+        <div class="flag">🇨🇭</div>
+        <div class="body">
+          <div class="t">Swiss Iron Rule: 100% Supermarket Strategy</div>
+          <div class="d">Recognize <strong>Coop</strong> and <strong>Migros</strong> — these are your lifeline. Restaurant meal: CHF 25+. Supermarket meal: CHF 8–12. Eating out twice in 7 Swiss days = entire daily budget gone.</div>
+        </div>
+      </div>
+      <div class="dining-item">
+        <div class="flag">🇨🇭</div>
+        <div class="body">
+          <div class="t">Swiss Hero Items at Coop / Migros</div>
+          <div class="d"><strong>Rotisserie chicken</strong> CHF 10–12 · pre-packed salad CHF 3–5 · Swiss muesli + milk · <strong>Rivella soda</strong> (local cult drink) · Gruyère cheese slices · sliced bread.</div>
+        </div>
+      </div>
+      <div class="dining-item">
+        <div class="flag">🍜</div>
+        <div class="body">
+          <div class="t">Maggi Noodle Salvation</div>
+          <div class="d">Pack 10 Maggi/Mamee packets + the folding electric kettle. Mountain hostels often have kitchens but no instant food. Hot noodles after Day 8 = nirvana.</div>
+        </div>
+      </div>
+      <div class="dining-item">
+        <div class="flag">⚠️</div>
+        <div class="body">
+          <div class="t">Day 6 Critical Grocery Run</div>
+          <div class="d">Gimmelwald has <strong>no supermarket</strong>. On Day 6 in Zermatt (afternoon), do a single big shop at Migros for ALL Day 7 + Day 8 food (incl. Day 8 trail snacks). Miss this, you eat overpriced hostel pasta for 2 nights.</div>
+        </div>
+      </div>
+      <div class="dining-item">
+        <div class="flag">💧</div>
+        <div class="body">
+          <div class="t">Tap Water = Free Premium Water</div>
+          <div class="d"><strong>100% drink tap water</strong> in both countries — it's mountain-spring quality. Refill at every train station, café, and public fountain. Buying bottled water = burning money.</div>
+        </div>
+      </div>
+      <div class="dining-item">
+        <div class="flag">🥘</div>
+        <div class="body">
+          <div class="t">The Reward Dinner — Day 10 Lucerne</div>
+          <div class="d">After 10 days of supermarket meals, one proper Swiss restaurant dinner. <strong>Rösti CHF 18–22</strong> at Wirtshaus Galliker, or Fondue for CHF 30 if splurging. Earned, not indulgent.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout-warn">
+      <div class="callout-title">💰 Real-World Math</div>
+      Daily food budget Italy: ~€20/person · Switzerland: ~CHF 18–22/person (supermarket-led). That's roughly <strong>RM 160/day average</strong> — exactly the RM 1,800 target across 11 days. One restaurant splurge = 2 days of supermarket budget gone.
     </div>
   </div>
 </section>
