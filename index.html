@@ -1097,11 +1097,12 @@
   const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
   function openInMaps(query){
     const q=encodeURIComponent(query);
+    const url='https://www.google.com/maps/search/?api=1&query='+q;
     if(isIOS){
-      // Apple Maps universal link → opens the Maps app directly, no Safari prompt
-      window.location.href='https://maps.apple.com/?q='+q;
+      // Google Maps universal link → opens the Google Maps app directly if installed
+      window.location.href=url;
     } else {
-      window.open('https://www.google.com/maps/search/?api=1&query='+q,'_blank','noopener');
+      window.open(url,'_blank','noopener');
     }
   }
   // Wire up every .maplink and (after injection) every .map-pin via delegation
