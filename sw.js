@@ -1,5 +1,5 @@
-const CACHE = 'our-journey-v8';
-const CORE = ['./', './index.html', './gallery.html', './manifest.json', './icon-192.png', './icon-512.png'];
+const CACHE = 'our-journey-v9';
+const CORE = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE).catch(() => {})));
