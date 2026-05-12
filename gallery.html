@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1a1a1a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="manifest" href="manifest.json">
+<title>相册 · Photo Gallery · Our Journey</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Dancing+Script:wght@500;700&family=Noto+Serif+SC:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FAF6EE;--cream-2:#F4ECDC;--ink:#2A1F24;--muted:#7a6a6c;
+  --line:#E5DBC9;--rose:#B85C7A;--rose-deep:#7d2a4a;--gold:#B8872A;
+  --italy:#C0392B;--swiss:#D4001F;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{background:var(--cream);color:var(--ink);font-family:'Noto Serif SC','Cormorant Garamond',serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+/* HERO */
+.hero{position:relative;min-height:55vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:60px 24px;color:#fff;overflow:hidden;background:#1a1a1a}
+.hero::before{content:"";position:absolute;inset:0;background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Stellisee.jpg?width=1600');background-size:cover;background-position:center;filter:brightness(.5) saturate(1.05)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,20,.4) 0%,rgba(20,15,20,.7) 100%)}
+.hero-inner{position:relative;z-index:2}
+.hero .script{font-family:'Dancing Script',cursive;font-size:clamp(1.6rem,4vw,2.4rem);color:#f9d9c8;font-weight:500;margin-bottom:8px}
+.hero h1{font-family:'Noto Serif SC',serif;font-weight:700;font-size:clamp(2rem,6vw,3.6rem);letter-spacing:.04em;line-height:1.1;margin-bottom:14px;text-shadow:0 4px 30px rgba(0,0,0,.4)}
+.hero .en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1rem,2.4vw,1.2rem);color:#e8dccd;letter-spacing:.06em}
+.hero .back{position:absolute;top:18px;left:18px;color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:1px;background:rgba(0,0,0,.4);padding:8px 14px;border-radius:24px;backdrop-filter:blur(6px);z-index:3;display:inline-flex;gap:6px;align-items:center}
+
+/* DAY SECTIONS */
+.day-section{padding:50px 20px 30px;max-width:1200px;margin:0 auto;border-bottom:.5px solid var(--line)}
+.day-section:last-of-type{border-bottom:none}
+.day-section .head{display:flex;align-items:flex-end;gap:14px;margin-bottom:24px;padding-bottom:14px;border-bottom:.5px solid var(--line)}
+.day-section .num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:64px;font-weight:400;color:var(--rose);line-height:.85;flex-shrink:0}
+.day-section .meta{flex:1}
+.day-section .date{font-family:'DM Sans',sans-serif;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin-bottom:4px}
+.day-section .title{font-family:'Noto Serif SC',serif;font-size:1.4rem;font-weight:700;line-height:1.25;color:var(--ink)}
+.day-section .en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.95rem;color:var(--rose);margin-top:2px}
+
+.spot-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.spot{position:relative;border-radius:14px;overflow:hidden;background:#1a1a1a;aspect-ratio:4/3;box-shadow:0 4px 18px rgba(160,120,80,.1);cursor:zoom-in;transition:transform .2s}
+.spot:active{transform:scale(.98)}
+.spot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.spot:hover img{transform:scale(1.04)}
+.spot .caption{position:absolute;inset:auto 0 0 0;padding:30px 14px 12px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.85));color:#fff;z-index:1}
+.spot .cap-cn{font-family:'Noto Serif SC',serif;font-size:.95rem;font-weight:600;line-height:1.25}
+.spot .cap-en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78rem;color:#e8dccd;margin-top:2px}
+.spot.tall{aspect-ratio:3/4}
+.spot.wide{grid-column:span 2;aspect-ratio:16/9}
+@media (max-width:600px){
+  .spot.wide{grid-column:span 1;aspect-ratio:16/10}
+  .day-section{padding:40px 16px 24px}
+  .day-section .num{font-size:50px}
+  .day-section .title{font-size:1.2rem}
+  .spot-grid{gap:10px}
+}
+
+/* LIGHTBOX */
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:20px}
+.lb.open{display:flex}
+.lb img{max-width:100%;max-height:90vh;border-radius:8px;box-shadow:0 10px 60px rgba(0,0,0,.6)}
+.lb .lb-cap{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#fff;font-family:'Noto Serif SC',serif;font-size:.95rem}
+.lb .lb-cap em{font-family:'Cormorant Garamond',serif;font-style:italic;color:#f9d9c8;display:block;font-size:.8rem;margin-top:3px}
+.lb .lb-close{position:absolute;top:18px;right:18px;background:rgba(255,255,255,.15);color:#fff;border:none;width:42px;height:42px;border-radius:50%;font-size:22px;cursor:pointer;backdrop-filter:blur(8px)}
+
+.footer{background:var(--ink);color:#aaa;text-align:center;padding:50px 24px;font-family:'Noto Serif SC',serif;font-size:.9rem}
+.footer a{color:#f9d9c8;text-decoration:underline}
+.footer .script{font-family:'Dancing Script',cursive;font-size:1.6rem;color:#f9d9c8;margin-bottom:10px;display:block}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <a href="index.html" class="back">← 返回 · Back</a>
+  <div class="hero-inner">
+    <div class="script">moments to remember</div>
+    <h1>相册 · Photo Gallery</h1>
+    <div class="en">Every spot, every day · 11 days, one summer</div>
+  </div>
+</section>
+
+<!-- DAY 1 -->
+<section class="day-section">
+  <div class="head">
+    <div class="num">1</div>
+    <div class="meta">
+      <div class="date">8月17日 · Day 01 · 罗马 Roma</div>
+      <div class="title">落地潜行 · 罗马入场式</div>
+      <div class="en">Roma — arrival &amp; the Trevi at midnight</div>
+    </div>
+  </div>
+  <div class="spot-grid">
+    <a class="spot wide" href="#" data-cap="许愿池 Trevi Fountain"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Trevi_Fountain%2C_Rome%2C_Italy_2_-_May_2007.jpg?width=1200" alt="Trevi Fountain"><div class="caption"><div class="cap-cn">许愿池</div><div class="cap-en">Trevi Fountain</div></div></a>
+    <a class="spot" href="#" data-cap="万神殿 Pantheon"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pantheon_Rom_1_cropped.jpg?width=900" alt="Pantheon"><div class="caption"><div class="cap-cn">万神殿</div><div class="cap-en">Pantheon</div></div></a>
+    <a class="spot" href="#" data-cap="纳沃纳广场 Piazza Navona"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Piazza_Navona_%28Rome%29_at_night.jpg/1200px-Piazza_Navona_%28Rome%29_at_night.jpg" alt="Piazza Navona"><div class="caption"><div class="cap-cn">纳沃纳广场</div><div class="cap-en">Piazza Navona</div></div></a>
+  </div>
+</section>
+
+<!-- DAY 2 -->
+<section class="day-section">
+  <div class="head">
+    <div class="num">2</div>
+    <div class="meta">
+      <div class="date">8月18日 · Day 02 · 罗马 Roma</div>
+      <div class="title">罗马帝国拉练 · 25 km</div>
+      <div class="en">The full circuit on foot</div>
+    </div>
+  </div>
+  <div class="spot-grid">
+    <a class="spot wide" href="#" data-cap="斗兽场 Colosseum"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Colosseo_2020.jpg?width=1200" alt="Colosseum"><div class="caption"><div class="cap-cn">斗兽场</div><div class="cap-en">Colosseum</div></div></a>
+    <a class="spot" href="#" data-cap="圣彼得广场 St. Peter's Square"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/St_Peter%27s_Square%2C_Vatican_City_-_April_2007.jpg/1200px-St_Peter%27s_Square%2C_Vatican_City_-_April_2007.jpg" alt="St Peter's Square"><div class="caption"><div class="cap-cn">圣彼得广场</div><div class="cap-en">St. Peter's Square</div></div></a>
+    <a class="spot" href="#" data-cap="西班牙台阶 Spanish Steps"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Piazza_di_Spagna_%28Rome%29_0004.jpg" alt="Spanish Steps"><div class="caption"><div class="cap-cn">西班牙台阶</div><div class="cap-en">Spanish Steps</div></div></a>
+  </div>
+</section>
+
+<!-- DAY 3 -->
+<section class="day-section">
+  <div class="head">
+    <div class="num">3</div>
+    <div class="meta">
+      <div class="date">8月19日 · Day 03 · 佛罗伦萨 Firenze</div>
+      <div class="title">文艺复兴余晖</div>
+      <div class="en">Sunset over the Arno</div>
+    </div>
+  </div>
+  <div class="spot-grid">
+    <a class="spot wide" href="#" data-cap="圣母百花大教堂 Florence Cathedral"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cattedrale_di_Santa_Maria_del_Fiore_%E2%80%93_Il_Duomo_di_Firenze.jpg?width=1200" alt="Florence Cathedral"><div class="caption"><div class="cap-cn">圣母百花大教堂</div><div class="cap-en">Cattedrale di Santa Maria del Fiore</div></div></a>
+    <a class="spot" href="#" data-cap="老桥 Ponte Vecchio"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ponte_Vecchio_Florence.jpg?width=900" alt="Ponte Vecchio"><div class="caption"><div class="cap-cn">老桥</div><div class="cap-en">Ponte Vecchio</div></div></a>
+    <a class="spot" href="#" data-cap="米开朗基罗广场 Piazzale Michelangelo · 日落"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cattedrale_di_Santa_Maria_del_Fiore_%E2%80%93_Il_Duomo_di_Firenze.jpg?width=900" alt="Florence sunset"><div class="caption"><div class="cap-cn">米开朗基罗广场</div><div class="cap-en">Piazzale Michelangelo · sunset</div></div></a>
+  </div>
+</section>
+
+<!-- DAY 4 -->
+<section class="day-section">
+  <div class="head">
+    <div class="num">4</div>
+    <div class="meta">
+      <div class="date">8月20日 · Day 04 · 米兰 + 科莫湖 Milano + Como</div>
+      <div class="title">湖光山色序章</div>
+      <div class="en">Milano flash &mdash; then Lago di Como</div>
+    </div>
+  </div>
+  <div class="spot-grid">
+    <a class="spot" href="#" data-cap="米兰大教堂 Milan Cathedral"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Milan_Cathedral_from_Piazza_del_Duomo.jpg?width=900" alt="Milan Cathedral"><div class="caption"><div class="cap-cn">米兰大教堂</div><div class="cap-en">Duomo di Milano</div></div></a>
+    <a class="spot" href="#" data-cap="艾曼纽二世拱廊 Galleria"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Galleria_Milano_%28179532365%29.jpeg" alt="Galleria"><div class="caption"><div class="cap-cn">艾曼纽二世拱廊</div><div class="cap-en">Galleria Vittorio Emanuele II</div></div></a>
+    <a class="spot wide" href="#" data-cap="科莫湖 Lake Como"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sentiero_del_Viandante_DSC_6340_%2814020554463%29.jpg?width=1200" alt="Lake Como"><div class="caption"><div class="cap-cn">科莫湖 · 情人小径</div><div class="cap-en">Greenway del Lago di Como</div></div></a>
+    <a class="spot" href="#" data-cap="梅纳焦 Menaggio"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Menaggio.jpg?width=900" alt="Menaggio"><div class="caption"><div class="cap-cn">梅纳焦</div><div class="cap-en">Menaggio</div></div></a>
+  </div>
+</section>
+
+<!-- DAY 5 -->
+<section class="day-section">
+  <div class="head">
+    <div class="num">5</div>
+    <div class="meta">
+      <div class="date">8月21日 · Day 05 · 跨国 → Zermatt</div>
+      <div class="title">雪山之巅</div>
+      <div class="en">Crossing borders to the Matterhorn</div>
+    </div>
+  </div>
+  <div class="spot-grid">
+    <a class="spot wide" href="#" data-cap="马特洪峰 Matterhorn"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Matterhorn_from_Domh%C3%BCtte_-_2.jpg?width=1200" alt="Matterhorn"><div class="caption"><div class="cap-cn">马特洪峰 · 日照金山</div><div class="cap-en">Matterhorn at golden hour</div></div></a>
+  </div>
+</section>
+
+<!-- DAY 6 -->
+<section class="day-section">
+  <div class="head">
+    <div class="num">6</div>
+    <div class="meta">
+      <div class="date">8月22日 · Day 06 · 采尔马特 Zermatt</div>
+      <div class="title">五湖徒步 · 倒影时刻</div>
+      <div class="en">Five Lakes Walk &mdash; the Stellisee mirror</div>
+    </div>
+  </div>
+  <div class="spot-grid">
+    <a class="spot wide" href="#" data-cap="施泰利湖 Stellisee"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Stellisee.jpg?width=1200" alt="Stellisee"><div class="caption"><div class="cap-cn">施泰利湖 · 马特洪峰倒影</div><div class="cap-en">Stellisee · the mirror lake</div></div></a>
+    <a class="spot" href="#" data-cap="格林吉湖 Grindjisee"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Grindjisee.jpg?width=900" alt="Grindjisee"><div class="caption"><div class="cap-cn">格林吉湖</div><div class="cap-en">Grindjisee</div></div></a>
+  </div>
+</section>
+
+<!-- DAY 7 -->
+<section class="day-section">
+  <div class="head">
+    <div class="num">7</div>
+    <div class="meta">
+      <div class="date">8月23日 · Day 07 · Lauterbrunnen → Gimmelwald</div>
+      <div class="title">瀑布深谷 · 悬崖小村</div>
+      <div class="en">Lauterbrunnen → the cliff village</div>
+    </div>
+  </div>
+  <div class="spot-grid">
+    <a class="spot wide" href="#" data-cap="劳特布鲁嫩山谷 Lauterbrunnen"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Lauterbrunnen_Valley.jpg?width=1200" alt="Lauterbrunnen"><div class="caption"><div class="cap-cn">劳特布鲁嫩山谷</div><div class="cap-en">Lauterbrunnen Valley · 72 waterfalls</div></div></a>
+    <a class="spot" href="#" data-cap="斯陶巴赫瀑布 Staubbach Falls"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Staubbach_Falls.jpg?width=900" alt="Staubbach Falls"><div class="caption"><div class="cap-cn">斯陶巴赫瀑布</div><div class="cap-en">Staubbach Falls</div></div></a>
+    <a class="spot" href="#" data-cap="Gimmelwald 悬崖小村"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/en/2/20/Gimmelwald.jpg" alt="Gimmelwald"><div class="caption"><div class="cap-cn">Gimmelwald 悬崖村</div><div class="cap-en">Gimmelwald · 130 souls</div></div></a>
+  </div>
+</section>
+
+<!-- DAY 8 -->
+<section class="day-section">
+  <div class="head">
+    <div class="num">8</div>
+    <div class="meta">
+      <div class="date">8月24日 · Day 08 · 少女峰区</div>
+      <div class="title">⭐ Boss Level · 16 km 史诗徒步</div>
+      <div class="en">First → Faulhorn → Schynige Platte</div>
+    </div>
+  </div>
+  <div class="spot-grid">
+    <a class="spot wide" href="#" data-cap="巴哈尔湖 Bachalpsee"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Bachalpsee.jpg?width=1200" alt="Bachalpsee"><div class="caption"><div class="cap-cn">巴哈尔湖 · 三雄倒影</div><div class="cap-en">Bachalpsee · Eiger, Mönch, Jungfrau</div></div></a>
+    <a class="spot" href="#" data-cap="法尔峰 Faulhorn 2,681m"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Faulhorn.jpeg" alt="Faulhorn"><div class="caption"><div class="cap-cn">法尔峰 · 2,681m</div><div class="cap-en">Faulhorn summit</div></div></a>
+    <a class="spot" href="#" data-cap="Schynige Platte 高山植物园"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Schynige_Platte.jpg?width=900" alt="Schynige Platte"><div class="caption"><div class="cap-cn">Schynige Platte</div><div class="cap-en">Schynige Platte plateau</div></div></a>
+  </div>
+</section>
+
+<!-- DAY 9 -->
+<section class="day-section">
+  <div class="head">
+    <div class="num">9</div>
+    <div class="meta">
+      <div class="date">8月25日 · Day 09 · Iseltwald · 伯恩 → 卢塞恩</div>
+      <div class="title">布里恩茨湖 + 伯恩老城</div>
+      <div class="en">A gentler day — Iseltwald, Bern, Lucerne</div>
+    </div>
+  </div>
+  <div class="spot-grid">
+    <a class="spot wide" href="#" data-cap="伊瑟尔特瓦尔德 Iseltwald · 布里恩茨湖"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Iseltwald_Brienzersee.jpg?width=1200" alt="Iseltwald"><div class="caption"><div class="cap-cn">Iseltwald · 布里恩茨湖</div><div class="cap-en">Iseltwald, Brienzersee</div></div></a>
+    <a class="spot" href="#" data-cap="伯恩老城 Bern"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/4/45/Bundeshaus_Bern_2009%2C_Flooffy.jpg" alt="Bern"><div class="caption"><div class="cap-cn">伯恩老城</div><div class="cap-en">Bern · UNESCO old town</div></div></a>
+    <a class="spot" href="#" data-cap="钟楼 Zytglogge"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/1/17/Zytglogge_01.jpg" alt="Zytglogge"><div class="caption"><div class="cap-cn">钟楼</div><div class="cap-en">Zytglogge clock tower</div></div></a>
+  </div>
+</section>
+
+<!-- DAY 10 -->
+<section class="day-section">
+  <div class="head">
+    <div class="num">10</div>
+    <div class="meta">
+      <div class="date">8月26日 · Day 10 · 卢塞恩 Lucerne</div>
+      <div class="title">老城 + 瑞吉山日落</div>
+      <div class="en">Lucerne &amp; the Queen of the Mountains</div>
+    </div>
+  </div>
+  <div class="spot-grid">
+    <a class="spot wide" href="#" data-cap="卡贝尔桥 Kapellbrücke"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Luzern_Kapellbruecke.jpg?width=1200" alt="Kapellbrücke"><div class="caption"><div class="cap-cn">卡贝尔桥</div><div class="cap-en">Kapellbrücke · 14th-century covered bridge</div></div></a>
+    <a class="spot" href="#" data-cap="垂死狮子纪念碑 Lion Monument"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Lion_Monument_in_Lucerne.jpg?width=900" alt="Lion Monument"><div class="caption"><div class="cap-cn">垂死狮子纪念碑</div><div class="cap-en">Löwendenkmal</div></div></a>
+    <a class="spot" href="#" data-cap="瑞吉山区 Mt. Rigi"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Lauerzersee.jpg" alt="Rigi area"><div class="caption"><div class="cap-cn">瑞吉山区</div><div class="cap-en">Mt. Rigi · Queen of the Mountains</div></div></a>
+  </div>
+</section>
+
+<!-- DAY 11 -->
+<section class="day-section">
+  <div class="head">
+    <div class="num">11</div>
+    <div class="meta">
+      <div class="date">8月27日 · Day 11 · 卢塞恩 → ZRH</div>
+      <div class="title">⭐ 巅峰谢幕 · 皮拉图斯山</div>
+      <div class="en">Curtain call on Mt. Pilatus</div>
+    </div>
+  </div>
+  <div class="spot-grid">
+    <a class="spot wide" href="#" data-cap="皮拉图斯山 Mt. Pilatus"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Pilatus.jpg?width=1200" alt="Mt Pilatus"><div class="caption"><div class="cap-cn">皮拉图斯山 · Pilatus Kulm 2,132m</div><div class="cap-en">Mt. Pilatus &mdash; the curtain call</div></div></a>
+    <a class="spot" href="#" data-cap="皮拉图斯齿轨火车"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pilatusbahn.jpg?width=900" alt="Pilatusbahn"><div class="caption"><div class="cap-cn">皮拉图斯齿轨火车</div><div class="cap-en">Pilatusbahn · world's steepest cogwheel</div></div></a>
+    <a class="spot" href="#" data-cap="琉森湖 Lake Lucerne"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/9/94/Vierwaldstaettersee.jpg" alt="Lake Lucerne"><div class="caption"><div class="cap-cn">琉森湖</div><div class="cap-en">Vierwaldstättersee · the boat ride</div></div></a>
+  </div>
+</section>
+
+<footer class="footer">
+  <span class="script">our journey, my love</span>
+  📷 图片来自 Wikimedia Commons<br>
+  <a href="index.html">← 返回主页 · Back to plan</a>
+</footer>
+
+<!-- Lightbox -->
+<div class="lb" id="lb">
+  <button class="lb-close" id="lbClose" aria-label="Close">×</button>
+  <img id="lbImg" alt="">
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+
+<script>
+  if('serviceWorker' in navigator){ navigator.serviceWorker.register('sw.js').catch(()=>{}); }
+
+  const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),lbCap=document.getElementById('lbCap');
+  document.querySelectorAll('.spot').forEach(s=>{
+    s.addEventListener('click',e=>{
+      e.preventDefault();
+      const img=s.querySelector('img');
+      lbImg.src=img.src.replace(/width=\d+/,'width=1600');
+      lbCap.innerHTML=s.dataset.cap || '';
+      lb.classList.add('open');
+    });
+  });
+  function closeLb(){lb.classList.remove('open');lbImg.src='';}
+  document.getElementById('lbClose').addEventListener('click',closeLb);
+  lb.addEventListener('click',e=>{if(e.target===lb)closeLb();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb();});
+
+  // Hide broken images cleanly
+  document.querySelectorAll('.spot img').forEach(img=>{
+    img.addEventListener('error',()=>{
+      const spot=img.closest('.spot');
+      if(spot) spot.style.display='none';
+    });
+  });
+</script>
+</body>
+</html>
