@@ -108,11 +108,16 @@ tr:nth-child(even) td{background:#FBF7EE}
 .callout strong{font-weight:600}
 .callout-title{font-weight:700;margin-bottom:6px;font-size:.85rem;text-transform:uppercase;letter-spacing:.6px;font-family:'DM Sans',sans-serif}
 
-ul.plain{list-style:none}
-ul.plain li{font-size:.95rem;padding:10px 0;border-bottom:.5px dashed var(--line);display:flex;gap:12px;align-items:flex-start;line-height:1.7}
+ul.plain{list-style:none;background:#fff;border:.5px solid var(--line);border-radius:14px;padding:6px 20px;box-shadow:0 1px 4px rgba(160,120,80,.05)}
+ul.plain li{font-size:.95rem;padding:14px 0;border-bottom:.5px dashed var(--line);display:flex;gap:12px;align-items:flex-start;line-height:1.75;color:var(--ink);min-width:0}
+ul.plain li>*{min-width:0}
 ul.plain li:last-child{border-bottom:none}
-ul.plain li::before{content:"❀";color:var(--rose);flex-shrink:0;margin-top:3px;font-size:11px}
-ul.plain li strong{color:var(--ink);font-weight:600}
+ul.plain li::before{content:"❀";color:var(--rose);flex-shrink:0;margin-top:4px;font-size:12px}
+ul.plain li strong{color:var(--rose-deep);font-weight:600}
+@media (max-width:600px){
+  ul.plain{padding:4px 16px;border-radius:12px}
+  ul.plain li{font-size:.92rem;padding:12px 0;gap:10px;line-height:1.7}
+}
 
 /* DAY CARDS */
 .day-card{background:#fff;border:.5px solid var(--line);border-radius:18px;margin-bottom:32px;overflow:hidden;box-shadow:0 4px 18px rgba(160,120,80,.06)}
