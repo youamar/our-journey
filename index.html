@@ -108,15 +108,25 @@ tr:nth-child(even) td{background:#FBF7EE}
 .callout strong{font-weight:600}
 .callout-title{font-weight:700;margin-bottom:6px;font-size:.85rem;text-transform:uppercase;letter-spacing:.6px;font-family:'DM Sans',sans-serif}
 
-ul.plain{list-style:none;background:#fff;border:.5px solid var(--line);border-radius:14px;padding:6px 20px;box-shadow:0 1px 4px rgba(160,120,80,.05)}
-ul.plain li{font-size:.95rem;padding:14px 0;border-bottom:.5px dashed var(--line);display:flex;gap:12px;align-items:flex-start;line-height:1.75;color:var(--ink);min-width:0}
-ul.plain li>*{min-width:0}
-ul.plain li:last-child{border-bottom:none}
-ul.plain li::before{content:"❀";color:var(--rose);flex-shrink:0;margin-top:4px;font-size:12px}
-ul.plain li strong{color:var(--rose-deep);font-weight:600}
+/* FACT CARDS (replaces ul.plain) */
+.fact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.fact-card{background:#fff;border:.5px solid var(--line);border-radius:14px;padding:18px 20px 18px 22px;box-shadow:0 2px 8px rgba(160,120,80,.05);position:relative;overflow:hidden;transition:transform .15s}
+.fact-card:active{transform:scale(.99)}
+.fact-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--rose)}
+.fact-card .fc-icon{font-size:22px;margin-bottom:6px;display:block;line-height:1}
+.fact-card .fc-title{font-family:'Noto Serif SC',serif;font-size:1.02rem;font-weight:700;color:var(--ink);margin-bottom:8px;line-height:1.35}
+.fact-card .fc-en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.78rem;color:var(--rose);letter-spacing:.04em;margin-top:-4px;margin-bottom:8px;display:block}
+.fact-card .fc-body{font-size:.9rem;color:var(--ink);line-height:1.75;font-family:'Noto Serif SC',serif}
+.fact-card .fc-body strong{color:var(--rose-deep);font-weight:700}
+.fact-card.urgent::before{background:var(--italy);width:5px}
+.fact-card.urgent{background:#fffaf5}
+.fact-card.urgent .fc-title{color:var(--italy)}
+.fact-card.success::before{background:#2D6A4F}
 @media (max-width:600px){
-  ul.plain{padding:4px 16px;border-radius:12px}
-  ul.plain li{font-size:.92rem;padding:12px 0;gap:10px;line-height:1.7}
+  .fact-grid{gap:12px}
+  .fact-card{padding:16px 16px 16px 18px;border-radius:12px}
+  .fact-card .fc-title{font-size:.98rem}
+  .fact-card .fc-body{font-size:.88rem;line-height:1.7}
 }
 
 /* DAY CARDS */
@@ -301,12 +311,12 @@ ul.plain li strong{color:var(--rose-deep);font-weight:600}
 <section class="sec" id="s2">
   <div class="section-header"><div class="section-num">02</div><div><div class="section-title">证件与入境</div><div class="section-en">Documents &amp; Entry</div></div></div>
   <div class="callout callout-fix"><div class="callout-title">⚠️ ETIAS 倒计时</div>马来西亚护照 2026 起进入申根需 ETIAS。建议<strong>出发前 2 个月（即 6 月前）</strong>在 <strong>travel-europe.europa.eu</strong> 完成申请。€7，72 小时内审批。</div>
-  <ul class="plain">
-    <li><strong>护照有效期：</strong>必须 <strong>2027 年 2 月以后</strong> 仍有效。</li>
-    <li><strong>旅游保险：</strong>必须涵盖 <strong>高海拔徒步 ≥2500m</strong> 与 <strong>紧急山地救援</strong>。AXA Smart Traveller 或 MSIG TravelEasy Premier，医疗 ≥ €50,000。</li>
-    <li><strong>电子备份：</strong>护照首页 / 保险单 / 住宿确认 / ETIAS，全部上传 Google Drive 离线。实体影印件放背包夹层。</li>
-    <li><strong>紧急号码：</strong>意大利 <strong>112</strong> · 瑞士 <strong>144</strong> · 马来西亚大使馆罗马 <strong>+39-06-8840-4258</strong>。</li>
-  </ul>
+  <div class="fact-grid">
+    <div class="fact-card"><span class="fc-icon">📘</span><div class="fc-title">护照有效期</div><div class="fc-en">Passport validity</div><div class="fc-body">必须 <strong>2027 年 2 月以后</strong> 仍有效——申根要求离境后剩余 3 个月。</div></div>
+    <div class="fact-card urgent"><span class="fc-icon">🛡️</span><div class="fc-title">旅游保险</div><div class="fc-en">Insurance · must cover</div><div class="fc-body">必须涵盖 <strong>高海拔徒步 ≥ 2,500m</strong> 与 <strong>紧急山地救援</strong>。<br>推荐 AXA Smart Traveller 或 MSIG TravelEasy Premier，医疗 ≥ €50,000。</div></div>
+    <div class="fact-card"><span class="fc-icon">☁️</span><div class="fc-title">电子备份</div><div class="fc-en">Digital backups</div><div class="fc-body">护照首页 · 保险单 · 住宿确认 · ETIAS，全部上传 Google Drive 离线可用。<br>实体影印件放背包夹层。</div></div>
+    <div class="fact-card urgent"><span class="fc-icon">🚨</span><div class="fc-title">紧急号码</div><div class="fc-en">Emergency contacts</div><div class="fc-body">意大利急救 <strong>112</strong><br>瑞士急救 <strong>144</strong><br>马来西亚大使馆（罗马）<strong>+39-06-8840-4258</strong></div></div>
+  </div>
 </section>
 
 <section class="sec" id="s3">
@@ -581,27 +591,27 @@ ul.plain li strong{color:var(--rose-deep);font-weight:600}
 
 <section class="sec" id="s6">
   <div class="section-header"><div class="section-num">06</div><div><div class="section-title">餐饮策略</div><div class="section-en">Eating Smart</div></div></div>
-  <ul class="plain">
-    <li><strong>意大利景点周边餐厅避开：</strong>往小巷走 2 条街价格减半。<em>Pizza al Taglio</em> 按重量 €3–5。Forno 早餐 €2。</li>
-    <li><strong>意大利超市：</strong>Lidl / Carrefour / Conad。Mozzarella + 面包 + 番茄 ~€4 一餐。</li>
-    <li><strong>瑞士铁律 — 100% 超市：</strong><strong>Coop / Migros</strong>。外食 CHF 20+，超市 CHF 8–12。</li>
-    <li><strong>瑞士神单：</strong>烤鸡 CHF 10–12 · 沙拉吧 CHF 3–5 · Swiss Muesli · Rivella 苏打 · Gruyère 奶酪。</li>
-    <li><strong>泡面神器：</strong>Maggi + 折叠电热水壶（欧标双圆孔）。Gimmelwald 两天靠它。</li>
-    <li><strong>Day 6 关键采购：</strong>Zermatt Migros 一次性买齐 Day 7、8 的所有食物。</li>
-    <li><strong>犒劳时刻：</strong>Day 10 卢塞恩餐厅 Rösti 或 Fondue。</li>
-  </ul>
+  <div class="fact-grid">
+    <div class="fact-card"><span class="fc-icon">🍕</span><div class="fc-title">意大利 · 街边 Pizza</div><div class="fc-en">Italy street pizza</div><div class="fc-body">避开景点周边餐厅，<strong>往小巷走 2 条街价格减半</strong>。<br><em>Pizza al Taglio</em> 按重量 €3–5 吃饱。Forno 早餐 €2。</div></div>
+    <div class="fact-card"><span class="fc-icon">🛒</span><div class="fc-title">意大利超市</div><div class="fc-en">Italian supermarkets</div><div class="fc-body"><strong>Lidl / Carrefour / Conad</strong>。<br>Mozzarella + 面包 + 番茄 ~€4 解决一餐。</div></div>
+    <div class="fact-card urgent"><span class="fc-icon">🇨🇭</span><div class="fc-title">瑞士铁律 · 100% 超市策略</div><div class="fc-en">Switzerland — supermarket only</div><div class="fc-body">认准 <strong>Coop</strong> 与 <strong>Migros</strong>。<br>外食一顿最低 CHF 20+，超市一顿 CHF 8–12。</div></div>
+    <div class="fact-card"><span class="fc-icon">⭐</span><div class="fc-title">瑞士必买神单</div><div class="fc-en">Swiss supermarket hits</div><div class="fc-body">烤鸡 (Poulet rôti) <strong>CHF 10–12</strong><br>沙拉吧 CHF 3–5<br>Swiss Muesli + 牛奶<br>Rivella 苏打<br>Gruyère 奶酪</div></div>
+    <div class="fact-card"><span class="fc-icon">🍜</span><div class="fc-title">泡面神器</div><div class="fc-en">The Maggi survival kit</div><div class="fc-body"><strong>Maggi 鸡汤面 + 折叠电热水壶</strong>（欧标双圆孔）。<br>Gimmelwald 两天全靠它。</div></div>
+    <div class="fact-card urgent"><span class="fc-icon">🛍️</span><div class="fc-title">Day 6 关键采购</div><div class="fc-en">Zermatt grocery run</div><div class="fc-body">在 <strong>Zermatt Migros</strong> 一次性买齐 Day 7、8 在 Gimmelwald 的所有食物。<br>Gimmelwald 山上无超市。</div></div>
+    <div class="fact-card"><span class="fc-icon">🥂</span><div class="fc-title">犒劳时刻</div><div class="fc-en">A treat to end the trip</div><div class="fc-body"><strong>Day 10 卢塞恩</strong>——Rösti 或 Fondue 餐厅，作为旅程完美句号。</div></div>
+  </div>
 </section>
 
 <section class="sec" id="s7">
   <div class="section-header"><div class="section-num">07</div><div><div class="section-title">市内交通</div><div class="section-en">Local Transport</div></div></div>
-  <ul class="plain">
-    <li><strong>意大利（罗马）：</strong>步行为主 + 单次地铁 €2。避免出租车。</li>
-    <li><strong>意大利城际：</strong>Trenitalia / Italo 提前购特价 €15–25。</li>
-    <li><strong>瑞士 Half Fare Card（灵魂之卡）：</strong>CHF 120（~RM 600），全瑞士火车/巴士/船/缆车 50% 折扣，11 天高度回本。<strong>出发前 sbb.ch 购买</strong>。</li>
-    <li><strong>必备 App：</strong><strong>SBB Mobile</strong> · <strong>Trenitalia / Italo</strong> · <strong>Google Maps</strong>（离线下载）。</li>
-    <li><strong>现金：</strong><strong>CHF 100–150</strong> 备用，意大利 ~€50。</li>
-    <li><strong>eSIM：</strong>Airalo Europe 15GB ~RM 80。</li>
-  </ul>
+  <div class="fact-grid">
+    <div class="fact-card"><span class="fc-icon">🚶</span><div class="fc-title">罗马 · 用脚走</div><div class="fc-en">Rome on foot</div><div class="fc-body">步行为主（25km 全靠脚）+ 单次地铁 €2/次。<br>避免出租车——贵且容易绕路。</div></div>
+    <div class="fact-card"><span class="fc-icon">🚆</span><div class="fc-title">意大利城际高铁</div><div class="fc-en">Italy intercity</div><div class="fc-body"><strong>Trenitalia / Italo</strong> 提前购特价 <strong>€15–25</strong>。<br>科莫段用 Trenord 区域车 ~€5。</div></div>
+    <div class="fact-card urgent"><span class="fc-icon">💳</span><div class="fc-title">瑞士 Half Fare Card · 灵魂之卡</div><div class="fc-en">The card that pays for itself</div><div class="fc-body"><strong>CHF 120</strong>（~RM 600），全瑞士火车 / 巴士 / 船 / 缆车 <strong>50% 折扣</strong>。<br>11 天行程高度回本。<strong>出发前在 sbb.ch 购买</strong>，到瑞士首站激活。</div></div>
+    <div class="fact-card"><span class="fc-icon">📱</span><div class="fc-title">必备 App</div><div class="fc-en">Apps to install</div><div class="fc-body"><strong>SBB Mobile</strong>（瑞士铁路）<br><strong>Trenitalia / Italo</strong>（意大利高铁）<br><strong>Google Maps</strong>（离线下载意 + 瑞）</div></div>
+    <div class="fact-card"><span class="fc-icon">💵</span><div class="fc-title">现金</div><div class="fc-en">Cash on hand</div><div class="fc-body"><strong>CHF 100–150</strong> 瑞士备用<br><strong>~€50</strong> 意大利<br>瑞士山地小屋、缆车站、Gimmelwald 偶尔不收卡。</div></div>
+    <div class="fact-card"><span class="fc-icon">📶</span><div class="fc-title">eSIM</div><div class="fc-en">Data plan</div><div class="fc-body"><strong>Airalo Europe 15GB</strong> ~RM 80，覆盖意瑞。<br>山区信号弱，提前下离线地图。</div></div>
+  </div>
 </section>
 
 <section class="sec" id="s8">
@@ -632,15 +642,15 @@ ul.plain li strong{color:var(--rose-deep);font-weight:600}
 
 <section class="sec" id="s9">
   <div class="section-header"><div class="section-num">09</div><div><div class="section-title">应急预案</div><div class="section-en">Plan B Playbook</div></div></div>
-  <ul class="plain">
-    <li><strong>Day 8 雨天：</strong>前晚 20:00 查 MeteoSwiss，>50% 降雨改 <strong>伯恩老城</strong>（6km 拱廊雨天友好）或 <strong>Lindt 巧克力博物馆</strong>（免费）。</li>
-    <li><strong>意大利高铁罢工：</strong>FlixBus / Blablacar，罗马→佛罗伦萨 ~€20。</li>
-    <li><strong>Zermatt 区恶劣天气：</strong>Day 6 大雾改村内徒步或 Matterhorn Museum (~CHF 10)。</li>
-    <li><strong>Gimmelwald 满房：</strong>备选 <strong>Mürren Youth Hostel</strong>（步行 45m）。</li>
-    <li><strong>伤病：</strong>布洛芬 + 创可贴 + Voltaren 喷雾 + 丹木斯 (高反预防)。</li>
-    <li><strong>信用卡：</strong>2 张不同银行 Visa/Master。Wise / Revolut 加载 EUR + CHF。</li>
-    <li><strong>Day 11 赶机：</strong>Pilatus 延误，14:30 火车 → ZRH 仍有 5h 缓冲。</li>
-  </ul>
+  <div class="fact-grid">
+    <div class="fact-card urgent"><span class="fc-icon">🌧️</span><div class="fc-title">Day 8 雨天</div><div class="fc-en">If it rains on the big hike</div><div class="fc-body">前一晚 <strong>20:00 查 MeteoSwiss</strong>，降雨 >50% 取消 First→Faulhorn。<br>改 <strong>伯恩老城</strong>（6km 拱廊雨天友好）或 <strong>Lindt 巧克力博物馆</strong>（免费）。</div></div>
+    <div class="fact-card"><span class="fc-icon">⚡</span><div class="fc-title">意大利高铁罢工</div><div class="fc-en">Italian rail strike</div><div class="fc-body">出发前 1 周关注 Trenitalia 与新闻。<br>罢工时立即 <strong>FlixBus / Blablacar</strong>——罗马→佛罗伦萨 ~€20，3.5h。</div></div>
+    <div class="fact-card"><span class="fc-icon">🌫️</span><div class="fc-title">Zermatt 区恶劣天气</div><div class="fc-en">Bad weather at the Matterhorn</div><div class="fc-body">Day 6 五湖大雾，改村内平坦徒步或 <strong>Matterhorn Museum</strong> (~CHF 10)。</div></div>
+    <div class="fact-card"><span class="fc-icon">🏠</span><div class="fc-title">Gimmelwald 满房</div><div class="fc-en">If the cliff hostel is full</div><div class="fc-body">备选 <strong>Mürren Youth Hostel</strong>——同悬崖村，步行 45 分钟，风景同级。</div></div>
+    <div class="fact-card"><span class="fc-icon">💊</span><div class="fc-title">伤病处理</div><div class="fc-en">Health kit essentials</div><div class="fc-body">布洛芬（止痛）<br>创可贴（徒步起泡）<br>Voltaren 喷雾（肌肉酸痛）<br>丹木斯（高反预防）</div></div>
+    <div class="fact-card"><span class="fc-icon">💳</span><div class="fc-title">信用卡问题</div><div class="fc-en">Card backup</div><div class="fc-body">至少 <strong>2 张不同银行</strong> Visa / Master。<br>Wise / Revolut 加载 EUR + CHF。<br>瑞士山区部分只收 Maestro 或现金。</div></div>
+    <div class="fact-card urgent"><span class="fc-icon">✈️</span><div class="fc-title">Day 11 赶机预案</div><div class="fc-en">Catching the flight</div><div class="fc-body">Pilatus 延误：放弃下午部分，<strong>14:30 火车 → ZRH</strong> 仍有 5h 缓冲。<br>最坏：Pilatus 全程取消，改卢塞恩市区。</div></div>
+  </div>
 </section>
 
 <section class="sec" id="s10">
@@ -695,13 +705,13 @@ ul.plain li strong{color:var(--rose-deep);font-weight:600}
 
 <section class="sec" id="s11">
   <div class="section-header"><div class="section-num">11</div><div><div class="section-title">节奏控制</div><div class="section-en">Rhythm &amp; Aftercare</div></div></div>
-  <ul class="plain">
-    <li><strong>意大利段（D1–4）：</strong>8 月罗马极热，<strong>06:00 起床</strong>，12:00–14:00 火车上、咖啡馆休息。瑞士段才是重头戏。</li>
-    <li><strong>瑞士段（D5–11）：</strong><strong>每晚 22:00 前休息</strong>。Day 7 缓冲，Day 9 恢复，节奏已设计。</li>
-    <li><strong>出发前 1 个月训练：</strong>爬 Bukit Tabur / Broga Hill 各 2–3 次，或每日 5km 跑步。</li>
-    <li><strong>防水泡：</strong>徒步鞋出发前磨合 2 周。羊毛袜 ×2 + 备用袜 ×2。</li>
-    <li><strong>退税：</strong>ZRH 机场 Global Blue / Planet Tax-Free（须海关盖章）。</li>
-  </ul>
+  <div class="fact-grid">
+    <div class="fact-card"><span class="fc-icon">☀️</span><div class="fc-title">意大利段 · D1–4</div><div class="fc-en">Italy — survive the heat</div><div class="fc-body">8 月罗马极热，<strong>06:00 起床出发</strong>，12:00–14:00 在火车上 / 咖啡馆休息补觉。<br>瑞士段才是重头戏，这段不要透支体力。</div></div>
+    <div class="fact-card"><span class="fc-icon">🌙</span><div class="fc-title">瑞士段 · D5–11</div><div class="fc-en">Switzerland — recover early</div><div class="fc-body"><strong>每晚 22:00 前休息</strong>。<br>Day 7 缓冲，Day 9 恢复，节奏已刻意设计。</div></div>
+    <div class="fact-card urgent"><span class="fc-icon">🏃</span><div class="fc-title">出发前 1 个月训练</div><div class="fc-en">Pre-trip training</div><div class="fc-body">Day 8 是 16km、6–7h 的硬核徒步——<br>爬 <strong>Bukit Tabur / Broga Hill</strong> 各 2–3 次，或每日 5km 跑步。</div></div>
+    <div class="fact-card"><span class="fc-icon">👟</span><div class="fc-title">防水泡</div><div class="fc-en">No blisters</div><div class="fc-body">徒步鞋出发前 <strong>磨合至少 2 周</strong>。<br>羊毛袜 ×2 + 备用袜 ×2，减少摩擦。</div></div>
+    <div class="fact-card success"><span class="fc-icon">💰</span><div class="fc-title">回程退税</div><div class="fc-en">Tax refund &amp; aftercare</div><div class="fc-body">ZRH 机场 <strong>Global Blue / Planet Tax-Free</strong>（必须海关盖章）。<br>回马后核对欧洲非接触账单。</div></div>
+  </div>
 </section>
 
 </div><!-- /container -->
