@@ -1,1663 +1,835 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Our Journey · Italy &amp; Switzerland · Aug 2026</title>
-<meta name="description" content="11 days, 2 countries, 8 cities — a love letter in the form of a trip. Italy & Switzerland, August 17–27, 2026." />
-
-<!-- Heart favicon (browser tab icon) -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9D%A4%EF%B8%8F%3C/text%3E%3C/svg%3E" />
-
-<!-- PWA: installable + offline -->
-<link rel="manifest" href="manifest.json" />
-<meta name="theme-color" content="#c4546a" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-<meta name="apple-mobile-web-app-title" content="Our Journey" />
-<link rel="apple-touch-icon" href="icon-192.png" />
-
-<!-- Social share preview (WhatsApp / Instagram / Messenger) -->
-<meta property="og:title" content="Our Journey · Italy & Switzerland 💕" />
-<meta property="og:description" content="11 days, 2 countries, a thousand small moments — a trip planned just for you." />
-<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/1280px-Colosseo_2020.jpg" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary_large_image" />
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Dancing+Script:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1a1a1a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Our Journey">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="manifest" href="manifest.json">
+<title>意瑞双峰 · Our Journey · 8月 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Dancing+Script:wght@500;700&family=Noto+Serif+SC:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{font-family:'Inter',sans-serif;background:#faf5ef;color:#2a1f24;overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.65}
-  img{display:block;max-width:100%;background:#e8dcd0}
-  .script{font-family:'Dancing Script',cursive;color:#c4546a}
+:root{
+  --cream:#FAF6EE;
+  --cream-2:#F4ECDC;
+  --ink:#2A1F24;
+  --muted:#7a6a6c;
+  --line:#E5DBC9;
+  --rose:#B85C7A;
+  --rose-deep:#7d2a4a;
+  --gold:#B8872A;
+  --italy:#C0392B;
+  --swiss:#D4001F;
+  --accent:#2E5F8A;
+  --warn:#7D4E00;
+  --warn-bg:#FFF6E0;
+  --tip-bg:#EAF4FF;
+  --tip:#1A4A72;
+  --fix-bg:#FFEEEE;
+  --fix:#8B1A1A;
+  --ok-bg:#EBF6EE;
+  --ok:#1B4A32;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{background:var(--cream);color:var(--ink);font-family:'Noto Serif SC','Cormorant Garamond',serif;font-size:16px;line-height:1.8;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
 
-  /* ============ HERO ============ */
-  .hero-wrap{height:230vh;position:relative}
-  .hero{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center}
-  .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.1);will-change:transform,opacity}
-  .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(40,15,25,.3),rgba(40,15,25,.5) 60%,rgba(20,10,15,.75))}
-  .hero-content{position:relative;z-index:2;text-align:center;color:#fff;padding:0 20px;will-change:transform,opacity}
-  .hero .script{font-size:clamp(1.4rem,3vw,2.2rem);color:#ffd6dc;text-shadow:0 2px 20px rgba(0,0,0,.6);letter-spacing:1px}
-  .hero h1{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(3.5rem,11vw,9rem);line-height:.95;margin:.2em 0;text-shadow:0 4px 40px rgba(0,0,0,.5)}
-  .hero .sub{font-size:.95rem;letter-spacing:10px;text-transform:uppercase;font-weight:300;opacity:.95}
-  .hero .dates{margin-top:2.2rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.4rem;opacity:.95}
-  .scroll-cue{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);color:#fff;font-size:.7rem;letter-spacing:4px;text-transform:uppercase;opacity:.7;animation:fadeBounce 2.5s infinite}
-  @keyframes fadeBounce{0%,100%{transform:translate(-50%,0);opacity:.5}50%{transform:translate(-50%,8px);opacity:1}}
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:60px 24px;color:#fff;overflow:hidden;background:#1a1a1a}
+.hero::before{content:"";position:absolute;inset:0;background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Matterhorn_from_Domh%C3%BCtte_-_2.jpg?width=1600');background-size:cover;background-position:center;filter:brightness(.45) saturate(1.05);z-index:0}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,20,.55) 0%,rgba(20,15,20,.25) 50%,rgba(20,15,20,.75) 100%);z-index:1}
+.hero-inner{position:relative;z-index:2;max-width:780px}
+.hero .flags{font-size:42px;letter-spacing:14px;margin-bottom:18px}
+.hero .script{font-family:'Dancing Script',cursive;font-size:clamp(1.6rem,4vw,2.4rem);color:#f9d9c8;margin-bottom:8px;font-weight:500}
+.hero h1{font-family:'Noto Serif SC',serif;font-weight:700;font-size:clamp(2.4rem,7vw,4.4rem);letter-spacing:.04em;line-height:1.1;margin-bottom:14px;text-shadow:0 4px 30px rgba(0,0,0,.4)}
+.hero .en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1rem,2.4vw,1.4rem);color:#e8dccd;letter-spacing:.06em;margin-bottom:30px}
+.hero .countdown{display:inline-block;padding:10px 20px;border:1px solid rgba(255,255,255,.3);border-radius:40px;font-family:'DM Sans',sans-serif;font-size:.85rem;letter-spacing:3px;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.25);backdrop-filter:blur(6px);margin-bottom:36px}
+.hero .countdown b{font-weight:600;color:#f9d9c8;font-size:1.15rem}
+.hero-stats{display:flex;justify-content:center;flex-wrap:wrap;gap:0;margin-top:18px;border-top:.5px solid rgba(255,255,255,.18);padding-top:24px;max-width:680px;margin-left:auto;margin-right:auto}
+.stat{padding:0 22px;border-right:.5px solid rgba(255,255,255,.18);text-align:center;min-width:90px}
+.stat:last-child{border-right:none}
+.stat-val{font-size:1.4rem;font-weight:500;color:#fff;font-family:'DM Sans',sans-serif}
+.stat-label{font-size:10px;color:#c9b8a8;text-transform:uppercase;letter-spacing:1.5px;margin-top:4px}
+.hero .scroll-hint{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);color:#c9b8a8;font-size:11px;letter-spacing:3px;text-transform:uppercase;z-index:2;opacity:.7}
 
-  .reveal{opacity:0;transform:translateY(50px);transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1s cubic-bezier(.16,1,.3,1)}
-  .reveal.in{opacity:1;transform:none}
+/* NAV */
+.nav{background:rgba(250,246,238,.96);backdrop-filter:blur(10px);border-bottom:.5px solid var(--line);padding:0 16px;display:flex;gap:0;overflow-x:auto;position:sticky;top:0;z-index:90;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{color:var(--muted);text-decoration:none;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:14px 14px;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s;display:flex;flex-direction:column;align-items:center;gap:2px}
+.nav a:hover,.nav a.active{color:var(--ink);border-bottom-color:var(--rose)}
+.nav a .cn{font-family:'Noto Serif SC',serif;font-size:13px;font-weight:500;letter-spacing:1px}
 
-  /* ============ LETTER ============ */
-  .letter{padding:130px 30px;text-align:center;background:#fdf9f3}
-  .letter h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(2.8rem,6vw,4.8rem);color:#c4546a;margin-bottom:1.2rem}
-  .letter p{max-width:680px;margin:0 auto;font-size:clamp(1.1rem,1.5vw,1.3rem);color:#5a4a4c;font-weight:300;line-height:1.9}
+/* LETTER */
+.letter{padding:90px 24px;text-align:center;background:linear-gradient(180deg,var(--cream),var(--cream-2))}
+.letter .script{font-family:'Dancing Script',cursive;font-size:clamp(2rem,5vw,3rem);color:var(--rose-deep);font-weight:700}
+.letter h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:clamp(1.5rem,3.5vw,2.2rem);color:var(--ink);max-width:680px;margin:14px auto 18px;line-height:1.4}
+.letter p{max-width:600px;margin:0 auto;color:var(--ink);font-size:1.05rem;line-height:1.95;font-family:'Noto Serif SC',serif}
+.letter .sig{margin-top:24px;font-family:'Dancing Script',cursive;font-size:1.6rem;color:var(--rose-deep)}
 
-  /* ============ AT A GLANCE ============ */
-  .glance{padding:110px 6vw 130px;text-align:center;background:linear-gradient(180deg,#fdf9f3,#f5ebde)}
-  .glance .label{font-size:.75rem;letter-spacing:6px;text-transform:uppercase;color:#c4546a;font-weight:700;margin-bottom:.8rem}
-  .glance h2{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,7vw,5.5rem);font-weight:700;color:#2a1f24;margin-bottom:.8rem;line-height:1}
-  .glance .sub{color:#7a6a6c;margin-bottom:3.5rem;font-size:1.05rem}
-  .glance-grid{display:grid;grid-template-columns:repeat(9,1fr);gap:8px;max-width:1100px;margin:0 auto;position:relative}
-  .glance-line{position:absolute;left:5%;right:5%;top:36px;height:2px;background:linear-gradient(90deg,#c4546a 0%,#c4546a 33%,#5d8eb9 50%,#5d8eb9 100%);opacity:.3;z-index:0}
-  .stop{position:relative;display:flex;flex-direction:column;align-items:center;gap:8px;z-index:1}
-  .stop .dot{width:22px;height:22px;border-radius:50%;background:#c4546a;border:5px solid #fdf9f3;box-shadow:0 0 0 1px #c4546a;transition:transform .3s}
-  .stop.swiss .dot{background:#5d8eb9;box-shadow:0 0 0 1px #5d8eb9}
-  .stop:hover .dot{transform:scale(1.3)}
-  .stop .d{font-size:.62rem;letter-spacing:2px;color:#9a8a8c;font-weight:700;margin-top:8px}
-  .stop .n{font-size:.95rem;color:#2a1f24;font-weight:700}
-  @media(max-width:760px){.glance-grid{grid-template-columns:repeat(3,1fr);gap:24px}.glance-line{display:none}}
+/* CONTAINER + sections */
+.container{max-width:880px;margin:0 auto;padding:0 24px 60px}
+section.sec{padding:60px 0;border-bottom:.5px solid var(--line);scroll-margin-top:80px}
+section.sec:last-child{border-bottom:none}
+.section-header{display:flex;align-items:flex-start;gap:18px;margin-bottom:32px}
+.section-num{font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:400;color:var(--rose);line-height:.9;flex-shrink:0;font-style:italic}
+.section-title{font-family:'Noto Serif SC',serif;font-size:1.7rem;font-weight:700;line-height:1.2;color:var(--ink)}
+.section-en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--rose);letter-spacing:.04em;margin-top:4px}
 
-  /* ============ PHASE INTRO ============ */
-  .phase-intro{padding:160px 30px 110px;text-align:center;background:#faf5ef}
-  .phase-intro .flag{font-size:4rem;margin-bottom:.5rem}
-  .phase-intro .label{font-size:.78rem;letter-spacing:7px;text-transform:uppercase;color:#c4546a;margin-bottom:.6rem;font-weight:700}
-  .phase-intro.swiss .label{color:#5d8eb9}
-  .phase-intro h2{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(4rem,13vw,9rem);line-height:.95;color:#2a1f24}
-  .phase-intro .tag{margin-top:1.6rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.4rem;color:#7a6a6c;max-width:560px;margin-left:auto;margin-right:auto}
+/* COMPONENTS */
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:18px}
+.info-card{background:#fff;border:.5px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:0 1px 4px rgba(160,120,80,.04)}
+.info-card-label{font-family:'DM Sans',sans-serif;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:6px}
+.info-card-val{font-size:.98rem;font-weight:500;color:var(--ink);line-height:1.5}
 
-  /* ============ DAY HERO BANNER ============ */
-  .day-hero{position:relative;height:85vh;min-height:560px;overflow:hidden;display:flex;align-items:flex-end}
-  .day-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.05);transition:transform 10s ease-out}
-  .day-hero:hover img{transform:scale(1.13)}
-  .day-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.05) 0%,rgba(0,0,0,.2) 50%,rgba(0,0,0,.78) 100%)}
-  .day-hero-text{position:relative;z-index:2;color:#fff;padding:70px 6vw;width:100%}
-  .day-hero-text .num{display:inline-block;font-size:.78rem;letter-spacing:6px;text-transform:uppercase;color:#ffd6dc;font-weight:700;padding:7px 18px;border:1.5px solid rgba(255,214,220,.7);border-radius:100px;margin-bottom:1.2rem;backdrop-filter:blur(12px);background:rgba(0,0,0,.2)}
-  .day-hero-text h3{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(4rem,12vw,10rem);line-height:.92;text-shadow:0 6px 40px rgba(0,0,0,.5);letter-spacing:-2px}
-  .day-hero-text .where{margin-top:.7rem;font-size:1rem;letter-spacing:5px;text-transform:uppercase;font-weight:400;opacity:.95}
-  .day-hero-text .date{margin-top:.5rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.4rem;color:#ffd6dc}
-  .day-hero-text .maplink{display:inline-flex;align-items:center;gap:8px;margin-top:1.4rem;padding:10px 18px;background:rgba(255,255,255,.95);color:#2a1f24;text-decoration:none;border-radius:100px;font-size:.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;box-shadow:0 8px 22px rgba(0,0,0,.25);backdrop-filter:blur(10px);transition:all .25s}
-  .day-hero-text .maplink:hover{background:#fff;transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.35)}
-  .day-hero-text .maplink svg{width:15px;height:15px;flex-shrink:0}
+table{width:100%;border-collapse:collapse;font-size:14px;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 4px rgba(160,120,80,.04)}
+th{background:var(--ink);color:#fff;padding:11px 14px;text-align:left;font-weight:500;font-size:12px;letter-spacing:.5px;font-family:'DM Sans',sans-serif}
+td{padding:12px 14px;border-bottom:.5px solid var(--line);vertical-align:top;font-family:'Noto Serif SC',serif;line-height:1.65}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:#FBF7EE}
 
-  /* ============ DAY BODY ============ */
-  .day-body{padding:100px 6vw 110px;background:#fdf9f3}
-  .day-body-inner{max-width:1180px;margin:0 auto}
-  .feeling{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.6rem,3vw,2.4rem);color:#2a1f24;text-align:center;max-width:780px;margin:0 auto 4rem;line-height:1.4}
+.badge{display:inline-block;padding:3px 11px;border-radius:20px;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:.3px}
+.badge-italy{background:#FDECEA;color:var(--italy)}
+.badge-swiss{background:#FDE8EA;color:#A3001A}
+.badge-transit{background:#EEF2FF;color:#3B42A3}
+.badge-warn{background:var(--warn-bg);color:var(--warn)}
+.badge-ok{background:#E8F5E9;color:#1B5E20}
 
-  /* PHOTO COLLAGE — 5 images per day */
-  .gallery{display:grid;gap:14px;margin-bottom:4rem}
-  .gallery figure{position:relative;overflow:hidden;border-radius:18px;box-shadow:0 14px 36px rgba(80,40,50,.14);background:#e8dcd0}
-  .gallery figure img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
-  .gallery figure:hover img{transform:scale(1.07)}
-  .gallery figure .cap{position:absolute;bottom:14px;left:14px;right:14px;max-width:max-content;background:rgba(255,255,255,.95);padding:6px 13px;border-radius:8px;font-size:.7rem;letter-spacing:2.5px;text-transform:uppercase;color:#2a1f24;font-weight:700;backdrop-filter:blur(8px);line-height:1.35;word-break:break-word}
-  /* 5-image grid: big image left (spans both rows), 2 small top-right, 2 small bottom-right */
-  .gallery.g5{grid-template-columns:2fr 1fr 1fr;grid-template-rows:1fr 1fr;height:580px}
-  .gallery.g5 figure:nth-child(1){grid-row:1/3;grid-column:1/2}
-  .gallery.g5 figure:nth-child(2){grid-row:1/2;grid-column:2/3}
-  .gallery.g5 figure:nth-child(3){grid-row:1/2;grid-column:3/4}
-  .gallery.g5 figure:nth-child(4){grid-row:2/3;grid-column:2/3}
-  .gallery.g5 figure:nth-child(5){grid-row:2/3;grid-column:3/4}
-  .gallery.g3{grid-template-columns:1fr 1fr 1fr;height:340px}
-  @media(max-width:900px){.gallery.g5{grid-template-columns:1fr 1fr;grid-template-rows:auto;height:auto}.gallery.g5 figure{height:240px}.gallery.g5 figure:nth-child(1){grid-row:auto;grid-column:1/3;height:300px}.gallery.g5 figure:nth-child(3),.gallery.g5 figure:nth-child(4),.gallery.g5 figure:nth-child(5){grid-column:auto;grid-row:auto}.gallery.g3{grid-template-columns:1fr 1fr;height:auto}.gallery.g3 figure{height:240px}.gallery.g3 figure:nth-child(3){grid-column:1/3;height:280px}}
-  @media(max-width:560px){.gallery.g3{grid-template-columns:1fr}.gallery.g3 figure,.gallery.g3 figure:nth-child(3){grid-column:auto;height:260px}}
+.callout{border-radius:12px;padding:14px 18px;margin:14px 0;font-size:.95rem;line-height:1.7;font-family:'Noto Serif SC',serif}
+.callout-warn{background:var(--warn-bg);border-left:3px solid #F0A500;color:var(--warn)}
+.callout-tip{background:var(--tip-bg);border-left:3px solid var(--accent);color:var(--tip)}
+.callout-fix{background:var(--fix-bg);border-left:3px solid var(--italy);color:var(--fix)}
+.callout-ok{background:var(--ok-bg);border-left:3px solid #2D6A4F;color:var(--ok)}
+.callout strong{font-weight:600}
+.callout-title{font-weight:700;margin-bottom:6px;font-size:.85rem;text-transform:uppercase;letter-spacing:.6px;font-family:'DM Sans',sans-serif}
 
-  /* ============ VERTICAL HOUR-BY-HOUR TIMELINE ============ */
-  .schedule{margin-bottom:4rem}
-  .sch-head{text-align:center;margin-bottom:2.5rem}
-  .sch-head .lbl{font-size:.75rem;letter-spacing:5px;text-transform:uppercase;color:#c4546a;font-weight:700;margin-bottom:.6rem}
-  .sch-head .title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;color:#2a1f24}
+ul.plain{list-style:none}
+ul.plain li{font-size:.95rem;padding:10px 0;border-bottom:.5px dashed var(--line);display:flex;gap:12px;align-items:flex-start;line-height:1.7}
+ul.plain li:last-child{border-bottom:none}
+ul.plain li::before{content:"❀";color:var(--rose);flex-shrink:0;margin-top:3px;font-size:11px}
+ul.plain li strong{color:var(--ink);font-weight:600}
 
-  .rail{position:relative;max-width:780px;margin:0 auto;padding-left:60px}
-  .rail::before{content:'';position:absolute;left:18px;top:18px;bottom:18px;width:2px;background:linear-gradient(180deg,#c4546a 0%,#c4546a 100%);opacity:.3}
-  .rail.swiss::before{background:linear-gradient(180deg,#5d8eb9 0%,#5d8eb9 100%);opacity:.4}
-  .rail-item{position:relative;padding:18px 0 28px}
-  .rail-item::before{content:'';position:absolute;left:-50px;top:24px;width:18px;height:18px;border-radius:50%;background:#c4546a;border:4px solid #fdf9f3;box-shadow:0 0 0 1.5px #c4546a;z-index:2}
-  .rail.swiss .rail-item::before{background:#5d8eb9;box-shadow:0 0 0 1.5px #5d8eb9}
-  .rail-item .time{display:inline-block;font-size:.85rem;letter-spacing:3px;text-transform:uppercase;color:#c4546a;font-weight:700;margin-bottom:6px}
-  .rail.swiss .rail-item .time{color:#5d8eb9}
-  .rail-item .what{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:700;color:#2a1f24;line-height:1.2;margin-bottom:6px}
-  .rail-item .det{font-size:.95rem;color:#7a6a6c;font-weight:400}
+/* DAY CARDS */
+.day-card{background:#fff;border:.5px solid var(--line);border-radius:18px;margin-bottom:32px;overflow:hidden;box-shadow:0 4px 18px rgba(160,120,80,.06)}
+.day-hero{position:relative;height:240px;background:#1a1a1a;background-size:cover;background-position:center;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:24px 22px}
+.day-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,20,.15) 0%,rgba(20,15,20,.4) 50%,rgba(20,15,20,.85) 100%)}
+.day-hero>*{position:relative;z-index:1}
+.day-hero-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:80px;font-weight:400;line-height:.9;color:rgba(255,255,255,.95);text-shadow:0 4px 30px rgba(0,0,0,.5);position:absolute;top:14px;right:22px;z-index:1}
+.day-hero-date{font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:6px}
+.day-hero-title{font-family:'Noto Serif SC',serif;font-size:1.4rem;font-weight:600;line-height:1.3;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+.day-hero-en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.95rem;color:rgba(255,255,255,.85);margin-top:4px}
+.day-badges{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+.day-body{padding:20px 22px}
+.day-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:18px;padding:12px;background:linear-gradient(180deg,#FBF5E8,#F4ECDC);border-radius:10px;border:.5px solid var(--line)}
+.strip-cell{text-align:center}
+.strip-label{font-family:'DM Sans',sans-serif;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
+.strip-val{font-size:.78rem;color:var(--ink);font-weight:500;line-height:1.3}
+.day-block{margin-bottom:14px}
+.day-block:last-child{margin-bottom:0}
+.day-block-label{font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;color:var(--rose);text-transform:uppercase;letter-spacing:1.4px;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.day-block-label::after{content:"";flex:1;height:.5px;background:var(--line)}
+.day-block-content{font-size:.95rem;line-height:1.75;color:var(--ink)}
+.route-line{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:.88rem;font-weight:500;color:var(--ink);margin:8px 0;padding:10px 12px;background:#FBF7EE;border-radius:8px}
+.route-arrow{color:var(--rose);font-size:11px}
+.maps-pill{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:var(--rose);color:#fff;border-radius:24px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:.5px;text-decoration:none;margin-top:10px;box-shadow:0 2px 8px rgba(184,92,122,.3)}
+.maps-pill:hover{background:var(--rose-deep)}
 
-  /* ADVISOR */
-  .advisor{display:flex;gap:18px;background:#f5f0fa;border:1px solid #d6d0e0;border-radius:18px;padding:26px 28px;margin-bottom:1.4rem}
-  .advisor .icon{flex-shrink:0;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#7d6fa0,#5d8eb9);display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:#fff}
-  .advisor .body{flex:1}
-  .advisor .body .who{font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:#7d6fa0;font-weight:700;margin-bottom:8px}
-  .advisor .body p{font-size:.97rem;color:#3a2f32;font-weight:400;line-height:1.7}
-  .advisor .body p+p{margin-top:8px}
-  .advisor .body strong{color:#1a1014;font-weight:700}
+/* BUDGET */
+.budget-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:20px 0}
+.budget-card{background:#fff;border:.5px solid var(--line);border-radius:12px;padding:18px 14px;text-align:center;box-shadow:0 1px 4px rgba(160,120,80,.04)}
+.budget-icon{font-size:24px;margin-bottom:8px}
+.budget-label{font-family:'DM Sans',sans-serif;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.budget-amount{font-size:1.25rem;font-weight:600;color:var(--ink);font-family:'DM Sans',sans-serif}
+.budget-note{font-size:11px;color:var(--muted);margin-top:4px}
+.budget-total{background:var(--ink);color:#fff;border-radius:14px;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;margin-top:18px;flex-wrap:wrap;gap:10px}
+.budget-total-label{font-family:'DM Sans',sans-serif;font-size:12px;color:#bba;text-transform:uppercase;letter-spacing:1.2px}
+.budget-total-val{font-size:1.6rem;font-weight:600;font-family:'DM Sans',sans-serif}
 
-  /* ROMANTIC */
-  .romantic{padding:20px 26px;background:linear-gradient(135deg,#fde8eb,#fdf0d8);border-left:4px solid #c4546a;border-radius:0 14px 14px 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem;color:#7a3a48}
-  .romantic::before{content:'♡  ';color:#c4546a;font-style:normal;font-weight:bold}
+.gondola-table{margin:12px 0;background:#fff;border-radius:8px}
+.gondola-table td:first-child{font-weight:500;color:var(--ink)}
+.gondola-table td:last-child{text-align:right;font-size:.85rem;color:var(--muted)}
 
-  /* ============ LOGISTICS STRIP ============ */
-  .logistics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:3rem}
-  .logistics .item{background:#fff;border:1px solid #ead8c8;border-radius:14px;padding:18px 20px;box-shadow:0 8px 22px rgba(80,40,50,.06)}
-  .logistics.swiss .item{border-color:#d8e0ea;box-shadow:0 8px 22px rgba(60,80,120,.06)}
-  .logistics .item .k{font-size:.65rem;letter-spacing:3px;text-transform:uppercase;color:#c4546a;font-weight:700;margin-bottom:10px}
-  .logistics.swiss .item .k{color:#5d8eb9}
-  .logistics .item .v{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#2a1f24;font-weight:600;line-height:1.3}
-  .logistics .item .s{font-size:.8rem;color:#7a6a6c;margin-top:6px;line-height:1.45}
-  @media(max-width:760px){.logistics{grid-template-columns:1fr}}
+/* PACK */
+.pack-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.pack-category{background:#fff;border:.5px solid var(--line);border-radius:12px;padding:18px;box-shadow:0 1px 4px rgba(160,120,80,.04)}
+.pack-category-title{font-weight:600;font-size:.95rem;margin-bottom:12px;padding-bottom:10px;border-bottom:.5px solid var(--line);color:var(--ink)}
+.pack-item{font-size:.85rem;color:var(--muted);margin-bottom:7px;display:flex;align-items:flex-start;gap:6px;line-height:1.55}
+.pack-item::before{content:"·";color:var(--rose);font-weight:700;flex-shrink:0}
+.pack-item strong{color:var(--ink);font-weight:600}
 
-  /* ============ BUDGET / CHECKLIST ============ */
-  .budget-section{padding:130px 6vw;background:linear-gradient(180deg,#fdf9f3,#f5ebde)}
-  .budget-section .wrap,.checklist-section .wrap{max-width:1080px;margin:0 auto}
-  .budget-section .head,.checklist-section .head{text-align:center;margin-bottom:3.5rem}
-  .budget-section .head .lbl{font-size:.78rem;letter-spacing:6px;text-transform:uppercase;color:#c4546a;font-weight:700}
-  .checklist-section .head .lbl{font-size:.78rem;letter-spacing:6px;text-transform:uppercase;color:#5d8eb9;font-weight:700}
-  .budget-section .head h2,.checklist-section .head h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,4.4rem);color:#2a1f24;margin:.6rem 0 .5rem;line-height:1}
-  .budget-section .head .sub,.checklist-section .head .sub{color:#7a6a6c;font-size:1.05rem;max-width:560px;margin:0 auto}
-  .budget-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:1rem}
-  .budget-card{background:#fff;border:1px solid #ead8c8;border-radius:18px;padding:24px 26px;box-shadow:0 12px 30px rgba(80,40,50,.08)}
-  .budget-card .cat{font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:#c4546a;font-weight:700;margin-bottom:8px}
-  .budget-card .item{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:#2a1f24;line-height:1.3;margin-bottom:10px}
-  .budget-card .cost{font-size:1.05rem;color:#7a3a48;font-weight:700;margin-bottom:12px;letter-spacing:1px}
-  .budget-card .strat{font-size:.9rem;color:#5a4a4c;line-height:1.6;border-top:1px dashed #d6c4b0;padding-top:12px}
-  .budget-total{background:linear-gradient(135deg,#c4546a,#7d6fa0);color:#fff;text-align:center;padding:38px 30px;border-radius:20px;margin-top:.6rem;box-shadow:0 18px 40px rgba(196,84,106,.25)}
-  .budget-total .cat{color:#ffd6dc;font-size:.75rem;letter-spacing:5px;text-transform:uppercase;font-weight:700;margin-bottom:10px}
-  .budget-total .amount{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,7vw,4.4rem);font-weight:700;line-height:1}
-  .budget-total .strat{margin-top:10px;color:rgba(255,255,255,.92);font-size:.95rem;font-style:italic}
-  @media(max-width:760px){.budget-grid{grid-template-columns:1fr}}
+/* BOOKINGS */
+.bookings-section{padding:80px 24px;background:linear-gradient(180deg,var(--cream-2),#fdf9f3)}
+.bookings-section .wrap{max-width:1080px;margin:0 auto}
+.bookings-section .head{text-align:center;margin-bottom:30px}
+.bookings-section .lbl{font-family:'DM Sans',sans-serif;font-size:.7rem;letter-spacing:6px;text-transform:uppercase;color:var(--rose);font-weight:700}
+.bookings-section h2{font-family:'Noto Serif SC',serif;font-size:clamp(2rem,5vw,3rem);color:var(--ink);margin:.6rem 0 .5rem;line-height:1.1}
+.bookings-section .sub{color:var(--muted);font-size:1rem;max-width:560px;margin:0 auto 8px}
+.bk-progress{max-width:520px;margin:18px auto 8px;background:#e8dec9;border-radius:10px;height:10px;overflow:hidden}
+.bk-fill{background:linear-gradient(90deg,var(--rose),var(--gold));height:100%;width:0%;transition:width .4s}
+.bk-count{font-family:'DM Sans',sans-serif;font-size:.85rem;color:var(--muted);margin-top:6px}
+.bk-group{margin:30px 0}
+.group-title{font-family:'Noto Serif SC',serif;font-size:1.15rem;font-weight:600;color:var(--ink);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.group-title .emoji{font-size:1.3rem}
+.bk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.bk-card{background:#fff;border:.5px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer;transition:all .2s;box-shadow:0 1px 3px rgba(160,120,80,.05)}
+.bk-card:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(160,120,80,.1)}
+.bk-card.booked{background:#f0f9f3;border-color:#bdd9c2}
+.bk-card .row1{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.bk-card .name{font-weight:600;font-size:.95rem;color:var(--ink);line-height:1.35;flex:1}
+.bk-card .badge{flex-shrink:0;padding:2px 9px;border-radius:14px;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;background:var(--warn-bg);color:var(--warn)}
+.bk-card.booked .badge{background:#d4ecd8;color:#1b5e20}
+.bk-card .hint{color:var(--muted);font-size:.82rem;margin-top:6px;line-height:1.5}
+.bk-card .summary{margin-top:8px;padding-top:8px;border-top:.5px dashed var(--line);font-size:.8rem;color:var(--ink);line-height:1.6}
+.bk-form{display:none;margin-top:10px;padding-top:10px;border-top:.5px dashed var(--line)}
+.bk-card.editing .bk-form{display:block}
+.bk-form label{display:block;font-family:'DM Sans',sans-serif;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:8px;margin-bottom:3px}
+.bk-form input,.bk-form textarea{width:100%;padding:7px 9px;border:.5px solid var(--line);border-radius:6px;font-family:inherit;font-size:.85rem;background:#fdfaf3;color:var(--ink)}
+.bk-form textarea{resize:vertical;min-height:50px}
+.bk-form .actions{display:flex;gap:8px;margin-top:10px}
+.bk-form button{flex:1;padding:8px;border:none;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;cursor:pointer;letter-spacing:.5px}
+.bk-form .save{background:var(--rose);color:#fff}
+.bk-form .clear{background:#eee;color:var(--muted)}
 
-  .checklist-section{padding:130px 6vw;background:#faf5ef}
-  .checklist{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .check-item{display:flex;gap:14px;background:#fff;border:1px solid #d8e0ea;border-radius:14px;padding:18px 22px;box-shadow:0 8px 22px rgba(60,80,120,.06)}
-  .check-item .when{flex-shrink:0;width:66px;font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:#5d8eb9;font-weight:700;padding-top:4px;line-height:1.4}
-  .check-item .body{flex:1}
-  .check-item .body .t{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#2a1f24;margin-bottom:4px;line-height:1.3}
-  .check-item .body .d{font-size:.88rem;color:#7a6a6c;line-height:1.55}
-  @media(max-width:760px){.checklist{grid-template-columns:1fr}}
+/* FAB */
+.jump-fab{position:fixed;bottom:24px;right:24px;width:54px;height:54px;border-radius:50%;background:var(--ink);color:#fff;border:none;cursor:pointer;font-size:24px;box-shadow:0 4px 20px rgba(0,0,0,.3);z-index:80;display:flex;align-items:center;justify-content:center}
+.jump-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:81;opacity:0;pointer-events:none;transition:opacity .25s}
+.jump-overlay.open{opacity:1;pointer-events:auto}
+.jump-sheet{position:fixed;bottom:0;left:0;right:0;background:var(--cream);border-radius:20px 20px 0 0;padding:24px 20px 36px;z-index:82;transform:translateY(100%);transition:transform .3s ease;max-height:80vh;overflow-y:auto;box-shadow:0 -8px 30px rgba(0,0,0,.3)}
+.jump-sheet.open{transform:translateY(0)}
+.jump-handle{width:44px;height:4px;background:var(--line);border-radius:2px;margin:0 auto 18px}
+.jump-sheet h3{font-family:'Noto Serif SC',serif;font-size:1.1rem;color:var(--ink);margin-bottom:14px;text-align:center}
+.jump-group{margin-bottom:18px}
+.jump-group-title{font-family:'DM Sans',sans-serif;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;font-weight:600}
+.jump-link{display:flex;align-items:center;gap:8px;padding:11px 12px;background:#fff;border-radius:10px;text-decoration:none;color:var(--ink);font-size:.92rem;margin-bottom:6px;border:.5px solid var(--line)}
+.jump-link .lbl{font-family:'DM Sans',sans-serif;font-size:9px;color:var(--rose);text-transform:uppercase;letter-spacing:1px;font-weight:700;background:#fdecea;padding:2px 7px;border-radius:8px;flex-shrink:0}
 
-  /* ============ TIMELINE MAP PIN ============ */
-  .rail-item{padding-right:42px}
-  .rail-item .map-pin{position:absolute;right:0;top:20px;display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#3d4a5c;color:#fff;text-decoration:none;transition:transform .2s,background .2s;box-shadow:0 4px 12px rgba(40,50,70,.35);border:2px solid #fff}
-  .rail.swiss .rail-item .map-pin{background:#3d4a5c;box-shadow:0 4px 12px rgba(40,50,70,.35)}
-  .rail-item .map-pin:hover{background:#2a3445}
-  .rail-item .map-pin:hover{transform:scale(1.12)}
-  .rail-item .map-pin:active{transform:scale(.95)}
-  .rail-item .map-pin svg{width:15px;height:15px}
+/* FOOTER */
+.footer{background:var(--ink);color:#aaa;text-align:center;padding:50px 24px;font-family:'Noto Serif SC',serif;font-size:.95rem;line-height:1.8}
+.footer .script{font-family:'Dancing Script',cursive;font-size:1.8rem;color:#f9d9c8;margin-bottom:12px;display:block}
+.footer strong{color:#fff;font-weight:600}
+.footer .small{font-size:.8rem;color:#777;margin-top:14px;font-family:'DM Sans',sans-serif;letter-spacing:1px}
 
-  /* ============ LOGISTICS BOOKING LINK ============ */
-  .logistics .item .book{display:inline-block;margin-top:8px;font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:#c4546a;text-decoration:none;font-weight:700;border-bottom:1.5px solid #c4546a;padding-bottom:1px;transition:all .2s}
-  .logistics.swiss .item .book{color:#5d8eb9;border-bottom-color:#5d8eb9}
-  .logistics .item .book:hover{opacity:.7;letter-spacing:2px}
-
-  /* ============ BOOKINGS TRACKER ============ */
-  .bookings-section{padding:130px 6vw;background:linear-gradient(180deg,#f5ebde,#fdf9f3)}
-  .bookings-section .wrap{max-width:1080px;margin:0 auto}
-  .bookings-section .head{text-align:center;margin-bottom:2rem}
-  .bookings-section .head .lbl{font-size:.78rem;letter-spacing:6px;text-transform:uppercase;color:#7d6fa0;font-weight:700}
-  .bookings-section .head h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,4.4rem);color:#2a1f24;margin:.6rem 0 .5rem;line-height:1}
-  .bookings-section .head .sub{color:#7a6a6c;font-size:1.05rem;max-width:620px;margin:0 auto}
-  .bk-progress{max-width:560px;margin:2.4rem auto 3rem}
-  .bk-progress .bar{height:10px;background:#eadfd1;border-radius:100px;overflow:hidden}
-  .bk-progress .fill{height:100%;background:linear-gradient(90deg,#c4546a,#7d6fa0);border-radius:100px;width:0;transition:width .6s ease}
-  .bk-progress .count{text-align:center;margin-top:10px;font-size:.85rem;color:#7a6a6c;letter-spacing:1px}
-  .bk-progress .count b{color:#2a1f24;font-size:1rem}
-  .bk-group{margin-bottom:2rem}
-  .bk-group .group-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:#2a1f24;margin-bottom:1rem;padding-left:4px;display:flex;align-items:center;gap:12px}
-  .bk-group .group-title .emoji{font-size:1.5rem}
-  .bk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
-  .bk-card{background:#fff;border:1px solid #ead8c8;border-radius:14px;padding:18px 20px;box-shadow:0 8px 22px rgba(80,40,50,.06);transition:all .25s;cursor:pointer}
-  .bk-card.booked{background:linear-gradient(135deg,#eaf5ea,#fff);border-color:#a8d4a8}
-  .bk-card:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(80,40,50,.12)}
-  .bk-card .row1{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px}
-  .bk-card .name{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:#2a1f24;line-height:1.25;flex:1}
-  .bk-card .badge{flex-shrink:0;font-size:.62rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;padding:4px 9px;border-radius:100px;background:#f0e6d8;color:#9a8a6c}
-  .bk-card.booked .badge{background:#4caf50;color:#fff}
-  .bk-card .hint{font-size:.8rem;color:#7a6a6c;line-height:1.45}
-  .bk-card .summary{margin-top:8px;font-size:.82rem;color:#5a4a4c;padding-top:8px;border-top:1px dashed #d6c4b0;line-height:1.5;display:none}
-  .bk-card.booked .summary{display:block}
-  .bk-card .summary b{color:#2a1f24;font-weight:600}
-
-  .bk-form{display:none;margin-top:14px;padding-top:14px;border-top:1px dashed #d6c4b0;gap:10px;flex-direction:column}
-  .bk-card.editing .bk-form{display:flex}
-  .bk-form label{display:flex;flex-direction:column;font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;color:#7a6a6c;font-weight:700;gap:5px}
-  .bk-form input,.bk-form textarea{font-family:'Inter',sans-serif;font-size:.92rem;color:#2a1f24;padding:9px 12px;border:1px solid #d6c4b0;border-radius:8px;background:#fdfaf5;text-transform:none;letter-spacing:0;font-weight:400;outline:none;transition:border-color .2s}
-  .bk-form input:focus,.bk-form textarea:focus{border-color:#c4546a}
-  .bk-form textarea{resize:vertical;min-height:60px;font-family:inherit}
-  .bk-form .actions{display:flex;gap:8px;margin-top:4px}
-  .bk-form .actions button{flex:1;padding:10px 14px;border:none;border-radius:8px;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;cursor:pointer;transition:all .2s}
-  .bk-form .save{background:#c4546a;color:#fff}
-  .bk-form .save:hover{background:#a73a51}
-  .bk-form .clear{background:#f0e6d8;color:#7a6a6c}
-  .bk-form .clear:hover{background:#e0d4c0}
-
-  /* ============ GENERIC CONTENT SECTION ============ */
-  .content-section{padding:130px 6vw;background:#faf5ef}
-  .content-section.alt{background:linear-gradient(180deg,#fdf9f3,#f5ebde)}
-  .content-section .wrap{max-width:1080px;margin:0 auto}
-  .content-section .head{text-align:center;margin-bottom:3rem}
-  .content-section .head .lbl{font-size:.78rem;letter-spacing:6px;text-transform:uppercase;font-weight:700}
-  .content-section .head h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5.5vw,4rem);color:#2a1f24;margin:.6rem 0 .5rem;line-height:1}
-  .content-section .head .sub{color:#7a6a6c;font-size:1rem;max-width:620px;margin:0 auto;line-height:1.6}
-  .content-section.docs .head .lbl{color:#a73a51}
-  .content-section.planb .head .lbl{color:#b07025}
-  .content-section.packing .head .lbl{color:#4a8b6f}
-  .content-section.dining .head .lbl{color:#c08e3a}
-
-  /* Callouts */
-  .callout{border-radius:12px;padding:16px 20px;margin:14px 0;font-size:.92rem;line-height:1.65}
-  .callout .callout-title{font-weight:700;margin-bottom:6px;font-size:.7rem;text-transform:uppercase;letter-spacing:2px}
-  .callout strong{font-weight:700;color:#2a1f24}
-  .callout-warn{background:#fff8e7;border-left:4px solid #d4951e;color:#7d4e00}
-  .callout-warn .callout-title{color:#a06520}
-  .callout-fix{background:#fff0f0;border-left:4px solid #c4546a;color:#7a3a48}
-  .callout-fix .callout-title{color:#a73a51}
-  .callout-tip{background:#eaf4ff;border-left:4px solid #5d8eb9;color:#1a4a72}
-  .callout-tip .callout-title{color:#3266a3}
-
-  /* Emergency contacts grid */
-  .emerg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:1.4rem}
-  .emerg-card{background:#fff;border:1px solid #ead8c8;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:5px;box-shadow:0 6px 18px rgba(80,40,50,.05)}
-  .emerg-card.critical{background:linear-gradient(135deg,#fff0f0,#fff);border-color:#e8b8b8;box-shadow:0 8px 22px rgba(196,84,106,.1)}
-  .emerg-card .role{font-size:.62rem;letter-spacing:2.5px;text-transform:uppercase;color:#7a6a6c;font-weight:700}
-  .emerg-card.critical .role{color:#a73a51}
-  .emerg-card .num{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;color:#2a1f24;line-height:1;letter-spacing:.5px}
-  .emerg-card.critical .num{color:#a73a51}
-  .emerg-card .desc{font-size:.8rem;color:#7a6a6c;line-height:1.5}
-  .emerg-card a{color:inherit;text-decoration:none}
-  .emerg-card a:hover .num{color:#c4546a}
-
-  /* Document cards */
-  .doc-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:1rem}
-  .doc-card{background:#fff;border:1px solid #ead8c8;border-radius:14px;padding:20px 22px;display:flex;gap:14px;box-shadow:0 6px 18px rgba(80,40,50,.05)}
-  .doc-card.urgent{background:linear-gradient(135deg,#fff8e7,#fff);border-color:#e8d488}
-  .doc-card .ico{flex-shrink:0;font-size:1.6rem;line-height:1}
-  .doc-card .body .t{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:#2a1f24;line-height:1.3;margin-bottom:6px}
-  .doc-card .body .d{font-size:.86rem;color:#5a4a4c;line-height:1.55}
-  .doc-card .body .d strong{color:#2a1f24}
-  .doc-card .body .d a{color:#c4546a;font-weight:600}
-  @media(max-width:760px){.doc-grid{grid-template-columns:1fr}}
-
-  /* Plan B scenarios */
-  .scenario-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:1rem}
-  .scenario{background:#fff;border:1px solid #ead8c8;border-radius:14px;padding:18px 22px;box-shadow:0 6px 18px rgba(80,40,50,.05)}
-  .scenario .what{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:#b07025;font-weight:700;margin-bottom:6px}
-  .scenario .title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#2a1f24;margin-bottom:8px;line-height:1.3}
-  .scenario .plan{font-size:.88rem;color:#5a4a4c;line-height:1.6}
-  .scenario .plan strong{color:#2a1f24;font-weight:700}
-  @media(max-width:760px){.scenario-grid{grid-template-columns:1fr}}
-
-  /* Packing categories */
-  .pack-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:1rem}
-  .pack-cat{background:#fff;border:1px solid #ead8c8;border-radius:14px;padding:18px 22px;box-shadow:0 6px 18px rgba(80,40,50,.05)}
-  .pack-cat .head-row{display:flex;align-items:center;gap:10px;font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:#2a1f24;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid #ead8c8}
-  .pack-cat .head-row .ico{font-size:1.2rem}
-  .pack-cat .row{display:flex;align-items:flex-start;gap:8px;font-size:.84rem;color:#5a4a4c;padding:5px 0;line-height:1.5}
-  .pack-cat .row::before{content:"—";color:#c8b8a8;flex-shrink:0;font-weight:700}
-  .pack-cat .row strong{color:#2a1f24;font-weight:600}
-
-  /* Dining list */
-  .dining-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:1rem}
-  .dining-item{display:flex;gap:14px;background:#fff;border:1px solid #ead8c8;border-radius:14px;padding:16px 20px;box-shadow:0 6px 18px rgba(80,40,50,.05)}
-  .dining-item .flag{flex-shrink:0;width:30px;font-size:1.2rem;text-align:center;padding-top:2px}
-  .dining-item .body{flex:1}
-  .dining-item .body .t{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:#2a1f24;margin-bottom:4px;line-height:1.3}
-  .dining-item .body .d{font-size:.84rem;color:#5a4a4c;line-height:1.55}
-  .dining-item .body .d strong{color:#2a1f24;font-weight:600}
-  @media(max-width:760px){.dining-list{grid-template-columns:1fr}}
-
-  /* ============ JUMP MENU (FAB) ============ */
-  .jump-fab{position:fixed;right:18px;bottom:22px;z-index:80;width:56px;height:56px;border-radius:50%;background:#2a1f24;color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 28px rgba(0,0,0,.28);transition:all .25s}
-  .jump-fab:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(0,0,0,.35)}
-  .jump-fab:active{transform:scale(.94)}
-  .jump-fab svg{width:22px;height:22px}
-  .jump-overlay{position:fixed;inset:0;background:rgba(20,12,18,.55);backdrop-filter:blur(6px);z-index:90;opacity:0;pointer-events:none;transition:opacity .25s}
-  .jump-overlay.open{opacity:1;pointer-events:auto}
-  .jump-sheet{position:fixed;right:18px;bottom:22px;z-index:91;background:#fdf9f3;border-radius:22px;box-shadow:0 24px 60px rgba(0,0,0,.35);padding:22px 22px 18px;width:min(360px,calc(100vw - 36px));max-height:min(78vh,720px);overflow-y:auto;transform:scale(.85) translateY(20px);transform-origin:bottom right;opacity:0;pointer-events:none;transition:all .25s cubic-bezier(.16,1,.3,1)}
-  .jump-sheet.open{transform:none;opacity:1;pointer-events:auto}
-  .jump-sheet .jump-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid #ead8c8}
-  .jump-sheet .jump-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:#2a1f24}
-  .jump-sheet .jump-close{background:none;border:none;color:#7a6a6c;font-size:1.5rem;cursor:pointer;line-height:1;padding:4px 8px}
-  .jump-sheet .jump-group{margin-bottom:14px}
-  .jump-sheet .jump-group-title{font-size:.65rem;letter-spacing:3px;text-transform:uppercase;color:#c4546a;font-weight:700;margin-bottom:8px;padding-left:2px}
-  .jump-sheet .jump-group.swiss .jump-group-title{color:#5d8eb9}
-  .jump-sheet .jump-group.tools .jump-group-title{color:#7d6fa0}
-  .jump-sheet .jump-links{display:grid;grid-template-columns:1fr 1fr;gap:6px}
-  .jump-sheet .jump-link{display:block;padding:10px 12px;background:#fff;border:1px solid #ead8c8;border-radius:10px;text-decoration:none;color:#2a1f24;font-size:.85rem;font-weight:500;line-height:1.3;transition:all .15s}
-  .jump-sheet .jump-link:hover{background:#c4546a;color:#fff;border-color:#c4546a;transform:translateY(-1px)}
-  .jump-sheet .jump-group.swiss .jump-link:hover{background:#5d8eb9;border-color:#5d8eb9}
-  .jump-sheet .jump-group.tools .jump-link:hover{background:#7d6fa0;border-color:#7d6fa0}
-  .jump-sheet .jump-link.wide{grid-column:1/3}
-  .jump-sheet .jump-link .lbl{display:block;font-size:.62rem;letter-spacing:1.5px;text-transform:uppercase;color:#9a8a8c;font-weight:700;margin-bottom:2px}
-  .jump-sheet .jump-link:hover .lbl{color:rgba(255,255,255,.7)}
-
-  /* ============ FLOATING DAY NAV ============ */
-  .day-nav{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:4px;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);padding:12px 9px;border-radius:30px;box-shadow:0 8px 24px rgba(80,40,50,.14);border:1px solid rgba(196,84,106,.15);opacity:0;pointer-events:none;transition:opacity .4s}
-  .day-nav.show{opacity:1;pointer-events:auto}
-  .day-nav a{display:block;width:36px;height:26px;font-size:.62rem;font-weight:700;color:#7a6a6c;text-align:center;line-height:26px;border-radius:13px;text-decoration:none;letter-spacing:1px;transition:all .25s}
-  .day-nav a:hover,.day-nav a.active{background:#c4546a;color:#fff}
-  .day-nav a.swiss:hover,.day-nav a.swiss.active{background:#5d8eb9;color:#fff}
-  @media(max-width:900px){.day-nav{display:none}}
-
-  /* CLOSING */
-  .closing{position:relative;min-height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:110px 30px;overflow:hidden}
-  .closing-bg{position:absolute;inset:0;background-size:cover;background-position:center}
-  .closing-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(rgba(255,245,235,.7),rgba(245,225,225,.85))}
-  .closing>.reveal{position:relative;z-index:2}
-  .closing .script{font-size:clamp(2rem,4.5vw,3rem)}
-  .closing h2{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(3rem,7.5vw,6rem);line-height:1.05;margin:1rem 0 1.5rem;color:#2a1f24}
-  .closing p{max-width:620px;margin:0 auto;font-size:1.15rem;color:#5a4a4c;font-weight:300;line-height:1.8;font-style:italic}
-  .heart-pulse{display:inline-block;animation:pulse 1.6s ease-in-out infinite;color:#c4546a;font-size:2.4rem;margin-top:2rem;filter:drop-shadow(0 2px 12px rgba(196,84,106,.5))}
-  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
-
-  footer{text-align:center;padding:38px;color:#9a8a8c;font-size:.7rem;background:#faf5ef;letter-spacing:3px}
+@media (max-width:600px){
+  .container{padding:0 18px 40px}
+  .nav a{padding:12px 10px;font-size:10px}
+  .nav a .cn{font-size:12px}
+  .section-num{font-size:48px}
+  .section-title{font-size:1.4rem}
+  .day-hero{height:200px;padding:18px 18px}
+  .day-hero-num{font-size:60px;top:10px;right:18px}
+  .day-hero-title{font-size:1.2rem}
+  .day-body{padding:18px}
+  .day-strip{grid-template-columns:1fr;gap:10px}
+  .strip-cell{text-align:left;display:flex;justify-content:space-between;align-items:center}
+  .strip-label{margin:0}
+  th,td{padding:9px 10px;font-size:13px}
+  .hero{min-height:88vh}
+  .hero .flags{font-size:32px;letter-spacing:10px}
+  .stat{padding:0 14px;min-width:75px}
+  .stat-val{font-size:1.1rem}
+}
 </style>
 </head>
 <body>
 
-<!-- JUMP MENU FAB -->
-<button class="jump-fab" id="jumpFab" aria-label="Jump to section">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
-</button>
-<div class="jump-overlay" id="jumpOverlay"></div>
-<aside class="jump-sheet" id="jumpSheet" role="dialog" aria-label="Section menu">
-  <div class="jump-head">
-    <div class="jump-title">Jump to…</div>
-    <button class="jump-close" id="jumpClose" aria-label="Close">×</button>
-  </div>
-  <div class="jump-group">
-    <div class="jump-group-title">Overview</div>
-    <div class="jump-links">
-      <a class="jump-link" href="#top"><span class="lbl">Top</span>Hero</a>
-      <a class="jump-link" href="#glance"><span class="lbl">Map</span>11 Days · 8 Stops</a>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="flags">🇮🇹 🇨🇭</div>
+    <div class="script">our journey, my love</div>
+    <h1>意瑞双峰并峙</h1>
+    <div class="en">Italy &middot; Switzerland &middot; A Spec-Ops Romance &middot; August 2026</div>
+    <div class="countdown" id="countdown">距离出发 <b id="cdDays">—</b> 天</div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-val">11</div><div class="stat-label">Days · 天</div></div>
+      <div class="stat"><div class="stat-val">10</div><div class="stat-label">Nights · 晚</div></div>
+      <div class="stat"><div class="stat-val">2</div><div class="stat-label">Hearts · 人</div></div>
+      <div class="stat"><div class="stat-val">8 · 17</div><div class="stat-label">Depart</div></div>
+      <div class="stat"><div class="stat-val">8 · 27</div><div class="stat-label">Return</div></div>
     </div>
   </div>
-  <div class="jump-group">
-    <div class="jump-group-title">🇮🇹 Italy</div>
-    <div class="jump-links">
-      <a class="jump-link" href="#italy"><span class="lbl">Phase 1</span>Italia Intro</a>
-      <a class="jump-link" href="#d1"><span class="lbl">Aug 17 · Sun</span>Day 1 · Rome</a>
-      <a class="jump-link" href="#d2"><span class="lbl">Aug 18 · Mon</span>Day 2 · Rome</a>
-      <a class="jump-link" href="#d3"><span class="lbl">Aug 19 · Tue</span>Day 3 · Florence</a>
-      <a class="jump-link wide" href="#d4"><span class="lbl">Aug 20 · Wed</span>Day 4 · Milan → Lake Como</a>
-    </div>
-  </div>
-  <div class="jump-group swiss">
-    <div class="jump-group-title">🇨🇭 Switzerland</div>
-    <div class="jump-links">
-      <a class="jump-link" href="#swiss"><span class="lbl">Phase 2</span>Schweiz Intro</a>
-      <a class="jump-link" href="#d5"><span class="lbl">Aug 21 · Thu</span>Day 5 · Zermatt</a>
-      <a class="jump-link" href="#d6"><span class="lbl">Aug 22 · Fri</span>Day 6 · Five Lakes</a>
-      <a class="jump-link" href="#d7"><span class="lbl">Aug 23 · Sat</span>Day 7 · Lauterbrunnen</a>
-      <a class="jump-link" href="#d8"><span class="lbl">Aug 24 · Sun ⭐</span>Day 8 · Faulhorn</a>
-      <a class="jump-link" href="#d9"><span class="lbl">Aug 25 · Mon</span>Day 9 · Bern → Lucerne</a>
-      <a class="jump-link" href="#d10"><span class="lbl">Aug 26 · Tue</span>Day 10 · Lucerne · Rigi</a>
-      <a class="jump-link" href="#d11"><span class="lbl">Aug 27 · Wed ⭐</span>Day 11 · Pilatus</a>
-    </div>
-  </div>
-  <div class="jump-group tools">
-    <div class="jump-group-title">Planning Tools</div>
-    <div class="jump-links">
-      <a class="jump-link" href="#bookings"><span class="lbl">Reservations</span>Bookings Tracker</a>
-      <a class="jump-link" href="#prep"><span class="lbl">To-do</span>Pre-Trip Checklist</a>
-      <a class="jump-link" href="#docs"><span class="lbl">Critical</span>Docs &amp; Emergency</a>
-      <a class="jump-link" href="#planb"><span class="lbl">Backup</span>Plan B Playbook</a>
-      <a class="jump-link" href="#packing"><span class="lbl">Bags</span>Packing List</a>
-      <a class="jump-link" href="#dining"><span class="lbl">Food</span>Eating Smart</a>
-      <a class="jump-link" href="#budget"><span class="lbl">Money</span>Budget</a>
-      <a class="jump-link" href="#closing"><span class="lbl">Goodbye</span>Closing</a>
-    </div>
-  </div>
-</aside>
+  <div class="scroll-hint">↓ Scroll · 往下滑 ↓</div>
+</section>
 
-<!-- FLOATING DAY NAV -->
-<nav class="day-nav" id="dayNav">
-  <a href="#d1">D1</a>
-  <a href="#d2">D2</a>
-  <a href="#d3">D3</a>
-  <a href="#d4">D4</a>
-  <a href="#d5" class="swiss">D5</a>
-  <a href="#d6" class="swiss">D6</a>
-  <a href="#d7" class="swiss">D7</a>
-  <a href="#d8" class="swiss">D8</a>
-  <a href="#d9" class="swiss">D9</a>
-  <a href="#d10" class="swiss">D10</a>
-  <a href="#d11" class="swiss">D11</a>
+<nav class="nav" id="topNav">
+  <a href="#letter"><span class="cn">序</span>Letter</a>
+  <a href="#s1"><span class="cn">基础</span>01</a>
+  <a href="#s2"><span class="cn">证件</span>02</a>
+  <a href="#s3"><span class="cn">大交通</span>03</a>
+  <a href="#s4"><span class="cn">住宿</span>04</a>
+  <a href="#s5"><span class="cn">行程</span>05</a>
+  <a href="#s6"><span class="cn">餐饮</span>06</a>
+  <a href="#s7"><span class="cn">市内</span>07</a>
+  <a href="#s8"><span class="cn">预算</span>08</a>
+  <a href="#s9"><span class="cn">应急</span>09</a>
+  <a href="#s10"><span class="cn">行李</span>10</a>
+  <a href="#s11"><span class="cn">节奏</span>11</a>
+  <a href="#bookings"><span class="cn">预订</span>Track</a>
 </nav>
 
-<!-- HERO -->
-<div class="hero-wrap" id="top">
-  <section class="hero">
-    <div class="hero-bg" id="heroBg"></div>
-    <div class="hero-content" id="heroContent">
-      <p class="script">for the love of my life</p>
-      <h1>Our European<br>Adventure</h1>
-      <p class="sub">Italy &nbsp;·&nbsp; Switzerland</p>
-      <div class="dates">August 17 — August 27, 2026</div>
-    </div>
-    <div class="scroll-cue">scroll to begin</div>
-  </section>
-</div>
-
-<!-- LETTER -->
-<section class="letter">
-  <div class="reveal">
-    <h2>My dearest,</h2>
-    <p>I’ve been planning this for us. Eleven days, two countries, eight cities — and a thousand small moments to call our own. Scroll slowly. This is just for you.</p>
-  </div>
+<section class="letter" id="letter">
+  <div class="script">to the one I love,</div>
+  <h2>这不是一份行程，是我把整个夏天打包送给你。</h2>
+  <p>从罗马的许愿池到马特洪的倒影，从悬崖小村的木露台到皮拉图斯的云海——11 天，2 个人，一起把这个夏天走完。计划得再周密，路上也会有意外；但每一次意外，都会变成我们以后餐桌上的故事。</p>
+  <div class="sig">— forever yours ❤</div>
 </section>
 
-<!-- AT A GLANCE -->
-<section class="glance" id="glance">
-  <div class="reveal">
-    <p class="label">The Journey</p>
-    <h2>11 Days. 8 Stops.</h2>
-    <p class="sub">From the Roman Forum to the Swiss Alps.</p>
-    <div class="glance-grid">
-      <div class="glance-line"></div>
-      <div class="stop"><div class="dot"></div><div class="d">DAY 1–2</div><div class="n">Rome 🇮🇹</div></div>
-      <div class="stop"><div class="dot"></div><div class="d">DAY 3</div><div class="n">Florence</div></div>
-      <div class="stop"><div class="dot"></div><div class="d">DAY 4</div><div class="n">Lake Como</div></div>
-      <div class="stop swiss"><div class="dot"></div><div class="d">DAY 5–6</div><div class="n">Zermatt 🇨🇭</div></div>
-      <div class="stop swiss"><div class="dot"></div><div class="d">DAY 7</div><div class="n">Lauterbrunnen</div></div>
-      <div class="stop swiss"><div class="dot"></div><div class="d">DAY 8</div><div class="n">Grindelwald</div></div>
-      <div class="stop swiss"><div class="dot"></div><div class="d">DAY 9</div><div class="n">Bern → Lucerne</div></div>
-      <div class="stop swiss"><div class="dot"></div><div class="d">DAY 10</div><div class="n">Lucerne · Rigi</div></div>
-      <div class="stop"><div class="dot" style="background:#9a8a8c;box-shadow:0 0 0 1px #9a8a8c"></div><div class="d">DAY 11</div><div class="n">Pilatus → Home ✈️</div></div>
-    </div>
+<div class="container">
+
+<section class="sec" id="s1">
+  <div class="section-header"><div class="section-num">01</div><div><div class="section-title">基础信息</div><div class="section-en">Travel Framework</div></div></div>
+  <div class="info-grid">
+    <div class="info-card"><div class="info-card-label">目的地 · Destination</div><div class="info-card-val">意大利 + 瑞士</div></div>
+    <div class="info-card"><div class="info-card-label">出行日期 · Dates</div><div class="info-card-val">2026 · 8 · 17 — 8 · 27</div></div>
+    <div class="info-card"><div class="info-card-label">总天数 · Duration</div><div class="info-card-val">11 天 10 晚</div></div>
+    <div class="info-card"><div class="info-card-label">同行人 · Travelers</div><div class="info-card-val">2 人 · 情侣 · 特种兵体能</div></div>
+    <div class="info-card"><div class="info-card-label">旅行目的 · Vibe</div><div class="info-card-val">极致自然 · 硬核徒步 · 人文打卡 · 极致穷游</div></div>
+    <div class="info-card"><div class="info-card-label">预算（机票外）</div><div class="info-card-val">每人 RM 9,000 – 9,500</div></div>
   </div>
+  <div class="callout callout-tip"><div class="callout-title">💡 为何上限调整至 9,500</div>瑞士段缆车费用（即使半价卡）极高，Day 8、10、11 三日山地交通合计每人约 CHF 100+，预留 RM 500 弹性缓冲。</div>
 </section>
 
-<!-- PHASE 1 -->
-<section class="phase-intro" id="italy">
-  <div class="reveal">
-    <div class="flag">🇮🇹</div>
-    <p class="label">Phase One</p>
-    <h2>Italia.</h2>
-    <p class="tag">Ancient streets. Golden sunsets. A quiet lake to fall in love beside.</p>
-  </div>
+<section class="sec" id="s2">
+  <div class="section-header"><div class="section-num">02</div><div><div class="section-title">证件与入境</div><div class="section-en">Documents &amp; Entry</div></div></div>
+  <div class="callout callout-fix"><div class="callout-title">⚠️ ETIAS 倒计时</div>马来西亚护照 2026 起进入申根需 ETIAS。建议<strong>出发前 2 个月（即 6 月前）</strong>在 <strong>travel-europe.europa.eu</strong> 完成申请。€7，72 小时内审批。</div>
+  <ul class="plain">
+    <li><strong>护照有效期：</strong>必须 <strong>2027 年 2 月以后</strong> 仍有效。</li>
+    <li><strong>旅游保险：</strong>必须涵盖 <strong>高海拔徒步 ≥2500m</strong> 与 <strong>紧急山地救援</strong>。AXA Smart Traveller 或 MSIG TravelEasy Premier，医疗 ≥ €50,000。</li>
+    <li><strong>电子备份：</strong>护照首页 / 保险单 / 住宿确认 / ETIAS，全部上传 Google Drive 离线。实体影印件放背包夹层。</li>
+    <li><strong>紧急号码：</strong>意大利 <strong>112</strong> · 瑞士 <strong>144</strong> · 马来西亚大使馆罗马 <strong>+39-06-8840-4258</strong>。</li>
+  </ul>
 </section>
 
-<!-- ============ DAY 1 ROME ARRIVAL ============ -->
-<section class="reveal" id="d1" data-city="Rome, Italy">
-  <div class="day-hero">
-    <img data-wf="Rome_Skyline.jpg" alt="Rome skyline">
-    <div class="day-hero-text">
-      <span class="num">Day 01 · Aug 17</span>
-      <h3>Rome.</h3>
-      <p class="where">Italy · Arrival Day</p>
-      <p class="date">Sunday Evening</p>
-      <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Roma+Termini%2C+Rome%2C+Italy" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>Open in Maps</a>
-    </div>
-  </div>
-  <div class="day-body"><div class="day-body-inner">
-    <p class="feeling">Wheels down in Italy. Cobblestones, café air, and the start of us.</p>
+<section class="sec" id="s3">
+  <div class="section-header"><div class="section-num">03</div><div><div class="section-title">大交通</div><div class="section-en">Global Transport</div></div></div>
+  <table>
+    <tr><th>日期</th><th>路线</th><th>时间</th><th>备注</th></tr>
+    <tr><td><strong>8/17</strong></td><td>KUL → Rome FCO</td><td>抵达 18:15</td><td>Leonardo Express €14 直达 Termini，~32 分钟。</td></tr>
+    <tr><td><strong>8/19</strong></td><td>Roma → Firenze</td><td>建议 08:00</td><td>Trenitalia / Italo 高铁，1h30m。提前订 ~€15。</td></tr>
+    <tr><td><strong>8/20</strong></td><td>Firenze → Milano</td><td>建议 08:00</td><td>~2h。中央站寄存 €5–8/件，轻装去大教堂。</td></tr>
+    <tr><td><strong>8/20</strong></td><td>Milano → Varenna</td><td>下午班次</td><td>~1h Trenord，到 Menaggio 须在 Varenna 渡船口转渡轮 ~15m。</td></tr>
+    <tr><td><strong>8/21</strong></td><td>Varenna → Zermatt ⚠️</td><td><strong>6–7h</strong></td><td>3 次换乘：渡轮 → Milano → Brig → Visp → Zermatt。SBB 提前 60 天订。</td></tr>
+    <tr><td><strong>8/27</strong></td><td>Zurich ZRH → KUL</td><td>起飞 22:35</td><td>19:00 前到机场。Lucerne→ZRH ~50m，最晚 18:00 离 Lucerne。先退税。</td></tr>
+  </table>
+  <div class="callout callout-warn" style="margin-top:16px"><div class="callout-title">⚡ 意大利高铁罢工预警</div>出发前 1 周关注 Trenitalia 与 Google News。罢工立刻 <strong>FlixBus</strong>（罗马→佛罗伦萨 ~€20，3.5h）。</div>
+</section>
 
-    <div class="gallery g3">
-      <figure><img data-wf="FCO_Terminal_3.jpg" alt="Fiumicino"><figcaption class="cap">Fiumicino</figcaption></figure>
-      <figure><img data-wf="Stazione_Termini_-_Roma.jpg" alt="Termini"><figcaption class="cap">Roma Termini</figcaption></figure>
-      <figure><img src="https://upload.wikimedia.org/wikipedia/commons/4/47/CafeMia.jpg" alt="Gelato"><figcaption class="cap">First Gelato</figcaption></figure>
-    </div>
+<section class="sec" id="s4">
+  <div class="section-header"><div class="section-num">04</div><div><div class="section-title">住宿</div><div class="section-en">Where We Sleep</div></div></div>
+  <div class="callout callout-fix"><div class="callout-title">🔥 紧急等级</div><strong>Mountain Hostel Gimmelwald</strong> 8 月通常 3 个月前满房——<strong>立刻订</strong>，其次 Zermatt Youth Hostel。其余 60 天前订。</div>
+  <table style="margin-top:16px">
+    <tr><th>城市</th><th>住宿</th><th>晚数</th><th>特点</th></tr>
+    <tr><td><span class="badge badge-italy">意</span><br>罗马</td><td><strong>YellowSquare Rome</strong></td><td>2 晚<br>8/17–19</td><td>社交氛围佳，离 Termini 步行 5 分钟。</td></tr>
+    <tr><td><span class="badge badge-italy">意</span><br>佛罗伦萨</td><td><strong>PLUS Florence</strong></td><td>1 晚<br>8/19–20</td><td>露台远眺圣母百花，地理位置绝佳。</td></tr>
+    <tr><td><span class="badge badge-italy">意</span><br>科莫 Menaggio</td><td><strong>Lake Como Hostel</strong></td><td>1 晚<br>8/20–21</td><td>湖景户外区超美，距渡船码头 5 分钟。</td></tr>
+    <tr><td><span class="badge badge-swiss">瑞</span><br>采尔马特</td><td><strong>Zermatt Youth Hostel</strong></td><td>2 晚<br>8/21–23</td><td>部分房间窗外正对马特洪峰。</td></tr>
+    <tr><td><span class="badge badge-swiss">瑞</span><br>Gimmelwald</td><td><strong>Mountain Hostel Gimmelwald</strong></td><td>2 晚<br>8/23–25</td><td>悬崖青旅，露台正对阿尔卑斯。<strong>立刻抢订！</strong></td></tr>
+    <tr><td><span class="badge badge-swiss">瑞</span><br>卢塞恩</td><td><strong>Backpackers Lucerne</strong></td><td>2 晚<br>8/25–27</td><td>步行至湖滨与卡贝尔桥 ~10 分钟。</td></tr>
+  </table>
+</section>
 
-    <div class="logistics">
-      <div class="item"><div class="k">Stay</div><div class="v">YellowSquare Rome</div><div class="s">Near Termini · book non-refundable for 10% off</div></div>
-      <div class="item"><div class="k">Transit</div><div class="v">Leonardo Express</div><div class="s">FCO → Roma Termini · 32 min · €14</div><a class="book" href="https://www.trenitalia.com/en.html" target="_blank" rel="noopener">Book on Trenitalia →</a></div>
-      <div class="item"><div class="k">Today’s Budget</div><div class="v">€25 / RM 130</div><div class="s">Food &amp; misc, per person</div></div>
-    </div>
+<section class="sec" id="s5">
+  <div class="section-header"><div class="section-num">05</div><div><div class="section-title">每日行程</div><div class="section-en">Day by Day</div></div></div>
 
-    <div class="schedule">
-      <div class="sch-head"><p class="lbl">Today’s Timeline</p><p class="title">An Easy Welcome</p></div>
-      <div class="rail">
-        <div class="rail-item"><div class="time">14:00 · Land</div><div class="what">Rome Fiumicino (FCO)</div><div class="det">Welcome to Italy. Pick up SIM card at the airport.</div></div>
-        <div class="rail-item"><div class="time">15:00 · Train</div><div class="what">Leonardo Express → Roma Termini</div><div class="det">32 minutes · €14 · buy on the Trenitalia app before landing</div></div>
-        <div class="rail-item"><div class="time">16:00 · Settle</div><div class="what">Check in near Termini</div><div class="det">YellowSquare Rome or The RomeHello</div></div>
-        <div class="rail-item"><div class="time">19:00 · Dinner</div><div class="what">Slow walk + first gelato</div><div class="det">No agenda tonight. We need rest.</div></div>
+  <article class="day-card" id="d1">
+    <div class="day-hero" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Trevi_Fountain%2C_Rome%2C_Italy_2_-_May_2007.jpg?width=1200')">
+      <div class="day-hero-num">1</div>
+      <div class="day-hero-date">8月17日 · Mon · Day 01</div>
+      <div class="day-hero-title">落地潜行 · 罗马入场式</div>
+      <div class="day-hero-en">Roma — arrival &amp; the Trevi at midnight</div>
+      <div class="day-badges"><span class="badge badge-italy">罗马</span></div>
+    </div>
+    <div class="day-body">
+      <div class="day-strip">
+        <div class="strip-cell"><div class="strip-label">Stay · 住</div><div class="strip-val">YellowSquare Rome</div></div>
+        <div class="strip-cell"><div class="strip-label">Transit · 行</div><div class="strip-val">Leonardo Express €14</div></div>
+        <div class="strip-cell"><div class="strip-label">Budget · 钱</div><div class="strip-val">€25 · ~RM 130</div></div>
       </div>
+      <div class="day-block"><div class="day-block-label">傍晚 · Evening</div><div class="day-block-content">18:15 落地 FCO → 19:15 取行李 → Leonardo Express 抵达 Termini ~20:00 → 放行李 check-in。</div></div>
+      <div class="day-block"><div class="day-block-label">夜间 · Night</div><div class="day-block-content">21:00 出发夜巡 <strong>许愿池 (Trevi Fountain)</strong>——避开白天人潮，氛围更佳，人流减少 ~70%。投币许愿。顺步至 <strong>纳沃纳广场</strong>。</div></div>
+      <a class="maps-pill mapslink" href="#" data-q="Trevi Fountain Rome">📍 Open in Maps · 打开地图</a>
+      <div class="callout callout-tip" style="margin-top:10px">💡 第一天保持体力，步行 ≤5km。明天 25km 拉练。回青旅前在 Lidl 备粮。</div>
     </div>
+  </article>
 
-    <div class="advisor"><div class="icon">💡</div><div class="body">
-      <p class="who">Advisor’s Note</p>
-      <p><strong>Don’t plan anything heavy on day one.</strong> Long-haul flight + 6-hour time difference will hit hard.</p>
-      <p><strong>Watch out:</strong> taxi scams at FCO. Only take white official taxis with “Roma Capitale” logo — flat €50 to city center.</p>
-    </div></div>
-    <div class="romantic">First gelato together. A tradition begins.</div>
-  </div></div>
-</section>
-
-<!-- ============ DAY 2 ROME ============ -->
-<section class="reveal" id="d2" data-city="Rome, Italy">
-  <div class="day-hero">
-    <img data-wf="Colosseo_2020.jpg" alt="Colosseum">
-    <div class="day-hero-text">
-      <span class="num">Day 02 · Aug 18</span>
-      <h3>Rome.</h3>
-      <p class="where">Italy · Ancient Glory</p>
-      <p class="date">Monday</p>
-      <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Colosseum%2C+Rome%2C+Italy" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>Open in Maps</a>
+  <article class="day-card" id="d2">
+    <div class="day-hero" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Colosseo_2020.jpg?width=1200')">
+      <div class="day-hero-num">2</div>
+      <div class="day-hero-date">8月18日 · Tue · Day 02</div>
+      <div class="day-hero-title">罗马帝国拉练 · 25 km</div>
+      <div class="day-hero-en">Roma — the full circuit on foot</div>
+      <div class="day-badges"><span class="badge badge-italy">罗马</span><span class="badge badge-warn">25 km</span></div>
     </div>
-  </div>
-  <div class="day-body"><div class="day-body-inner">
-    <p class="feeling">Two thousand years of history — and you, holding my hand through all of it.</p>
-
-    <div class="gallery g5">
-      <figure><img data-wf="Colosseum_in_Rome,_Italy_-_April_2007.jpg" alt="Colosseum"><figcaption class="cap">Colosseum</figcaption></figure>
-      <figure><img data-wf="Trevi_Fountain,_Rome,_Italy_2_-_May_2007.jpg" alt="Trevi"><figcaption class="cap">Trevi Fountain</figcaption></figure>
-      <figure><img data-wf="Rome-Pantheon-Exterior.jpg" alt="Pantheon"><figcaption class="cap">Pantheon</figcaption></figure>
-      <figure><img data-wf="Spanish_Steps,_Rome.jpg" alt="Spanish Steps"><figcaption class="cap">Spanish Steps</figcaption></figure>
-      <figure><img data-wf="Roman_Forum_-_April_2007.jpg" alt="Roman Forum"><figcaption class="cap">Roman Forum</figcaption></figure>
-    </div>
-
-    <div class="logistics">
-      <div class="item"><div class="k">Stay</div><div class="v">YellowSquare Rome</div><div class="s">Second night · no need to move</div></div>
-      <div class="item"><div class="k">Transit</div><div class="v">Walk + Metro</div><div class="s">Roma Pass €32/48h covers public transport + 2 museums</div></div>
-      <div class="item"><div class="k">Today’s Budget</div><div class="v">€25 / RM 130</div><div class="s">Pre-book Colosseum combo €18 (separate from daily)</div></div>
-    </div>
-
-    <div class="schedule">
-      <div class="sch-head"><p class="lbl">Today’s Timeline</p><p class="title">The Ancient City</p></div>
-      <div class="rail">
-        <div class="rail-item"><div class="time">07:00 · Magic Hour</div><div class="what">Trevi Fountain</div><div class="det">Empty streets. Toss a coin together — three coins for love.</div></div>
-        <div class="rail-item"><div class="time">09:00 · Iconic</div><div class="what">Colosseum + Roman Forum</div><div class="det">Combo ticket €18 · pre-book 2-3 weeks ahead</div></div>
-        <div class="rail-item"><div class="time">13:00 · Hide</div><div class="what">Long lunch in Trastevere</div><div class="det">Carbonara + nap. Escape the noon heat.</div></div>
-        <div class="rail-item"><div class="time">17:00 · Wander</div><div class="what">Pantheon → Piazza Navona</div><div class="det">Golden light through ancient columns</div></div>
-        <div class="rail-item"><div class="time">19:30 · Sunset</div><div class="what">Spanish Steps</div><div class="det">Sit, people-watch, eat focaccia from the bakery below</div></div>
+    <div class="day-body">
+      <div class="day-strip">
+        <div class="strip-cell"><div class="strip-label">Stay</div><div class="strip-val">YellowSquare Rome</div></div>
+        <div class="strip-cell"><div class="strip-label">Transit</div><div class="strip-val">脚 · 偶尔地铁 €2</div></div>
+        <div class="strip-cell"><div class="strip-label">Budget</div><div class="strip-val">€30 · ~RM 150</div></div>
       </div>
+      <div class="day-block"><div class="day-block-label">06:00 早晨</div><div class="day-block-content">早起趁凉，6 点出门。先走 <strong>斗兽场 (Colosseum)</strong> 外围打卡，避开 8 点后人潮。</div></div>
+      <div class="day-block"><div class="day-block-label">上午 · Morning</div><div class="day-block-content"><div class="route-line"><span>斗兽场外围</span><span class="route-arrow">→</span><span>君士坦丁凯旋门</span><span class="route-arrow">→</span><span>古罗马广场</span><span class="route-arrow">→</span><span>威尼斯广场</span><span class="route-arrow">→</span><span>万神殿</span></div></div></div>
+      <div class="day-block"><div class="day-block-label">下午 · Afternoon</div><div class="day-block-content"><div class="route-line"><span>圣彼得广场（梵蒂冈）</span><span class="route-arrow">→</span><span>圣天使桥</span><span class="route-arrow">→</span><span>西班牙台阶</span></div></div></div>
+      <a class="maps-pill mapslink" href="#" data-q="Colosseum Rome">📍 Open in Maps · 打开地图</a>
+      <div class="callout callout-warn" style="margin-top:10px"><div class="callout-title">🎟️ 关键提醒</div>斗兽场 + 梵蒂冈博物馆若想入内，<strong>必须提前 30–60 天在官网购票</strong>（coopculture.it / museivaticani.va）。8 月现场排队 2–3h。本计划仅外观打卡。</div>
     </div>
+  </article>
 
-    <div class="advisor"><div class="icon">💡</div><div class="body">
-      <p class="who">Advisor’s Note — IMPORTANT</p>
-      <p><strong>August in Rome is brutal — 35–38°C and humid.</strong> Don’t do 5 monuments straight on foot. Mornings (before 11am) and evenings (after 5pm); rest at the hostel in the middle. Heatstroke ruins trips.</p>
-      <p><strong>Eat in Trastevere</strong>, never near the monuments. Tourist-strip food is overpriced and bad — a 15-min walk doubles the quality and halves the price.</p>
-    </div></div>
-    <div class="romantic">Walking, hand in hand, where emperors once stood.</div>
-  </div></div>
-</section>
-
-<!-- ============ DAY 3 FLORENCE ============ -->
-<section class="reveal" id="d3" data-city="Florence, Italy">
-  <div class="day-hero">
-    <img data-wf="Florence_Duomo_from_Michelangelo_hill.jpg" alt="Florence">
-    <div class="day-hero-text">
-      <span class="num">Day 03 · Aug 19</span>
-      <h3>Florence.</h3>
-      <p class="where">Italy · Sunset &amp; Renaissance</p>
-      <p class="date">Tuesday</p>
-      <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Piazzale+Michelangelo%2C+Florence%2C+Italy" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>Open in Maps</a>
+  <article class="day-card" id="d3">
+    <div class="day-hero" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Vista_di_Firenze_da_Piazzale_Michelangelo.jpg?width=1200')">
+      <div class="day-hero-num">3</div>
+      <div class="day-hero-date">8月19日 · Wed · Day 03</div>
+      <div class="day-hero-title">文艺复兴余晖 · 佛罗伦萨</div>
+      <div class="day-hero-en">Firenze — sunset over the Arno</div>
+      <div class="day-badges"><span class="badge badge-italy">佛罗伦萨</span></div>
     </div>
-  </div>
-  <div class="day-body"><div class="day-body-inner">
-    <p class="feeling">The most romantic sunset of your life. I promise.</p>
-
-    <div class="gallery g5">
-      <figure><img data-wf="Florence_-_Cathedral_-_Duomo_-_panoramio_(2).jpg" alt="Duomo"><figcaption class="cap">Duomo</figcaption></figure>
-      <figure><img data-wf="Ponte_Vecchio_at_dusk_(cropped).jpg" alt="Ponte Vecchio"><figcaption class="cap">Ponte Vecchio</figcaption></figure>
-      <figure><img data-wf="Piazza_della_Signoria_in_Florence.jpg" alt="Piazza della Signoria"><figcaption class="cap">Piazza Signoria</figcaption></figure>
-      <figure><img data-wf="Florence_seen_from_Piazzale_Michelangelo.jpg" alt="Piazzale Michelangelo"><figcaption class="cap">Piazzale Michelangelo</figcaption></figure>
-      <figure><img data-wf="Frecciarossa_1000_ETR_400.jpg" alt="Frecciarossa"><figcaption class="cap">Frecciarossa Train</figcaption></figure>
-    </div>
-
-    <div class="logistics">
-      <div class="item"><div class="k">Stay</div><div class="v">PLUS Florence</div><div class="s">Hostel + pool · 15-min walk from S.M.N. station</div></div>
-      <div class="item"><div class="k">Transit</div><div class="v">Roma → Firenze (1.5h)</div><div class="s">Frecciarossa or Italo · €19 if booked 60+ days ahead</div><a class="book" href="https://www.italotreno.it/en" target="_blank" rel="noopener">Book on Italo →</a></div>
-      <div class="item"><div class="k">Today’s Budget</div><div class="v">€30 / RM 150</div><div class="s">Add €19 train + €4 Conad wine/focaccia</div></div>
-    </div>
-
-    <div class="schedule">
-      <div class="sch-head"><p class="lbl">Today’s Timeline</p><p class="title">From Caesar to Da Vinci</p></div>
-      <div class="rail">
-        <div class="rail-item"><div class="time">08:00 · Train</div><div class="what">Roma → Firenze S.M.N.</div><div class="det">Frecciarossa or Italo · 1h 30m · book €19 advance fare</div></div>
-        <div class="rail-item"><div class="time">11:00 · Walk</div><div class="what">Duomo + Piazza della Signoria</div><div class="det">Outside views are enough — skip the queues</div></div>
-        <div class="rail-item"><div class="time">14:00 · Lunch</div><div class="what">Trattoria Mario or Sostanza</div><div class="det">Tuscan steak + Chianti, no reservation possible</div></div>
-        <div class="rail-item"><div class="time">16:00 · Stroll</div><div class="what">Ponte Vecchio + leather market</div><div class="det">Cross the Old Bridge as the sun lowers</div></div>
-        <div class="rail-item"><div class="time">19:30 · THE Moment</div><div class="what">Piazzale Michelangelo</div><div class="det">€4 Chianti from Conad + €3 focaccia + the whole city below us 🌅</div></div>
+    <div class="day-body">
+      <div class="day-strip">
+        <div class="strip-cell"><div class="strip-label">Stay</div><div class="strip-val">PLUS Florence</div></div>
+        <div class="strip-cell"><div class="strip-label">Transit</div><div class="strip-val">Roma→Firenze 高铁 €15</div></div>
+        <div class="strip-cell"><div class="strip-label">Budget</div><div class="strip-val">€30 · ~RM 150</div></div>
       </div>
+      <div class="day-block"><div class="day-block-label">08:00 上午</div><div class="day-block-content">高铁抵达 SMN 站 ~09:30 → 放行李 check-in。</div></div>
+      <div class="day-block"><div class="day-block-label">下午</div><div class="day-block-content"><div class="route-line"><span>圣母百花大教堂</span><span class="route-arrow">→</span><span>老桥 Ponte Vecchio</span><span class="route-arrow">→</span><span>共和国广场</span><span class="route-arrow">→</span><span>领主广场</span></div>老桥 14:00–15:00 前往，正午人潮稍退。</div></div>
+      <div class="day-block"><div class="day-block-label">傍晚 · 核心</div><div class="day-block-content"><strong>米开朗基罗广场</strong> 日落——佛罗伦萨最经典全景。日落 ~20:15，<strong>19:30 前到</strong>。超市备啤酒。</div></div>
+      <a class="maps-pill mapslink" href="#" data-q="Piazzale Michelangelo Florence">📍 Open in Maps · 打开地图</a>
     </div>
+  </article>
 
-    <div class="advisor"><div class="icon">💡</div><div class="body">
-      <p class="who">Advisor’s Note</p>
-      <p><strong>Book Italo or Frecciarossa 1–2 months ahead</strong> — same-day tickets are 3–4× more expensive (€19 vs €70+).</p>
-      <p><strong>Piazzale Michelangelo:</strong> arrive by 7pm, sit on the steps (not the main platform — too crowded). Stop at a Conad supermarket for wine + focaccia. This is the moment of the trip.</p>
-      <p><strong>Skip:</strong> Uffizi and Accademia unless pre-booked. Same-day is impossible in August.</p>
-    </div></div>
-    <div class="romantic">If you remember one moment from this trip — let it be this one.</div>
-  </div></div>
-</section>
-
-<!-- ============ DAY 4 LAKE COMO ============ -->
-<section class="reveal" id="d4" data-city="Varenna, Lake Como, Italy">
-  <div class="day-hero">
-    <img data-wf="Varenna_-_Lago_di_Como.jpg" alt="Varenna">
-    <div class="day-hero-text">
-      <span class="num">Day 04 · Aug 20</span>
-      <h3>Lake Como.</h3>
-      <p class="where">Italy · Milan → Varenna</p>
-      <p class="date">Wednesday</p>
-      <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Varenna%2C+Lake+Como%2C+Italy" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>Open in Maps</a>
+  <article class="day-card" id="d4">
+    <div class="day-hero" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Lago_di_Como_-_Bellagio_view.jpg?width=1200')">
+      <div class="day-hero-num">4</div>
+      <div class="day-hero-date">8月20日 · Thu · Day 04</div>
+      <div class="day-hero-title">湖光山色序章 · 米兰闪击 + 科莫湖</div>
+      <div class="day-hero-en">Milano flash — then Lago di Como</div>
+      <div class="day-badges"><span class="badge badge-italy">米兰 / 科莫</span></div>
     </div>
-  </div>
-  <div class="day-body"><div class="day-body-inner">
-    <p class="feeling">A lake so blue it doesn’t look real. Like you.</p>
-
-    <div class="gallery g5">
-      <figure><img data-wf="Milan_Cathedral_from_Piazza_del_Duomo.jpg" alt="Milan Duomo"><figcaption class="cap">Milan Duomo</figcaption></figure>
-      <figure><img data-wf="Varenna,_Lake_Como.jpg" alt="Varenna village"><figcaption class="cap">Varenna</figcaption></figure>
-      <figure><img data-wf="Bellagio_Lake_Como.JPG" alt="Bellagio"><figcaption class="cap">Bellagio</figcaption></figure>
-      <figure><img data-wf="Lago_di_Como_Italy.jpg" alt="Lake Como"><figcaption class="cap">Lake Como</figcaption></figure>
-      <figure><img data-wf="Como_ferry.jpg" alt="Como ferry"><figcaption class="cap">Lake Ferry</figcaption></figure>
-    </div>
-
-    <div class="logistics">
-      <div class="item"><div class="k">Stay</div><div class="v">Ostello Menaggio (Lake Como)</div><div class="s">Lakeside hostel · book direct for best rate</div></div>
-      <div class="item"><div class="k">Transit</div><div class="v">Firenze → Milano → Varenna</div><div class="s">2h + 1h · sit LEFT on the Varenna leg</div><a class="book" href="https://www.trenitalia.com/en.html" target="_blank" rel="noopener">Book on Trenitalia →</a></div>
-      <div class="item"><div class="k">Today’s Budget</div><div class="v">€35 / RM 180</div><div class="s">Plus €15 Milan–Varenna regional train</div></div>
-    </div>
-
-    <div class="schedule">
-      <div class="sch-head"><p class="lbl">Today’s Timeline</p><p class="title">From the City to the Lake</p></div>
-      <div class="rail">
-        <div class="rail-item"><div class="time">08:00 · Train</div><div class="what">Firenze → Milano Centrale</div><div class="det">~2 hours · book in advance</div></div>
-        <div class="rail-item"><div class="time">11:00 · Quick stop</div><div class="what">Milan Cathedral (1 hour)</div><div class="det">Just outside views. Roof access if you have energy.</div></div>
-        <div class="rail-item"><div class="time">14:00 · Train</div><div class="what">Milano → Varenna-Esino</div><div class="det">Sit on the LEFT side for the lake reveal</div></div>
-        <div class="rail-item"><div class="time">16:00 · Settle</div><div class="what">Check in · explore Varenna</div><div class="det">Pastel houses, narrow lakeside walk</div></div>
-        <div class="rail-item"><div class="time">18:30 · Ferry</div><div class="what">Sunset ferry to Bellagio</div><div class="det">Aperitivo at Bar Rossi · golden hour on the water</div></div>
+    <div class="day-body">
+      <div class="day-strip">
+        <div class="strip-cell"><div class="strip-label">Stay</div><div class="strip-val">Lake Como Hostel · Menaggio</div></div>
+        <div class="strip-cell"><div class="strip-label">Transit</div><div class="strip-val">高铁 + Trenord</div></div>
+        <div class="strip-cell"><div class="strip-label">Budget</div><div class="strip-val">€35 · ~RM 180</div></div>
       </div>
+      <div class="day-block"><div class="day-block-label">08:00 上午</div><div class="day-block-content">佛罗伦萨 → 米兰 ~10:00 抵 Centrale → <strong>行李寄存</strong>（Kipoint / Radical Storage ~€5/件）。</div></div>
+      <div class="day-block"><div class="day-block-label">米兰闪击 ~3h</div><div class="day-block-content"><div class="route-line"><span>米兰大教堂广场</span><span class="route-arrow">→</span><span>艾曼纽二世拱廊</span><span class="route-arrow">→</span><span>斯卡拉歌剧院</span></div>13:00 取行李。</div></div>
+      <div class="day-block"><div class="day-block-label">下午—傍晚 · 科莫湖</div><div class="day-block-content">Milano → Varenna-Esino (~1h ~€5) → 渡轮至 Menaggio → check-in → 沿湖徒步"<strong>情人小径</strong> Greenway del Lago"。</div></div>
+      <a class="maps-pill mapslink" href="#" data-q="Menaggio Lake Como">📍 Open in Maps · 打开地图</a>
     </div>
+  </article>
 
-    <div class="advisor"><div class="icon">💡</div><div class="body">
-      <p class="who">Advisor’s Note — Honest Take</p>
-      <p><strong>Drop the Sentiero del Viandante hike.</strong> A long hike on a heavy travel day in summer heat = disaster. The magic of Como is the lake itself, not the trail.</p>
-      <p><strong>Stay in Varenna, not Bellagio.</strong> Bellagio is prettier but 3× the price and packed with day-trippers. Varenna is quiet and has the train station.</p>
-    </div></div>
-    <div class="romantic">Just us, the ferry, and the bluest water you’ve ever seen.</div>
-  </div></div>
-</section>
-
-<!-- PHASE 2 -->
-<section class="phase-intro swiss" id="swiss">
-  <div class="reveal">
-    <div class="flag">🇨🇭</div>
-    <p class="label">Phase Two</p>
-    <h2>Die Schweiz.</h2>
-    <p class="tag">The Alps. Alpine lakes. Views that stop your breath — and mine.</p>
-  </div>
-</section>
-
-<!-- ============ DAY 5 ZERMATT ============ -->
-<section class="reveal" id="d5" data-city="Zermatt, Switzerland">
-  <div class="day-hero">
-    <img data-wf="Matterhorn_from_Domhütte_-_2.jpg" alt="Matterhorn">
-    <div class="day-hero-text">
-      <span class="num">Day 05 · Aug 21</span>
-      <h3>Zermatt.</h3>
-      <p class="where">Switzerland · Crossing Borders</p>
-      <p class="date">Thursday</p>
-      <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Zermatt%2C+Switzerland" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>Open in Maps</a>
+  <article class="day-card" id="d5">
+    <div class="day-hero" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Matterhorn_from_Domh%C3%BCtte_-_2.jpg?width=1200')">
+      <div class="day-hero-num">5</div>
+      <div class="day-hero-date">8月21日 · Fri · Day 05</div>
+      <div class="day-hero-title">跨国奔赴 · 雪山之巅 Zermatt</div>
+      <div class="day-hero-en">Crossing borders to the Matterhorn</div>
+      <div class="day-badges"><span class="badge badge-transit">跨国日</span><span class="badge badge-warn">6–7h transit</span></div>
     </div>
-  </div>
-  <div class="day-body"><div class="day-body-inner">
-    <p class="feeling">First glimpse of the Matterhorn. First taste of mountain air.</p>
-
-    <div class="gallery g5">
-      <figure><img data-wf="Matterhorn_from_Zermatt.jpg" alt="Matterhorn from Zermatt"><figcaption class="cap">The Matterhorn</figcaption></figure>
-      <figure><img data-wf="Zermatt_-_Bahnhofstrasse.jpg" alt="Zermatt village"><figcaption class="cap">Zermatt Village</figcaption></figure>
-      <figure><img data-wf="Glacier_Express_above_Brig.jpg" alt="Mountain train"><figcaption class="cap">Mountain Train</figcaption></figure>
-      <figure><img data-wf="Kirchbrücke_Zermatt.jpg" alt="Kirchbrücke"><figcaption class="cap">Kirchbrücke Bridge</figcaption></figure>
-      <figure><img data-wf="Swiss_Alps_chalets.jpg" alt="Swiss chalets"><figcaption class="cap">Alpine Chalets</figcaption></figure>
-    </div>
-
-    <div class="logistics swiss">
-      <div class="item"><div class="k">Stay</div><div class="v">Zermatt Youth Hostel</div><div class="s">5-min walk from station · breakfast included</div></div>
-      <div class="item"><div class="k">Transit</div><div class="v">Varenna → Milano → Brig → Visp → Zermatt</div><div class="s">⚠️ ~6–7h with 3 connections · book Visp→Zermatt 60+ days ahead (sells out in Aug)</div><a class="book" href="https://www.sbb.ch/en/" target="_blank" rel="noopener">Plan on SBB →</a></div>
-      <div class="item"><div class="k">Today’s Budget</div><div class="v">CHF 30 / RM 160</div><div class="s">Plus CHF 120 Half Fare Card (one-time, covers D5–10)</div></div>
-    </div>
-
-    <div class="schedule">
-      <div class="sch-head"><p class="lbl">Today’s Timeline</p><p class="title">A Long Travel Day</p></div>
-      <div class="rail swiss">
-        <div class="rail-item"><div class="time">07:00 · Train</div><div class="what">Como → Milano Centrale</div><div class="det">~1 hour</div></div>
-        <div class="rail-item"><div class="time">09:00 · Border</div><div class="what">Milano → Brig (Switzerland)</div><div class="det">Cross the Alps · ~3.5 hours · scenic</div></div>
-        <div class="rail-item"><div class="time">14:00 · Climb</div><div class="what">Brig → Zermatt</div><div class="det">Mountain train · 1h 20m · sit on the right for views</div></div>
-        <div class="rail-item"><div class="time">16:00 · Wander</div><div class="what">Car-free village + check in</div><div class="det">Wooden chalets, electric taxis only</div></div>
-        <div class="rail-item"><div class="time">19:00 · Sunset</div><div class="what">Kirchbrücke bridge</div><div class="det">The classic Matterhorn-over-the-river photo</div></div>
+    <div class="day-body">
+      <div class="day-strip">
+        <div class="strip-cell"><div class="strip-label">Stay</div><div class="strip-val">Zermatt Youth Hostel</div></div>
+        <div class="strip-cell"><div class="strip-label">Transit</div><div class="strip-val">渡轮 + 火车 ×3 换乘</div></div>
+        <div class="strip-cell"><div class="strip-label">Budget</div><div class="strip-val">CHF 30 · ~RM 160</div></div>
       </div>
+      <div class="day-block"><div class="day-block-label">全天交通 6–7h</div><div class="day-block-content"><div class="route-line"><span>渡轮 Menaggio→Varenna</span><span class="route-arrow">→</span><span>Varenna→Milano</span><span class="route-arrow">→</span><span>Brig (2h30)</span><span class="route-arrow">→</span><span>Visp (30m)</span><span class="route-arrow">→</span><span>Zermatt (1h)</span></div></div></div>
+      <div class="callout callout-fix"><div class="callout-title">📌 提前购票不可省</div>在 <strong>sbb.ch</strong> 购整段瑞士车票（含 Half Fare 折扣），8 月 Visp→Zermatt 段非常紧张，<strong>提前 60 天</strong>（6 月下旬开放）即买。</div>
+      <div class="day-block"><div class="day-block-label">傍晚 · Arrival</div><div class="day-block-content">抵达 Zermatt——无汽车小镇。傍晚在 <strong>Kirchbrücke 桥</strong> 等待马特洪峰"<strong>日照金山</strong>"（~20:00）。入住的第一份震撼。</div></div>
+      <a class="maps-pill mapslink" href="#" data-q="Zermatt Switzerland">📍 Open in Maps · 打开地图</a>
     </div>
+  </article>
 
-    <div class="advisor"><div class="icon">💡</div><div class="body">
-      <p class="who">Advisor’s Note — CRITICAL</p>
-      <p><strong>Buy a Swiss Half Fare Card before crossing the border</strong> (CHF 120, valid 1 month). Switzerland is brutally expensive — every train, cable car, and lift is 50% off. You will save 3–4× the cost over Days 5–10.</p>
-      <p><strong>Bring snacks.</strong> Swiss train food is ridiculous (€8 sandwich). Stock up at Coop in Milan before leaving.</p>
-    </div></div>
-    <div class="romantic">A peak named for kings — and a girl named for forever.</div>
-  </div></div>
+  <article class="day-card" id="d6">
+    <div class="day-hero" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Stellisee.jpg?width=1200')">
+      <div class="day-hero-num">6</div>
+      <div class="day-hero-date">8月22日 · Sat · Day 06</div>
+      <div class="day-hero-title">五湖徒步 · 倒影时刻</div>
+      <div class="day-hero-en">Five Lakes Walk &mdash; the Stellisee mirror</div>
+      <div class="day-badges"><span class="badge badge-swiss">采尔马特</span><span class="badge badge-warn">13 km · 4–5h</span></div>
+    </div>
+    <div class="day-body">
+      <div class="day-strip">
+        <div class="strip-cell"><div class="strip-label">Stay</div><div class="strip-val">Zermatt Youth Hostel</div></div>
+        <div class="strip-cell"><div class="strip-label">Transit</div><div class="strip-val">缆车 + 徒步</div></div>
+        <div class="strip-cell"><div class="strip-label">Budget</div><div class="strip-val">CHF 40 · ~RM 210</div></div>
+      </div>
+      <div class="day-block"><div class="day-block-label">核心路线 13 km</div><div class="day-block-content"><div class="route-line"><span>Zermatt</span><span class="route-arrow">→</span><span>Stellisee</span><span class="route-arrow">→</span><span>Grindjisee</span><span class="route-arrow">→</span><span>Grünsee</span><span class="route-arrow">→</span><span>Moosjisee</span><span class="route-arrow">→</span><span>Leisee</span></div>核心：<strong>Stellisee 湖马特洪峰倒影</strong>。</div></div>
+      <div class="callout callout-warn"><div class="callout-title">⏰ 07:00 出发，08:00 抵 Stellisee</div>Stellisee 倒影只在早晨湖面平静时清晰，10 点后风起涟漪、倒影消失。8 月 8 点后人流剧增。</div>
+      <div class="day-block"><div class="day-block-label">下午</div><div class="day-block-content">返回村庄休息，在 <strong>Migros 超市</strong> 补给明后两天的干粮。Gimmelwald 山上无超市。</div></div>
+      <a class="maps-pill mapslink" href="#" data-q="Stellisee Zermatt">📍 Open in Maps · 打开地图</a>
+    </div>
+  </article>
+
+  <article class="day-card" id="d7">
+    <div class="day-hero" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Lauterbrunnen_Valley.jpg?width=1200')">
+      <div class="day-hero-num">7</div>
+      <div class="day-hero-date">8月23日 · Sun · Day 07</div>
+      <div class="day-hero-title">瀑布深谷 · 抵达悬崖村</div>
+      <div class="day-hero-en">Lauterbrunnen → the cliff village</div>
+      <div class="day-badges"><span class="badge badge-swiss">Lauterbrunnen → Gimmelwald</span></div>
+    </div>
+    <div class="day-body">
+      <div class="day-strip">
+        <div class="strip-cell"><div class="strip-label">Stay</div><div class="strip-val">Mountain Hostel Gimmelwald</div></div>
+        <div class="strip-cell"><div class="strip-label">Transit</div><div class="strip-val">火车 + 缆车 ~2.5h</div></div>
+        <div class="strip-cell"><div class="strip-label">Budget</div><div class="strip-val">CHF 30 · ~RM 160</div></div>
+      </div>
+      <div class="day-block"><div class="day-block-label">上午 · 交通</div><div class="day-block-content"><div class="route-line"><span>Zermatt</span><span class="route-arrow">→</span><span>Visp</span><span class="route-arrow">→</span><span>Spiez</span><span class="route-arrow">→</span><span>Interlaken Ost</span><span class="route-arrow">→</span><span>Lauterbrunnen</span></div></div></div>
+      <div class="day-block"><div class="day-block-label">中午 · 瀑布镇</div><div class="day-block-content"><strong>Lauterbrunnen</strong>——欧洲最著名山谷瀑布群（72 条）。徒步至 <strong>Staubbach Falls</strong>，可走进瀑布后方。约 2–3h。</div></div>
+      <div class="day-block"><div class="day-block-label">下午 · 抵达</div><div class="day-block-content">Lauterbrunnen → Stechelberg → Schilthorn 缆车至 <strong>Gimmelwald 站</strong>（半价 CHF 7）。Mountain Hostel 就在缆车站旁。</div></div>
+      <a class="maps-pill mapslink" href="#" data-q="Mountain Hostel Gimmelwald">📍 Open in Maps · 打开地图</a>
+      <div class="callout callout-tip" style="margin-top:10px">💡 130 居民的悬崖小村，无超市无汽车。晚上露台自带食物聚餐，难以复制的高山社交。</div>
+    </div>
+  </article>
+
+  <article class="day-card" id="d8">
+    <div class="day-hero" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Bachalpsee.jpg?width=1200')">
+      <div class="day-hero-num">8</div>
+      <div class="day-hero-date">8月24日 · Mon · Day 08</div>
+      <div class="day-hero-title">⭐ Boss Level · First → Faulhorn → Schynige Platte</div>
+      <div class="day-hero-en">The big one — 16 km of pure alpine</div>
+      <div class="day-badges"><span class="badge badge-swiss">少女峰区</span><span class="badge badge-warn">16 km · 6–7h</span></div>
+    </div>
+    <div class="day-body">
+      <div class="day-strip">
+        <div class="strip-cell"><div class="strip-label">Stay</div><div class="strip-val">回 Mountain Hostel Gimmelwald</div></div>
+        <div class="strip-cell"><div class="strip-label">Transit</div><div class="strip-val">缆车 + 长徒步 + 历史齿轨</div></div>
+        <div class="strip-cell"><div class="strip-label">Budget</div><div class="strip-val">CHF 60 · ~RM 320</div></div>
+      </div>
+      <div class="day-block"><div class="day-block-label">路线</div><div class="day-block-content"><div class="route-line"><span>Grindelwald</span><span class="route-arrow">→</span><span>First 缆车 ↑</span><span class="route-arrow">→</span><span>Bachalpsee</span><span class="route-arrow">→</span><span>Faulhorn 2,681m</span><span class="route-arrow">→</span><span>Schynige Platte</span><span class="route-arrow">→</span><span>Interlaken</span></div>全程 <strong>16 km</strong>，海拔差 ~700m，<strong>6–7h</strong>。整个行程最艰辛也最壮美的一天。</div></div>
+      <div class="callout callout-warn"><div class="callout-title">⏰ 必须 08:00 前抵 First 缆车站</div>First 缆车 ~08:30 开始。从 Gimmelwald 出发 ~1h。<strong>07:00 必须离开</strong>，含早餐 06:30 起床。</div>
+      <div class="day-block"><div class="day-block-label">中途亮点</div><div class="day-block-content"><strong>Bachalpsee</strong> (~1.5h) — 双湖倒影少女峰三雄 (Eiger, Mönch, Jungfrau)。<br><br><strong>Faulhorn 2,681m</strong> (~3.5h) — 360° 阿尔卑斯全景，1832 年老山屋有热汤 CHF 8–12。<br><br><strong>Schynige Platte</strong> — 高山植物园，历史齿轨列车下山。</div></div>
+      <div class="callout callout-fix"><div class="callout-title">📌 必须预订 Schynige Platte 下山火车</div>8 月旺季紧俏，<strong>jungfrau.ch</strong> 提前订（半价 CHF 18）。没票当天可能被迫原路折返。</div>
+      <div class="callout callout-warn"><div class="callout-title">🎒 此日装备</div>· 每人 <strong>2.5L 水</strong>（中段无补给）<br>· 高热量干粮：坚果、能量棒、面包、香蕉<br>· <strong>防滑徒步鞋</strong>（普通运动鞋打滑）<br>· Uniqlo 轻薄羽绒（峰顶 5–12°C）<br>· 墨镜（雪地反光）</div>
+      <a class="maps-pill mapslink" href="#" data-q="First Grindelwald">📍 Open in Maps · 打开地图</a>
+      <div class="callout callout-tip" style="margin-top:10px">💡 雨天备案：MeteoSwiss 当日降雨 >50%，改 <strong>伯恩老城</strong> 或 Lindt 巧克力博物馆（免费）。</div>
+    </div>
+  </article>
+
+  <article class="day-card" id="d9">
+    <div class="day-hero" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Iseltwald_Brienzersee.jpg?width=1200')">
+      <div class="day-hero-num">9</div>
+      <div class="day-hero-date">8月25日 · Tue · Day 09</div>
+      <div class="day-hero-title">布里恩茨湖 + 伯恩 · 放缓节奏</div>
+      <div class="day-hero-en">A gentler day — Iseltwald, Bern, Lucerne</div>
+      <div class="day-badges"><span class="badge badge-swiss">Iseltwald · 伯恩 → 卢塞恩</span></div>
+    </div>
+    <div class="day-body">
+      <div class="day-strip">
+        <div class="strip-cell"><div class="strip-label">Stay</div><div class="strip-val">Backpackers Lucerne</div></div>
+        <div class="strip-cell"><div class="strip-label">Transit</div><div class="strip-val">缆车 + 火车 ~3h 全天</div></div>
+        <div class="strip-cell"><div class="strip-label">Budget</div><div class="strip-val">CHF 35 · ~RM 185</div></div>
+      </div>
+      <div class="day-block"><div class="day-block-label">上午</div><div class="day-block-content">Gimmelwald 缆车 → Stechelberg → <strong>Iseltwald（布里恩茨湖畔）</strong>。《爱的迫降》取景地，木栈道码头背景碧蓝湖水与雪山。环湖 ~30m。</div></div>
+      <div class="day-block"><div class="day-block-label">中午—下午</div><div class="day-block-content">Iseltwald → Interlaken → 火车至 <strong>伯恩 (Bern)</strong>。<strong>拱廊街 Lauben</strong> → <strong>钟楼 Zytglogge</strong> → <strong>熊公园</strong>（免费）。</div></div>
+      <div class="day-block"><div class="day-block-label">傍晚</div><div class="day-block-content">伯恩 → 火车 ~1h → 抵 <strong>卢塞恩</strong>，check-in，湖边散步。</div></div>
+      <a class="maps-pill mapslink" href="#" data-q="Iseltwald Brienzersee">📍 Open in Maps · 打开地图</a>
+      <div class="callout callout-tip" style="margin-top:10px">💡 体力较轻的一天，给 Day 8 之后双脚一个缓冲。"散步 + 看风景"为主。</div>
+    </div>
+  </article>
+
+  <article class="day-card" id="d10">
+    <div class="day-hero" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Luzern_Kapellbruecke.jpg?width=1200')">
+      <div class="day-hero-num">10</div>
+      <div class="day-hero-date">8月26日 · Wed · Day 10</div>
+      <div class="day-hero-title">卢塞恩 · 瑞吉山日落</div>
+      <div class="day-hero-en">Lucerne &amp; the Queen of the Mountains</div>
+      <div class="day-badges"><span class="badge badge-swiss">卢塞恩</span></div>
+    </div>
+    <div class="day-body">
+      <div class="day-strip">
+        <div class="strip-cell"><div class="strip-label">Stay</div><div class="strip-val">Backpackers Lucerne</div></div>
+        <div class="strip-cell"><div class="strip-label">Transit</div><div class="strip-val">齿轨 Mt. Rigi 来回</div></div>
+        <div class="strip-cell"><div class="strip-label">Budget</div><div class="strip-val">CHF 50 · ~RM 265</div></div>
+      </div>
+      <div class="day-block"><div class="day-block-label">上午 · 老城</div><div class="day-block-content">卡贝尔桥 (Kapellbrücke) → 水塔 → 垂死狮子纪念碑 → 老城。慢慢走，慢慢拍。</div></div>
+      <div class="day-block"><div class="day-block-label">下午 · Mt. Rigi</div><div class="day-block-content"><strong>Mt. Rigi</strong>——欧洲第一座齿轨登山铁路，"山中皇后"。半价往返 ~CHF 30。山顶 1,797m。<br><br><strong>备选：</strong>卢塞恩湖游船 2h（半价 ~CHF 20）。</div></div>
+      <div class="day-block"><div class="day-block-label">傍晚 · 犒劳</div><div class="day-block-content">"最后的晚餐"——超市烤鸡 + 沙拉，或奖励一顿餐厅 <strong>Rösti</strong>（CHF 18–22）。</div></div>
+      <a class="maps-pill mapslink" href="#" data-q="Mt Rigi Switzerland">📍 Open in Maps · 打开地图</a>
+    </div>
+  </article>
+
+  <article class="day-card" id="d11">
+    <div class="day-hero" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Pilatus.jpg?width=1200')">
+      <div class="day-hero-num">11</div>
+      <div class="day-hero-date">8月27日 · Thu · Day 11</div>
+      <div class="day-hero-title">⭐ 巅峰谢幕 · 皮拉图斯山 → ZRH</div>
+      <div class="day-hero-en">Curtain call on Mt. Pilatus</div>
+      <div class="day-badges"><span class="badge badge-swiss">卢塞恩 → ZRH</span><span class="badge badge-warn">tight!</span></div>
+    </div>
+    <div class="day-body">
+      <div class="day-strip">
+        <div class="strip-cell"><div class="strip-label">Stay</div><div class="strip-val">飞机上 ✈️</div></div>
+        <div class="strip-cell"><div class="strip-label">Transit</div><div class="strip-val">船+齿轨+缆车+火车+飞机</div></div>
+        <div class="strip-cell"><div class="strip-label">Budget</div><div class="strip-val">CHF 70 · ~RM 370</div></div>
+      </div>
+      <div class="callout callout-warn"><div class="callout-title">⏰ 时间线非常紧凑，严格执行</div>08:00 出发 Pilatus → 12:30 完成 → 13:30 返卢塞恩 → 14:30 火车 → 15:30 ZRH → 退税 → 19:30 值机截止 → 22:35 起飞。</div>
+      <div class="day-block"><div class="day-block-label">08:00 务必准时</div><div class="day-block-content"><strong>Mt. Pilatus 黄金往返</strong><div class="route-line"><span>Lucerne 码头</span><span class="route-arrow">→船 1h→</span><span>Alpnachstad</span><span class="route-arrow">→世界最陡齿轨 30m→</span><span>Pilatus Kulm 2,132m</span><span class="route-arrow">→缆车→</span><span>Kriens</span><span class="route-arrow">→巴士→</span><span>Lucerne</span></div>全程 ~4h。半价后 ~CHF 55/人。云海之上的谢幕。</div></div>
+      <div class="day-block"><div class="day-block-label">14:30 下午</div><div class="day-block-content">取行李，SBB <strong>Lucerne → ZRH</strong> ~50m 直达。15:30 抵机场，做 <strong>Global Blue 退税</strong>。</div></div>
+      <a class="maps-pill mapslink" href="#" data-q="Mount Pilatus Lucerne">📍 Open in Maps · 打开地图</a>
+      <div class="callout callout-ok" style="margin-top:10px">✅ 若赶不上 08:00 游船，改直接巴士 + 缆车上山（Gondola Round Trip），~3h。</div>
+    </div>
+  </article>
 </section>
 
-<!-- ============ DAY 6 FIVE LAKES ============ -->
-<section class="reveal" id="d6" data-city="Zermatt, Switzerland">
-  <div class="day-hero">
-    <img data-wf="Stellisee_Reflection.jpg" alt="Stellisee">
-    <div class="day-hero-text">
-      <span class="num">Day 06 · Aug 22</span>
-      <h3>Stellisee.</h3>
-      <p class="where">Switzerland · Five Lakes Walk</p>
-      <p class="date">Friday</p>
-      <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Stellisee%2C+Zermatt%2C+Switzerland" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>Open in Maps</a>
+<section class="sec" id="s6">
+  <div class="section-header"><div class="section-num">06</div><div><div class="section-title">餐饮策略</div><div class="section-en">Eating Smart</div></div></div>
+  <ul class="plain">
+    <li><strong>意大利景点周边餐厅避开：</strong>往小巷走 2 条街价格减半。<em>Pizza al Taglio</em> 按重量 €3–5。Forno 早餐 €2。</li>
+    <li><strong>意大利超市：</strong>Lidl / Carrefour / Conad。Mozzarella + 面包 + 番茄 ~€4 一餐。</li>
+    <li><strong>瑞士铁律 — 100% 超市：</strong><strong>Coop / Migros</strong>。外食 CHF 20+，超市 CHF 8–12。</li>
+    <li><strong>瑞士神单：</strong>烤鸡 CHF 10–12 · 沙拉吧 CHF 3–5 · Swiss Muesli · Rivella 苏打 · Gruyère 奶酪。</li>
+    <li><strong>泡面神器：</strong>Maggi + 折叠电热水壶（欧标双圆孔）。Gimmelwald 两天靠它。</li>
+    <li><strong>Day 6 关键采购：</strong>Zermatt Migros 一次性买齐 Day 7、8 的所有食物。</li>
+    <li><strong>犒劳时刻：</strong>Day 10 卢塞恩餐厅 Rösti 或 Fondue。</li>
+  </ul>
+</section>
+
+<section class="sec" id="s7">
+  <div class="section-header"><div class="section-num">07</div><div><div class="section-title">市内交通</div><div class="section-en">Local Transport</div></div></div>
+  <ul class="plain">
+    <li><strong>意大利（罗马）：</strong>步行为主 + 单次地铁 €2。避免出租车。</li>
+    <li><strong>意大利城际：</strong>Trenitalia / Italo 提前购特价 €15–25。</li>
+    <li><strong>瑞士 Half Fare Card（灵魂之卡）：</strong>CHF 120（~RM 600），全瑞士火车/巴士/船/缆车 50% 折扣，11 天高度回本。<strong>出发前 sbb.ch 购买</strong>。</li>
+    <li><strong>必备 App：</strong><strong>SBB Mobile</strong> · <strong>Trenitalia / Italo</strong> · <strong>Google Maps</strong>（离线下载）。</li>
+    <li><strong>现金：</strong><strong>CHF 100–150</strong> 备用，意大利 ~€50。</li>
+    <li><strong>eSIM：</strong>Airalo Europe 15GB ~RM 80。</li>
+  </ul>
+</section>
+
+<section class="sec" id="s8">
+  <div class="section-header"><div class="section-num">08</div><div><div class="section-title">预算明细（每人）</div><div class="section-en">Budget per Person</div></div></div>
+  <div class="budget-grid">
+    <div class="budget-card"><div class="budget-icon">✈️</div><div class="budget-label">机票</div><div class="budget-amount">已订</div><div class="budget-note">Confirmed</div></div>
+    <div class="budget-card"><div class="budget-icon">🛏️</div><div class="budget-label">住宿</div><div class="budget-amount">RM 3,500</div><div class="budget-note">~RM 175/晚</div></div>
+    <div class="budget-card"><div class="budget-icon">🚆</div><div class="budget-label">交通</div><div class="budget-amount">RM 2,500</div><div class="budget-note">含半价卡 + 缆车</div></div>
+    <div class="budget-card"><div class="budget-icon">🍜</div><div class="budget-label">餐饮</div><div class="budget-amount">RM 1,800</div><div class="budget-note">~RM 164/天</div></div>
+    <div class="budget-card"><div class="budget-icon">📱</div><div class="budget-label">杂项</div><div class="budget-amount">RM 700</div><div class="budget-note">eSIM + 保险 + 备用</div></div>
+  </div>
+  <div class="callout callout-warn" style="margin-top:0">
+    <div class="callout-title">💰 瑞士缆车现实</div>
+    <table class="gondola-table" style="margin-top:8px">
+      <tr><td>Day 8 First Gondola 来回</td><td>≈ CHF 30</td></tr>
+      <tr><td>Day 8 Schynige Platte 历史火车</td><td>≈ CHF 18</td></tr>
+      <tr><td>Day 10 Mt. Rigi 往返</td><td>≈ CHF 28</td></tr>
+      <tr><td>Day 11 Pilatus Golden</td><td>≈ CHF 55</td></tr>
+      <tr><td>Day 7 Stechelberg→Gimmelwald</td><td>≈ CHF 7</td></tr>
+      <tr><td style="font-weight:600;color:var(--ink)">合计</td><td style="font-weight:600;color:var(--ink)">≈ CHF 138 ≈ RM 680</td></tr>
+    </table>
+  </div>
+  <div class="budget-total">
+    <div><div class="budget-total-label">每人总预算（机票外）</div><div style="font-size:12px;color:#888;margin-top:4px">Suggested cash + card on hand</div></div>
+    <div class="budget-total-val">RM 9,000 – 9,500</div>
+  </div>
+</section>
+
+<section class="sec" id="s9">
+  <div class="section-header"><div class="section-num">09</div><div><div class="section-title">应急预案</div><div class="section-en">Plan B Playbook</div></div></div>
+  <ul class="plain">
+    <li><strong>Day 8 雨天：</strong>前晚 20:00 查 MeteoSwiss，>50% 降雨改 <strong>伯恩老城</strong>（6km 拱廊雨天友好）或 <strong>Lindt 巧克力博物馆</strong>（免费）。</li>
+    <li><strong>意大利高铁罢工：</strong>FlixBus / Blablacar，罗马→佛罗伦萨 ~€20。</li>
+    <li><strong>Zermatt 区恶劣天气：</strong>Day 6 大雾改村内徒步或 Matterhorn Museum (~CHF 10)。</li>
+    <li><strong>Gimmelwald 满房：</strong>备选 <strong>Mürren Youth Hostel</strong>（步行 45m）。</li>
+    <li><strong>伤病：</strong>布洛芬 + 创可贴 + Voltaren 喷雾 + 丹木斯 (高反预防)。</li>
+    <li><strong>信用卡：</strong>2 张不同银行 Visa/Master。Wise / Revolut 加载 EUR + CHF。</li>
+    <li><strong>Day 11 赶机：</strong>Pilatus 延误，14:30 火车 → ZRH 仍有 5h 缓冲。</li>
+  </ul>
+</section>
+
+<section class="sec" id="s10">
+  <div class="section-header"><div class="section-num">10</div><div><div class="section-title">行李清单</div><div class="section-en">Packing List</div></div></div>
+  <div class="pack-grid">
+    <div class="pack-category"><div class="pack-category-title">🔌 数码 &amp; 电</div>
+      <div class="pack-item"><strong>欧标转换插头</strong>（双圆孔 ×2–3）</div>
+      <div class="pack-item">10,000mAh 充电宝</div>
+      <div class="pack-item"><strong>折叠电热水壶</strong></div>
+      <div class="pack-item">Type-C 数据线 ×2</div>
+      <div class="pack-item">eSIM Airalo</div>
+    </div>
+    <div class="pack-category"><div class="pack-category-title">👟 穿搭 &amp; 装备</div>
+      <div class="pack-item"><strong>防滑徒步鞋</strong>（Day 8 必须）</div>
+      <div class="pack-item"><strong>Uniqlo 轻薄羽绒</strong>（峰顶 5–12°C）</div>
+      <div class="pack-item"><strong>墨镜</strong>（雪山反光）</div>
+      <div class="pack-item">速干短裤 ×2 + 长裤 ×1</div>
+      <div class="pack-item">轻量防风雨壳</div>
+      <div class="pack-item">登山杖（选带）</div>
+    </div>
+    <div class="pack-category"><div class="pack-category-title">🎒 背包 &amp; 户外</div>
+      <div class="pack-item"><strong>25–30L 日间背包</strong></div>
+      <div class="pack-item">可压缩大行李箱</div>
+      <div class="pack-item">行李锁 ×2</div>
+      <div class="pack-item">水壶 1L ×2</div>
+      <div class="pack-item">湿纸巾</div>
+    </div>
+    <div class="pack-category"><div class="pack-category-title">💊 医药 &amp; 急救</div>
+      <div class="pack-item">布洛芬</div>
+      <div class="pack-item">创可贴（大量）</div>
+      <div class="pack-item">Voltaren 凝胶</div>
+      <div class="pack-item">防晒 SPF 50+</div>
+      <div class="pack-item">高反药（丹木斯）</div>
+      <div class="pack-item">止泻药 + 肠胃药</div>
+    </div>
+    <div class="pack-category"><div class="pack-category-title">🍜 食物 &amp; 干粮</div>
+      <div class="pack-item"><strong>Maggi 泡面 ×10</strong></div>
+      <div class="pack-item">能量棒 ×10（Day 8）</div>
+      <div class="pack-item">混合坚果</div>
+      <div class="pack-item">速溶咖啡 3-in-1</div>
+    </div>
+    <div class="pack-category"><div class="pack-category-title">📱 必备 App</div>
+      <div class="pack-item"><strong>SBB Mobile</strong></div>
+      <div class="pack-item"><strong>Trenitalia / Italo</strong></div>
+      <div class="pack-item"><strong>MeteoSwiss</strong></div>
+      <div class="pack-item">Google Maps（离线）</div>
+      <div class="pack-item">XE Currency</div>
+      <div class="pack-item">Google Translate</div>
     </div>
   </div>
-  <div class="day-body"><div class="day-body-inner">
-    <p class="feeling">Stellisee — the Matterhorn’s perfect mirror. A photo of you here. Forever.</p>
-
-    <div class="gallery g3">
-      <figure><img data-wf="Sunnegga_funicular.jpg" alt="Sunnegga"><figcaption class="cap">Sunnegga</figcaption></figure>
-      <figure><img data-wf="Stellisee_with_Matterhorn.jpg" alt="Stellisee mirror"><figcaption class="cap">Stellisee Mirror</figcaption></figure>
-      <figure><img data-wf="Grindjisee.jpg" alt="Grindjisee"><figcaption class="cap">Grindjisee</figcaption></figure>
-    </div>
-
-    <div class="logistics swiss">
-      <div class="item"><div class="k">Stay</div><div class="v">Balmers Hostel · Interlaken</div><div class="s">Legendary backpacker spot · book months ahead in Aug</div></div>
-      <div class="item"><div class="k">Transit</div><div class="v">Zermatt → Interlaken Ost</div><div class="s">~2h 15m after the hike · scenic the whole way</div><a class="book" href="https://www.sbb.ch/en/" target="_blank" rel="noopener">Plan on SBB →</a></div>
-      <div class="item"><div class="k">Today’s Budget</div><div class="v">CHF 40 / RM 210</div><div class="s">Funicular + cable car CHF ~50 (Half Fare halves it)</div></div>
-    </div>
-
-    <div class="schedule">
-      <div class="sch-head"><p class="lbl">Today’s Timeline</p><p class="title">Above the Clouds</p></div>
-      <div class="rail swiss">
-        <div class="rail-item"><div class="time">06:30 · Up</div><div class="what">Funicular → Sunnegga</div><div class="det">Beat the tour groups. First train of the day.</div></div>
-        <div class="rail-item"><div class="time">07:30 · Higher</div><div class="what">Cable car → Blauherd (2,571m)</div><div class="det">Trail starts here</div></div>
-        <div class="rail-item"><div class="time">08:00 · Hike</div><div class="what">Stellisee FIRST</div><div class="det">Wind picks up by 11am — kills the reflection. Get the photo NOW.</div></div>
-        <div class="rail-item"><div class="time">10:00 · Walk</div><div class="what">Grindjisee → Grünsee → Moosjisee → Leisee</div><div class="det">9.3km · mostly downhill · 3 hours</div></div>
-        <div class="rail-item"><div class="time">14:00 · Lunch</div><div class="what">Findeln mountain restaurant</div><div class="det">Rösti + alpine cheese before descending</div></div>
-        <div class="rail-item"><div class="time">17:00 · Travel</div><div class="what">Train Zermatt → Interlaken Ost</div><div class="det">~2h 15m</div></div>
-      </div>
-    </div>
-
-    <div class="advisor"><div class="icon">💡</div><div class="body">
-      <p class="who">Advisor’s Note</p>
-      <p><strong>Get to Stellisee EARLY.</strong> The mirror reflection only happens when the lake is windless — usually before 10am. By noon it’s rippled and the photo is gone. This is the #1 reason people leave disappointed.</p>
-      <p><strong>Bring layers.</strong> It’s 10°C colder up there even in August. No hiking boots needed — sneakers are fine.</p>
-    </div></div>
-    <div class="romantic">Five lakes. One you. The reflection I’ll never forget.</div>
-  </div></div>
 </section>
 
-<!-- ============ DAY 7 LAUTERBRUNNEN ============ -->
-<section class="reveal" id="d7" data-city="Lauterbrunnen, Switzerland">
-  <div class="day-hero">
-    <img data-wf="Lauterbrunnen_Valley.jpg" alt="Lauterbrunnen">
-    <div class="day-hero-text">
-      <span class="num">Day 07 · Aug 23</span>
-      <h3>Lauterbrunnen.</h3>
-      <p class="where">Switzerland · Valley of 72 Waterfalls</p>
-      <p class="date">Saturday</p>
-      <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Gimmelwald%2C+Switzerland" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>Open in Maps</a>
-    </div>
-  </div>
-  <div class="day-body"><div class="day-body-inner">
-    <p class="feeling">Falling asleep above the clouds, in a village clinging to a cliff.</p>
-
-    <div class="gallery g5">
-      <figure><img data-wf="Lauterbrunnen_-_2017.jpg" alt="Lauterbrunnen valley"><figcaption class="cap">The Valley</figcaption></figure>
-      <figure><img data-wf="Staubbach_Falls_2010.jpg" alt="Staubbach Falls"><figcaption class="cap">Staubbach Falls</figcaption></figure>
-      <figure><img data-wf="Mürren_Switzerland.jpg" alt="Mürren"><figcaption class="cap">Mürren</figcaption></figure>
-      <figure><img data-wf="Gimmelwald_Switzerland.jpg" alt="Gimmelwald"><figcaption class="cap">Gimmelwald</figcaption></figure>
-      <figure><img data-wf="Schilthorn_view.jpg" alt="Schilthorn"><figcaption class="cap">Schilthorn View</figcaption></figure>
-    </div>
-
-    <div class="logistics swiss">
-      <div class="item"><div class="k">Stay</div><div class="v">Mountain Hostel Gimmelwald</div><div class="s">Cliffside village · valley view from dinner table</div></div>
-      <div class="item"><div class="k">Transit</div><div class="v">Train → Bus → Cable Car</div><div class="s">Interlaken Ost → Lauterbrunnen → Mürren · ~1h</div></div>
-      <div class="item"><div class="k">Today’s Budget</div><div class="v">CHF 30 / RM 160</div><div class="s">Cable car CHF 14 with Half Fare · Staubbach free</div></div>
-    </div>
-
-    <div class="schedule">
-      <div class="sch-head"><p class="lbl">Today’s Timeline</p><p class="title">Into the Valley</p></div>
-      <div class="rail swiss">
-        <div class="rail-item"><div class="time">09:00 · Train</div><div class="what">Interlaken Ost → Lauterbrunnen</div><div class="det">~20 min · scenic the whole way</div></div>
-        <div class="rail-item"><div class="time">10:00 · Walk</div><div class="what">Staubbach Falls (free)</div><div class="det">Europe’s tallest free-falling waterfall · 297m drop</div></div>
-        <div class="rail-item"><div class="time">12:30 · Lunch</div><div class="what">Hotel Oberland terrace</div><div class="det">Bratwurst with the cliffs above us</div></div>
-        <div class="rail-item"><div class="time">14:00 · Up</div><div class="what">Cable car → Mürren</div><div class="det">Walk down to Gimmelwald (45 min, easy)</div></div>
-        <div class="rail-item"><div class="time">17:00 · Settle</div><div class="what">Mountain Hostel Gimmelwald</div><div class="det">Dinner with the entire Lauterbrunnen valley below us</div></div>
-      </div>
-    </div>
-
-    <div class="advisor"><div class="icon">💡</div><div class="body">
-      <p class="who">Advisor’s Note — My Favorite Day</p>
-      <p><strong>Gimmelwald is my favorite stop in all of Switzerland.</strong> Tiny, car-free, fewer than 100 residents, glued to a 500m cliff. Most tourists never get past Mürren. You’ll have it almost to yourselves.</p>
-      <p><strong>BOOK MOUNTAIN HOSTEL GIMMELWALD 2–3 MONTHS AHEAD.</strong> Only ~40 beds. In August it sells out by May.</p>
-    </div></div>
-    <div class="romantic">A balcony in the sky, and you beside me at sunrise.</div>
-  </div></div>
+<section class="sec" id="s11">
+  <div class="section-header"><div class="section-num">11</div><div><div class="section-title">节奏控制</div><div class="section-en">Rhythm &amp; Aftercare</div></div></div>
+  <ul class="plain">
+    <li><strong>意大利段（D1–4）：</strong>8 月罗马极热，<strong>06:00 起床</strong>，12:00–14:00 火车上、咖啡馆休息。瑞士段才是重头戏。</li>
+    <li><strong>瑞士段（D5–11）：</strong><strong>每晚 22:00 前休息</strong>。Day 7 缓冲，Day 9 恢复，节奏已设计。</li>
+    <li><strong>出发前 1 个月训练：</strong>爬 Bukit Tabur / Broga Hill 各 2–3 次，或每日 5km 跑步。</li>
+    <li><strong>防水泡：</strong>徒步鞋出发前磨合 2 周。羊毛袜 ×2 + 备用袜 ×2。</li>
+    <li><strong>退税：</strong>ZRH 机场 Global Blue / Planet Tax-Free（须海关盖章）。</li>
+  </ul>
 </section>
 
-<!-- ============ DAY 8 GRINDELWALD ============ -->
-<section class="reveal" id="d8" data-city="Grindelwald, Switzerland">
-  <div class="day-hero">
-    <img data-wf="Bachalpsee_reflection.jpg" alt="Bachalpsee">
-    <div class="day-hero-text">
-      <span class="num">Day 08 · Aug 24</span>
-      <h3>Bachalpsee.</h3>
-      <p class="where">Switzerland · Grindelwald-First</p>
-      <p class="date">Sunday</p>
-      <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Bachalpsee%2C+Grindelwald%2C+Switzerland" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>Open in Maps</a>
-    </div>
-  </div>
-  <div class="day-body"><div class="day-body-inner">
-    <p class="feeling">If we make it to the top — I owe you fondue.</p>
+</div><!-- /container -->
 
-    <div class="gallery g5">
-      <figure><img data-wf="First_cliff_walk.jpg" alt="First Cliff Walk"><figcaption class="cap">First Cliff Walk</figcaption></figure>
-      <figure><img data-wf="Bachalpsee_Switzerland.jpg" alt="Bachalpsee lake"><figcaption class="cap">Bachalpsee</figcaption></figure>
-      <figure><img data-wf="Faulhorn_summit.jpg" alt="Faulhorn"><figcaption class="cap">Faulhorn Summit</figcaption></figure>
-      <figure><img data-wf="First_gondola_Grindelwald.jpg" alt="First gondola"><figcaption class="cap">First Gondola</figcaption></figure>
-      <figure><img data-wf="Schynige_Platte.jpg" alt="Schynige Platte"><figcaption class="cap">Schynige Platte</figcaption></figure>
-    </div>
-
-    <div class="logistics swiss">
-      <div class="item"><div class="k">Stay</div><div class="v">Mountain Hostel Gimmelwald</div><div class="s">Second night · easier than packing/moving</div></div>
-      <div class="item"><div class="k">Transit</div><div class="v">Cable Car + Gondola</div><div class="s">Gimmelwald → Grindelwald → First · full-day hike</div></div>
-      <div class="item"><div class="k">Today’s Budget</div><div class="v">CHF 35 / RM 185</div><div class="s">First gondola CHF 32 + Trottibike CHF 19 (Half Fare)</div></div>
-    </div>
-
-    <div class="schedule">
-      <div class="sch-head"><p class="lbl">Today’s Timeline</p><p class="title">The Big Hike</p></div>
-      <div class="rail swiss">
-        <div class="rail-item"><div class="time">07:30 · Train</div><div class="what">Gimmelwald → Grindelwald</div><div class="det">Via Lauterbrunnen + Zweilütschinen</div></div>
-        <div class="rail-item"><div class="time">09:00 · Up</div><div class="what">Gondola → First (2,168m)</div><div class="det">Cliff Walk first if you’re not afraid of heights</div></div>
-        <div class="rail-item"><div class="time">10:00 · Hike</div><div class="what">First → Bachalpsee</div><div class="det">Easy 1h walk · alpine lake reward</div></div>
-        <div class="rail-item"><div class="time">12:00 · Decision</div><div class="what">Continue OR head back</div><div class="det">Hardcore: Faulhorn → Schynige Platte (6h, weather permitting)</div></div>
-        <div class="rail-item"><div class="time">17:00 · Reward</div><div class="what">Trottibike scooter down</div><div class="det">Way more fun than the gondola · book in advance</div></div>
-        <div class="rail-item"><div class="time">19:30 · Dinner</div><div class="what">Fondue in Interlaken</div><div class="det">Restaurant Bären · the best in town</div></div>
-      </div>
-    </div>
-
-    <div class="advisor"><div class="icon">💡</div><div class="body">
-      <p class="who">Advisor’s Note — Decision Point</p>
-      <p><strong>Decide on the morning of, based on weather.</strong> The Faulhorn → Schynige Platte hike is 16km, 6+ hours, with serious climbing. In rain or low cloud it’s dangerous and pointless (no view). Check meteoswiss.ch the night before.</p>
-      <p><strong>Easy version</strong> (First → Bachalpsee → back, 2 hours) is equally beautiful. Don’t feel like you have to be a hero.</p>
-    </div></div>
-    <div class="romantic">Hard climbs are easier when I’m climbing them with you.</div>
-  </div></div>
-</section>
-
-<!-- ============ DAY 9 BERN ============ -->
-<section class="reveal" id="d9" data-city="Bern, Switzerland">
-  <div class="day-hero">
-    <img data-wf="Bern_Old_City_Pano.jpg" alt="Bern">
-    <div class="day-hero-text">
-      <span class="num">Day 09 · Aug 25</span>
-      <h3>Bern.</h3>
-      <p class="where">Switzerland · Lakes &amp; Capital</p>
-      <p class="date">Monday</p>
-      <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Bern+Old+Town%2C+Switzerland" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>Open in Maps</a>
-    </div>
-  </div>
-  <div class="day-body"><div class="day-body-inner">
-    <p class="feeling">A slow afternoon by impossibly blue water — then the storybook capital.</p>
-
-    <div class="gallery g5">
-      <figure><img data-wf="Iseltwald_Lake_Brienz.jpg" alt="Iseltwald"><figcaption class="cap">Iseltwald</figcaption></figure>
-      <figure><img data-wf="Lake_Brienz_Switzerland.jpg" alt="Lake Brienz"><figcaption class="cap">Lake Brienz</figcaption></figure>
-      <figure><img data-wf="Bern_Altstadt.jpg" alt="Bern Old Town"><figcaption class="cap">Bern Altstadt</figcaption></figure>
-      <figure><img data-wf="Zytglogge_Bern.jpg" alt="Zytglogge"><figcaption class="cap">Zytglogge</figcaption></figure>
-      <figure><img data-wf="Aare_River_Bern.jpg" alt="Aare River"><figcaption class="cap">Aare River</figcaption></figure>
-    </div>
-
-    <div class="logistics swiss">
-      <div class="item"><div class="k">Stay</div><div class="v">Backpackers Lucerne</div><div class="s">10 min walk to lake + Kapellbrücke · close to station for Day 11 departure</div></div>
-      <div class="item"><div class="k">Transit</div><div class="v">Gimmelwald → Iseltwald → Bern → Lucerne</div><div class="s">Cable car + train · ~half-day in motion · use Half Fare</div><a class="book" href="https://www.sbb.ch/en/" target="_blank" rel="noopener">Plan on SBB →</a></div>
-      <div class="item"><div class="k">Today’s Budget</div><div class="v">CHF 35 / RM 185</div><div class="s">Recovery day after Day 8 · light spending</div></div>
-    </div>
-
-    <div class="schedule">
-      <div class="sch-head"><p class="lbl">Today’s Timeline</p><p class="title">Lake · Capital · Lucerne</p></div>
-      <div class="rail swiss">
-        <div class="rail-item"><div class="time">08:30 · Descent</div><div class="what">Gimmelwald → Stechelberg cable car</div><div class="det">Last morning on the cliff · check out from Mountain Hostel</div></div>
-        <div class="rail-item"><div class="time">10:00 · K-Drama Spot</div><div class="what">Iseltwald (Lake Brienz)</div><div class="det">Wooden pier from “Crash Landing on You” · 30-min lake loop walk</div></div>
-        <div class="rail-item"><div class="time">12:30 · Train</div><div class="what">Interlaken Ost → Bern</div><div class="det">~1 hour · lunch on board (Coop sandwich)</div></div>
-        <div class="rail-item"><div class="time">14:00 · Day-trip</div><div class="what">Bern Old Town</div><div class="det">Lauben arcades · Zytglogge clock tower · Bear Park (free)</div></div>
-        <div class="rail-item"><div class="time">18:00 · Train</div><div class="what">Bern → Lucerne</div><div class="det">~1 hour direct · check in to Backpackers Lucerne</div></div>
-        <div class="rail-item"><div class="time">20:00 · Stroll</div><div class="what">Kapellbrücke + lakefront</div><div class="det">First taste of Lucerne · early night — Day 10 is busy</div></div>
-      </div>
-    </div>
-
-    <div class="advisor"><div class="icon">💡</div><div class="body">
-      <p class="who">Advisor’s Note — Recovery Day</p>
-      <p><strong>Day 9 is intentionally light</strong> — Day 8 destroys your legs. Iseltwald + Bern are walk-and-watch, not race-the-clock. Don’t add stops.</p>
-      <p><strong>Iseltwald reality check:</strong> expect crowds and a CHF 5 fee at the famous pier. Lake Brienz is more beautiful from the boat than the pier — do the lake loop instead of fighting for the photo.</p>
-      <p><strong>Get to Lucerne by sunset.</strong> You sleep there for 2 nights — Days 10 + 11 both start from Lucerne. Backpackers Lucerne is 10 min from station for the morning rush.</p>
-    </div></div>
-    <div class="romantic">A slow day. Lake reflections, arcaded streets, your hand in mine.</div>
-  </div></div>
-</section>
-
-<!-- ============ DAY 10 LUCERNE + MT. RIGI ============ -->
-<section class="reveal" id="d10" data-city="Lucerne, Switzerland">
-  <div class="day-hero">
-    <img data-wf="Kapellbrücke_Lucerne.jpg" alt="Lucerne Kapellbrücke">
-    <div class="day-hero-text">
-      <span class="num">Day 10 · Aug 26</span>
-      <h3>Lucerne.</h3>
-      <p class="where">Switzerland · Old Town &amp; the Queen of Mountains</p>
-      <p class="date">Tuesday</p>
-      <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Kapellbr%C3%BCcke%2C+Lucerne%2C+Switzerland" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>Open in Maps</a>
-    </div>
-  </div>
-  <div class="day-body"><div class="day-body-inner">
-    <p class="feeling">Old wooden bridge below us. Europe’s first cogwheel mountain above us.</p>
-
-    <div class="gallery g5">
-      <figure><img data-wf="Kapellbrücke_Lucerne.jpg" alt="Kapellbrücke"><figcaption class="cap">Chapel Bridge</figcaption></figure>
-      <figure><img data-wf="Wasserturm_Lucerne.jpg" alt="Water Tower"><figcaption class="cap">Water Tower</figcaption></figure>
-      <figure><img data-wf="Lion_Monument_Lucerne.jpg" alt="Lion Monument"><figcaption class="cap">Dying Lion</figcaption></figure>
-      <figure><img data-wf="Mt_Rigi_Switzerland.jpg" alt="Mt Rigi"><figcaption class="cap">Mt. Rigi</figcaption></figure>
-      <figure><img data-wf="Lake_Lucerne_Switzerland.jpg" alt="Lake Lucerne"><figcaption class="cap">Vierwaldstättersee</figcaption></figure>
-    </div>
-
-    <div class="logistics swiss">
-      <div class="item"><div class="k">Stay</div><div class="v">Backpackers Lucerne</div><div class="s">Second night · no packing · station-side for Day 11</div></div>
-      <div class="item"><div class="k">Transit</div><div class="v">Lucerne old town + Mt. Rigi</div><div class="s">Cogwheel train + boat · Half Fare card essential</div><a class="book" href="https://www.rigi.ch/en" target="_blank" rel="noopener">Plan on Rigi.ch →</a></div>
-      <div class="item"><div class="k">Today’s Budget</div><div class="v">CHF 40 / RM 210</div><div class="s">Rigi return CHF 28 (Half Fare) + last-meal Rösti CHF 18</div></div>
-    </div>
-
-    <div class="schedule">
-      <div class="sch-head"><p class="lbl">Today’s Timeline</p><p class="title">Old Town · Queen of the Mountains</p></div>
-      <div class="rail swiss">
-        <div class="rail-item"><div class="time">09:00 · Walk</div><div class="what">Kapellbrücke + Water Tower</div><div class="det">Europe’s oldest covered wooden bridge · 14th century</div></div>
-        <div class="rail-item"><div class="time">10:30 · Walk</div><div class="what">Löwendenkmal (Dying Lion)</div><div class="det">Mark Twain called it “the saddest piece of stone in the world”</div></div>
-        <div class="rail-item"><div class="time">11:30 · Lunch</div><div class="what">Old Town · Coop or Migros</div><div class="det">Stock up before heading up the mountain</div></div>
-        <div class="rail-item"><div class="time">13:00 · Up</div><div class="what">Mt. Rigi cogwheel railway</div><div class="det">Europe’s 1st mountain railway (1871) · summit 1,797m · 360° lake panorama</div></div>
-        <div class="rail-item"><div class="time">17:00 · Down</div><div class="what">Rigi → boat back to Lucerne</div><div class="det">Take the lake-boat leg for sunset views over Vierwaldstättersee</div></div>
-        <div class="rail-item"><div class="time">19:30 · Last Supper</div><div class="what">Rösti or Fondue · Old Town</div><div class="det">Reward dinner · Wirtshaus Galliker or Restaurant Fritschi · CHF 18–22</div></div>
-      </div>
-    </div>
-
-    <div class="advisor"><div class="icon">💡</div><div class="body">
-      <p class="who">Advisor’s Note</p>
-      <p><strong>Backup plan:</strong> if your legs are wrecked after Day 8, skip Rigi and do the <strong>Lake Lucerne 2h boat cruise</strong> instead (Half Fare ~CHF 20). Same panorama, zero hiking. No shame in this — Day 11 (Pilatus) is more important.</p>
-      <p><strong>“Queen of the Mountains”:</strong> Rigi has been a tourist mountain since 1871. Sunset from the top is famous — but Day 11 leaves early, so don’t stay past 18:00.</p>
-      <p><strong>Last real dinner of the trip.</strong> Treat yourselves. Eleven days of supermarket food earned you one Rösti.</p>
-    </div></div>
-    <div class="romantic">Two of the world’s oldest things — a 14th-century bridge and the world’s first mountain train. Us, somewhere between them.</div>
-  </div></div>
-</section>
-
-<!-- ============ DAY 11 PILATUS + DEPARTURE ============ -->
-<section class="reveal" id="d11" data-city="Lucerne, Switzerland">
-  <div class="day-hero">
-    <img data-wf="Mt_Pilatus_Switzerland.jpg" alt="Mt Pilatus">
-    <div class="day-hero-text">
-      <span class="num">Day 11 · Aug 27</span>
-      <h3>Pilatus.</h3>
-      <p class="where">Switzerland · Final Summit → ZRH</p>
-      <p class="date">Wednesday</p>
-      <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Mount+Pilatus%2C+Switzerland" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>Open in Maps</a>
-    </div>
-  </div>
-  <div class="day-body"><div class="day-body-inner">
-    <p class="feeling">A summit at sunrise, the airport by sunset. One last view above the clouds.</p>
-
-    <div class="gallery g3">
-      <figure><img data-wf="Mt_Pilatus_Switzerland.jpg" alt="Pilatus summit"><figcaption class="cap">Pilatus Kulm</figcaption></figure>
-      <figure><img data-wf="Pilatus_cogwheel.jpg" alt="Pilatus railway"><figcaption class="cap">World’s Steepest Cogwheel</figcaption></figure>
-      <figure><img data-wf="Zurich_Airport_Aerial.jpg" alt="Zurich airport"><figcaption class="cap">ZRH → Home</figcaption></figure>
-    </div>
-
-    <div class="logistics swiss">
-      <div class="item"><div class="k">Stay</div><div class="v">In transit · Heading home</div><div class="s">Flight ZRH → KUL · departs 22:35 · be at gate by 19:30</div></div>
-      <div class="item"><div class="k">Transit</div><div class="v">Golden Round Trip + train to ZRH</div><div class="s">Boat → cogwheel → gondola · then Lucerne → ZRH 50m direct</div><a class="book" href="https://www.pilatus.ch/en" target="_blank" rel="noopener">Book on Pilatus.ch →</a></div>
-      <div class="item"><div class="k">Today’s Budget</div><div class="v">CHF 60 / RM 320</div><div class="s">Pilatus Golden Round CHF 55 (Half Fare) + tax-refund processing time</div></div>
-    </div>
-
-    <div class="schedule">
-      <div class="sch-head"><p class="lbl">Today’s Timeline · STRICT TIMING</p><p class="title">Final Summit · Then Home</p></div>
-      <div class="rail swiss">
-        <div class="rail-item"><div class="time">08:00 · Boat</div><div class="what">Lucerne pier → Alpnachstad</div><div class="det">~1h scenic boat across Vierwaldstättersee · MUST be on this departure</div></div>
-        <div class="rail-item"><div class="time">09:00 · Cogwheel</div><div class="what">Alpnachstad → Pilatus Kulm</div><div class="det">World’s steepest cogwheel railway · 48% gradient · 30 min</div></div>
-        <div class="rail-item"><div class="time">10:00 · Summit</div><div class="what">Pilatus Kulm (2,132m)</div><div class="det">Cloud-sea panorama · 90 min on top · the trip’s final view</div></div>
-        <div class="rail-item"><div class="time">11:30 · Gondola</div><div class="what">Pilatus → Kriens → Lucerne</div><div class="det">Cable car + panorama gondola + bus back · ~1.5h</div></div>
-        <div class="rail-item"><div class="time">14:00 · Pickup</div><div class="what">Grab luggage at Backpackers Lucerne</div><div class="det">Buffer time built in · don’t rush · eat a final Coop sandwich</div></div>
-        <div class="rail-item"><div class="time">15:00 · Train</div><div class="what">Lucerne → Zurich Airport (ZRH)</div><div class="det">~50 min direct · arrive ZRH ~16:00</div></div>
-        <div class="rail-item"><div class="time">16:30 · Tax Refund</div><div class="what">Global Blue / Planet at ZRH</div><div class="det">Customs stamp + refund counter · allow 60 min</div></div>
-        <div class="rail-item"><div class="time">19:30 · Check-in</div><div class="what">Flight ZRH → KUL · departs 22:35</div><div class="det">Gate close ~22:00 · be checked-in by 19:30 latest</div></div>
-      </div>
-    </div>
-
-    <div class="advisor"><div class="icon">💡</div><div class="body">
-      <p class="who">Advisor’s Final Note — CRITICAL TIMING</p>
-      <p><strong>The 08:00 boat from Lucerne is non-negotiable.</strong> Miss it and the entire Pilatus loop unravels. Set two alarms. Pack the night before.</p>
-      <p><strong>Plan B if you oversleep:</strong> skip the boat leg, take the bus + gondola direct to Kriens → Pilatus (~3h round-trip instead of 4h). You still get the summit, just lose the lake.</p>
-      <p><strong>Plan C if energy is gone:</strong> skip Pilatus entirely. Catch the 13:00 train from Lucerne to ZRH and you’ll have a relaxed afternoon at the airport. No regrets — Day 8 already gave you the mountains.</p>
-      <p><strong>On the flight home:</strong> write down 3 favorite moments before you sleep. You’ll thank yourself in 10 years.</p>
-    </div></div>
-    <div class="romantic">Eleven days. Two countries. One unforgettable summit before we fly home together.</div>
-  </div></div>
-</section>
-
-<!-- ============ BOOKINGS TRACKER ============ -->
-<section class="bookings-section reveal" id="bookings">
+<section class="bookings-section" id="bookings">
   <div class="wrap">
     <div class="head">
-      <p class="lbl">The Paperwork</p>
-      <h2>Bookings Tracker.</h2>
-      <p class="sub">A live checklist of every reservation. Tap a card → fill in the confirmation number, date, cost, and notes once you book it. Saves automatically in your browser — no account needed.</p>
+      <div class="lbl">Reservations · 预订</div>
+      <h2>Bookings Tracker</h2>
+      <div class="sub">所有出发前要锁定的事——大部分省钱都来自早订。点卡片填确认号。</div>
+      <div class="bk-progress"><div class="bk-fill" id="bkFill"></div></div>
+      <div class="bk-count"><span id="bkDone">0</span> / <span id="bkTotal">0</span> booked</div>
     </div>
-
-    <div class="bk-progress">
-      <div class="bar"><div class="fill" id="bkFill"></div></div>
-      <div class="count"><b id="bkDone">0</b> of <b id="bkTotal">0</b> booked</div>
-    </div>
-
     <div id="bkGroups"></div>
   </div>
 </section>
 
-<!-- ============ PRE-TRIP CHECKLIST ============ -->
-<section class="checklist-section reveal" id="prep">
-  <div class="wrap">
-    <div class="head">
-      <p class="lbl">Before We Fly</p>
-      <h2>The Prep Checklist.</h2>
-      <p class="sub">Everything to lock in before August so the trip runs smoothly — most savings come from booking early.</p>
-    </div>
-    <div class="checklist">
-      <div class="check-item"><div class="when">NOW</div><div class="body"><div class="t">⚠️ ETIAS Travel Authorization</div><div class="d">From 2026 Malaysian passports need ETIAS to enter Schengen. €7 · apply on <strong>travel-europe.europa.eu</strong> · usually approved in 72h. Do this BEFORE booking anything else.</div></div></div>
-      <div class="check-item"><div class="when">NOW</div><div class="body"><div class="t">🔥 Mountain Hostel Gimmelwald</div><div class="d">Most urgent booking. ~40 beds, sells out 3 months ahead in August. Book Booking.com or direct. Without this, the Gimmelwald nights collapse.</div></div></div>
-      <div class="check-item"><div class="when">90 days</div><div class="body"><div class="t">Book Italian high-speed trains</div><div class="d">Roma → Firenze, Firenze → Milano. Frecciarossa/Italo €15–25 advance vs €70+ same-day. Book on trenitalia.com or italotreno.it.</div></div></div>
-      <div class="check-item"><div class="when">60 days</div><div class="body"><div class="t">Reserve remaining hostels</div><div class="d">YellowSquare Rome, PLUS Florence, Lake Como Hostel, Zermatt YH, Backpackers Lucerne. Non-refundable rates ~10% cheaper.</div></div></div>
-      <div class="check-item"><div class="when">60 days</div><div class="body"><div class="t">Visp → Zermatt train (Day 5)</div><div class="d">Sells out fastest in August. Book on sbb.ch the day reservations open (60 days before departure).</div></div></div>
-      <div class="check-item"><div class="when">60 days</div><div class="body"><div class="t">Schynige Platte descent (Day 8)</div><div class="d">Historic cogwheel railway, sells out. Book on <strong>jungfrau.ch</strong> · CHF 18 with Half Fare. Without this you walk back the way you came.</div></div></div>
-      <div class="check-item"><div class="when">60 days</div><div class="body"><div class="t">Colosseum + Forum combo</div><div class="d">€18 · coopculture.it. August dates fill up. Vatican (museivaticani.va) optional but same lead time.</div></div></div>
-      <div class="check-item"><div class="when">30 days</div><div class="body"><div class="t">Buy Swiss Half Fare Card</div><div class="d">CHF 120 on sbb.ch. Cuts every Swiss train / cable car / lift by 50% for Days 5–11. Pays itself off by Day 6.</div></div></div>
-      <div class="check-item"><div class="when">30 days</div><div class="body"><div class="t">Mt. Pilatus Golden Round (Day 11)</div><div class="d">pilatus.ch · CHF 55 with Half Fare · 08:00 boat from Lucerne is critical — book this specific time slot.</div></div></div>
-      <div class="check-item"><div class="when">14 days</div><div class="body"><div class="t">Travel insurance · alpine rescue</div><div class="d">⚠️ Must cover <strong>high-altitude hiking ≥2,500m + mountain rescue</strong>. AXA Smart Traveller or MSIG TravelEasy Premier. Min €50,000 medical.</div></div></div>
-      <div class="check-item"><div class="when">14 days</div><div class="body"><div class="t">Set up eSIM + Wise card</div><div class="d">Airalo Europe 15GB ~RM 80. Wise multi-currency card loaded with EUR + CHF for best FX rates.</div></div></div>
-      <div class="check-item"><div class="when">14 days</div><div class="body"><div class="t">Download offline tools</div><div class="d">SBB Mobile (Swiss trains) · Trenitalia/Italo (Italy) · MeteoSwiss (weather) · Google Maps offline regions for Italy + Switzerland.</div></div></div>
-      <div class="check-item"><div class="when">7 days</div><div class="body"><div class="t">Print passport copies + docs</div><div class="d">Upload to Google Drive (offline access on). Print 2 paper copies of passport, insurance, ETIAS, hostel confirmations. Keep one in bag, one in backpack.</div></div></div>
-      <div class="check-item"><div class="when">3 days</div><div class="body"><div class="t">Pack light · layers · grippy shoes</div><div class="d">Carry-on only. Alps drop to 5–12°C at 2,500m even in August. <strong>Day 8 requires grip-soled shoes</strong> — pure sneakers slip on rock. 2 wool socks min.</div></div></div>
-    </div>
+<footer class="footer">
+  <span class="script">our journey, my love</span>
+  <strong>🇮🇹🇨🇭 意瑞双峰并峙特种兵计划</strong><br>
+  2026 · 8 · 17 → 8 · 27 &nbsp;·&nbsp; 2 hearts &nbsp;·&nbsp; one summer
+  <div class="small">"计划没有变化快，但有计划的人永远比没计划的人更从容。"</div>
+</footer>
+
+<button class="jump-fab" id="jumpFab" aria-label="Jump menu">☰</button>
+<div class="jump-overlay" id="jumpOverlay"></div>
+<div class="jump-sheet" id="jumpSheet">
+  <div class="jump-handle"></div>
+  <h3>Quick Jump · 快速跳转</h3>
+  <div class="jump-group">
+    <div class="jump-group-title">Days · 每日</div>
+    <a class="jump-link" href="#d1"><span class="lbl">D1</span>罗马 · 落地</a>
+    <a class="jump-link" href="#d2"><span class="lbl">D2</span>罗马 · 25km 拉练</a>
+    <a class="jump-link" href="#d3"><span class="lbl">D3</span>佛罗伦萨</a>
+    <a class="jump-link" href="#d4"><span class="lbl">D4</span>米兰 + 科莫</a>
+    <a class="jump-link" href="#d5"><span class="lbl">D5</span>跨国 → Zermatt</a>
+    <a class="jump-link" href="#d6"><span class="lbl">D6</span>五湖徒步</a>
+    <a class="jump-link" href="#d7"><span class="lbl">D7</span>Gimmelwald</a>
+    <a class="jump-link" href="#d8"><span class="lbl">D8</span>Boss 16km</a>
+    <a class="jump-link" href="#d9"><span class="lbl">D9</span>Iseltwald + 伯恩</a>
+    <a class="jump-link" href="#d10"><span class="lbl">D10</span>卢塞恩 + Rigi</a>
+    <a class="jump-link" href="#d11"><span class="lbl">D11</span>Pilatus → 回家</a>
   </div>
-</section>
-
-<!-- ============ DOCUMENTS & EMERGENCY ============ -->
-<section class="content-section docs reveal" id="docs">
-  <div class="wrap">
-    <div class="head">
-      <p class="lbl">Don’t Leave Home Without</p>
-      <h2>Documents &amp; Emergency.</h2>
-      <p class="sub">Five critical pieces of paperwork, four critical phone numbers. Apply for ETIAS before you book anything else.</p>
-    </div>
-
-    <div class="callout callout-fix">
-      <div class="callout-title">⚠️ ETIAS — Most Urgent</div>
-      From <strong>2026</strong>, Malaysian passports need ETIAS travel authorization to enter the Schengen area. Apply on the official site <a href="https://travel-europe.europa.eu" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">travel-europe.europa.eu</a> — €7, usually approved within 72 hours. <strong>Apply 2+ months before departure</strong>, never wait until the last month. Without ETIAS, you don’t board the plane.
-    </div>
-
-    <div class="doc-grid">
-      <div class="doc-card urgent">
-        <div class="ico">🛂</div>
-        <div class="body">
-          <div class="t">ETIAS Authorization</div>
-          <div class="d">€7 · travel-europe.europa.eu · 72h processing · valid 3 years. <strong>Submit by June 2026.</strong></div>
-        </div>
-      </div>
-      <div class="doc-card">
-        <div class="ico">📘</div>
-        <div class="body">
-          <div class="t">Passport Validity</div>
-          <div class="d">Must be valid past <strong>February 2027</strong> — Schengen requires 3+ months remaining after your exit date (Aug 27).</div>
-        </div>
-      </div>
-      <div class="doc-card">
-        <div class="ico">🏥</div>
-        <div class="body">
-          <div class="t">Travel Insurance · Alpine Cover</div>
-          <div class="d">Must cover <strong>high-altitude hiking ≥2,500m + mountain rescue</strong>. AXA Smart Traveller or MSIG TravelEasy Premier. Min €50,000 medical.</div>
-        </div>
-      </div>
-      <div class="doc-card">
-        <div class="ico">☁️</div>
-        <div class="body">
-          <div class="t">Offline Document Backup</div>
-          <div class="d">Upload to Google Drive: passport photo page, insurance policy, hostel confirmations, ETIAS approval, flight tickets. Set <strong>offline-available</strong> in the Drive app.</div>
-        </div>
-      </div>
-      <div class="doc-card">
-        <div class="ico">📄</div>
-        <div class="body">
-          <div class="t">Paper Copies</div>
-          <div class="d">Print 2 sets of all documents. One in your day bag, one in the main suitcase. Insurance policy number + embassy contacts on a card in your wallet.</div>
-        </div>
-      </div>
-      <div class="doc-card">
-        <div class="ico">💉</div>
-        <div class="body">
-          <div class="t">Vaccinations &amp; Health</div>
-          <div class="d">No special vaccines required for Italy/Switzerland. Bring prescription meds in original packaging. EU pharmacies stock all common OTC drugs.</div>
-        </div>
-      </div>
-    </div>
-
-    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:#2a1f24;margin:3rem 0 .5rem;text-align:center">Emergency Numbers · Save to Phone</h3>
-    <p style="text-align:center;color:#7a6a6c;font-size:.92rem;max-width:520px;margin:0 auto 1rem">Save these <strong>before you fly</strong> — store all 4 in your contacts so you can dial without internet.</p>
-
-    <div class="emerg-grid">
-      <div class="emerg-card critical">
-        <div class="role">EU Emergency</div>
-        <a href="tel:112"><div class="num">112</div></a>
-        <div class="desc">Works in both Italy &amp; Switzerland · police, fire, ambulance · operators speak English</div>
-      </div>
-      <div class="emerg-card critical">
-        <div class="role">Swiss Mountain Rescue</div>
-        <a href="tel:144"><div class="num">144</div></a>
-        <div class="desc">Direct alpine rescue line · use for any injury on a hike · 1414 (REGA) for helicopter</div>
-      </div>
-      <div class="emerg-card">
-        <div class="role">Malaysian Embassy · Rome</div>
-        <a href="tel:+39068840458"><div class="num">+39 06 8840 4258</div></a>
-        <div class="desc">Lost passport, legal trouble, repatriation · Via Nomentana 297</div>
-      </div>
-      <div class="emerg-card">
-        <div class="role">Malaysian Embassy · Bern</div>
-        <a href="tel:+41313804750"><div class="num">+41 31 380 4750</div></a>
-        <div class="desc">Switzerland consular services · Jubiläumsstrasse 41</div>
-      </div>
-    </div>
+  <div class="jump-group">
+    <div class="jump-group-title">Sections · 章节</div>
+    <a class="jump-link" href="#s1"><span class="lbl">01</span>基础信息</a>
+    <a class="jump-link" href="#s2"><span class="lbl">02</span>证件 ETIAS</a>
+    <a class="jump-link" href="#s3"><span class="lbl">03</span>大交通</a>
+    <a class="jump-link" href="#s4"><span class="lbl">04</span>住宿</a>
+    <a class="jump-link" href="#s8"><span class="lbl">08</span>预算</a>
+    <a class="jump-link" href="#s9"><span class="lbl">09</span>应急</a>
+    <a class="jump-link" href="#s10"><span class="lbl">10</span>行李</a>
+    <a class="jump-link" href="#bookings"><span class="lbl">★</span>Bookings</a>
   </div>
-</section>
-
-<!-- ============ PLAN B PLAYBOOK ============ -->
-<section class="content-section planb alt reveal" id="planb">
-  <div class="wrap">
-    <div class="head">
-      <p class="lbl">When Things Don’t Go to Plan</p>
-      <h2>Plan B Playbook.</h2>
-      <p class="sub">Seven scenarios that can derail this trip — and exactly what to do when they happen. Read once now, refer back when needed.</p>
-    </div>
-
-    <div class="scenario-grid">
-      <div class="scenario">
-        <div class="what">Day 8 · Faulhorn Hike</div>
-        <div class="title">Rain or low cloud on hike day</div>
-        <div class="plan">Check <strong>MeteoSwiss</strong> the night before at 20:00. If &gt;50% rain forecast → cancel the 16km hike. Drop to: <strong>Bern Old Town half-day</strong> (arcades + Bear Park) OR <strong>Lindt Chocolate Museum</strong> in Kilchberg (20 min from Zurich, free entry).</div>
-      </div>
-      <div class="scenario">
-        <div class="what">Day 3 / 4 · Italy</div>
-        <div class="title">Italian rail strike (sciopero)</div>
-        <div class="plan">Italy has one-day rail strikes ~monthly. Check Trenitalia status 1 week out + Google News. If a strike hits your travel day: book <strong>FlixBus</strong> immediately (Roma → Firenze €20, 3.5h) or <strong>Blablacar</strong> for a ride share.</div>
-      </div>
-      <div class="scenario">
-        <div class="what">Day 5 · Cross-Country</div>
-        <div class="title">Visp → Zermatt train sold out</div>
-        <div class="plan">August is peak season — this leg sells out fast. <strong>Book 60 days ahead</strong> the day reservations open. Backup: take any earlier Visp-Brig train and hop the next Zermatt connection (regular service runs every 60 min).</div>
-      </div>
-      <div class="scenario">
-        <div class="what">Day 7–8 · Cliff Village</div>
-        <div class="title">Mountain Hostel Gimmelwald cancels</div>
-        <div class="plan">Switch to <strong>Mürren Eiger Guesthouse</strong> (same cliff, 45-min walk from Gimmelwald, similar view) or <strong>Esther’s Guest House</strong> in Lauterbrunnen valley (cheaper, less view). Don’t cancel the whole leg.</div>
-      </div>
-      <div class="scenario">
-        <div class="what">Day 11 · Departure</div>
-        <div class="title">Miss the 08:00 Lucerne boat</div>
-        <div class="plan">Switch to <strong>bus + cogwheel direct from Kriens → Pilatus</strong> (~3h round-trip instead of 4h). You lose the lake leg but keep the summit. If totally late: skip Pilatus, take 13:00 train to ZRH, relax at airport.</div>
-      </div>
-      <div class="scenario">
-        <div class="what">Anywhere</div>
-        <div class="title">Cards declined / cash short</div>
-        <div class="plan">Carry <strong>2 cards from different banks</strong> (Visa + Mastercard). Some Swiss mountain stations take only Maestro or cash. ATMs at every train station — use those, not airport kiosks (worst rates).</div>
-      </div>
-      <div class="scenario">
-        <div class="what">Anywhere</div>
-        <div class="title">Injury on a hike</div>
-        <div class="plan">Dial <strong>144</strong> (Swiss mountain rescue) or <strong>1414</strong> (REGA helicopter). Stay where you are if possible. Your insurance MUST cover alpine rescue — REGA can charge CHF 3,000+ without it.</div>
-      </div>
-      <div class="scenario">
-        <div class="what">Catastrophic</div>
-        <div class="title">Lost passport</div>
-        <div class="plan">Police report first (any local station, free), then call <strong>Malaysian Embassy Rome or Bern</strong> for emergency travel document. Process takes 2–3 days. Keep digital scan in Google Drive offline-available.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PACKING LIST ============ -->
-<section class="content-section packing reveal" id="packing">
-  <div class="wrap">
-    <div class="head">
-      <p class="lbl">Carry-on Only</p>
-      <h2>The Packing List.</h2>
-      <p class="sub">Everything you need fits in carry-on. Day 8 is the gear-test — pack with that hike in mind, the rest is easy.</p>
-    </div>
-
-    <div class="pack-grid">
-      <div class="pack-cat">
-        <div class="head-row"><span class="ico">🔌</span>Power &amp; Digital</div>
-        <div class="row"><strong>EU Type C/F adapter</strong> ×2–3 (Italy + Switzerland same plug)</div>
-        <div class="row"><strong>10,000mAh power bank</strong> (carry-on, never checked)</div>
-        <div class="row"><strong>Folding electric kettle</strong> — Maggi savior in Gimmelwald</div>
-        <div class="row">USB-C cables ×2 + USB-A adapter</div>
-        <div class="row">eSIM activated (Airalo Europe)</div>
-      </div>
-      <div class="pack-cat">
-        <div class="head-row"><span class="ico">👟</span>Clothing &amp; Shoes</div>
-        <div class="row"><strong>Grippy hiking shoes</strong> — Day 8 essential, not plain sneakers</div>
-        <div class="row"><strong>Light down vest/jacket</strong> — Faulhorn summit 5–12°C in August</div>
-        <div class="row">Sunglasses (high-UV alpine reflection)</div>
-        <div class="row">2× quick-dry shorts + 1× lightweight long pants</div>
-        <div class="row">Lightweight rain shell (non-cotton)</div>
-        <div class="row">2× wool hiking socks + 2× regular socks</div>
-        <div class="row">Hiking poles (optional, easy on knees Day 8)</div>
-      </div>
-      <div class="pack-cat">
-        <div class="head-row"><span class="ico">🎒</span>Bags &amp; Outdoor</div>
-        <div class="row"><strong>25–30L day pack</strong> for Day 8 + city days</div>
-        <div class="row">Carry-on suitcase (40L max — Ryanair safe)</div>
-        <div class="row">2× luggage locks (hostel lockers)</div>
-        <div class="row"><strong>1L refillable water bottles ×2</strong> — Day 8 needs 2.5L each</div>
-        <div class="row">Wet wipes (Gimmelwald shower time is limited)</div>
-        <div class="row">Quick-dry travel towel</div>
-      </div>
-      <div class="pack-cat">
-        <div class="head-row"><span class="ico">💊</span>Medical &amp; First Aid</div>
-        <div class="row">Ibuprofen (pain + post-hike inflammation)</div>
-        <div class="row"><strong>Blister plasters · stockpile</strong> (Compeed ×10)</div>
-        <div class="row">Voltaren muscle gel (post-Day 8 lifesaver)</div>
-        <div class="row">SPF 50+ sunscreen (alpine UV is brutal)</div>
-        <div class="row">Anti-diarrhea + antacid tablets</div>
-        <div class="row">Personal prescriptions in original packaging</div>
-      </div>
-      <div class="pack-cat">
-        <div class="head-row"><span class="ico">🍜</span>Food from Home</div>
-        <div class="row"><strong>Maggi or Mamee instant noodles ×10</strong></div>
-        <div class="row">Energy bars ×10 (Day 8 trail food)</div>
-        <div class="row">Mixed nuts in sealed bags</div>
-        <div class="row">3-in-1 instant coffee sachets</div>
-        <div class="row">Local snacks for hostel kitchen barters 😉</div>
-      </div>
-      <div class="pack-cat">
-        <div class="head-row"><span class="ico">📱</span>Essential Apps</div>
-        <div class="row"><strong>SBB Mobile</strong> — Swiss train master app</div>
-        <div class="row"><strong>Trenitalia + Italo</strong> — Italian high-speed tickets</div>
-        <div class="row"><strong>MeteoSwiss</strong> — definitive Swiss weather (esp. Day 8)</div>
-        <div class="row"><strong>Google Maps</strong> — pre-download Italy + Switzerland offline regions</div>
-        <div class="row"><strong>XE Currency</strong> — CHF/EUR/MYR live rate</div>
-        <div class="row"><strong>Google Translate</strong> — IT + DE offline packs</div>
-      </div>
-    </div>
-
-    <div class="callout callout-tip">
-      <div class="callout-title">💡 Pre-Trip Training</div>
-      Day 8 (First → Faulhorn → Schynige Platte) is <strong>16km, 6–7 hours, 700m elevation gain</strong>. In the month before flying, train: hike <strong>Bukit Tabur</strong> or <strong>Broga Hill</strong> 2–3 times, or run 5km daily. Wear your hiking shoes for at least 2 weeks before departure to <strong>prevent blisters</strong> — fresh boots on Day 8 = trip ruined.
-    </div>
-  </div>
-</section>
-
-<!-- ============ EATING SMART ============ -->
-<section class="content-section dining alt reveal" id="dining">
-  <div class="wrap">
-    <div class="head">
-      <p class="lbl">RM 1,800 for 11 Days</p>
-      <h2>Eating Smart.</h2>
-      <p class="sub">Switzerland is brutal on the wallet — restaurants start at CHF 25/meal. Supermarkets keep this trip under budget without sacrificing flavor.</p>
-    </div>
-
-    <div class="dining-list">
-      <div class="dining-item">
-        <div class="flag">🇮🇹</div>
-        <div class="body">
-          <div class="t">Italy: Pizza al Taglio &amp; Forno bakeries</div>
-          <div class="d"><strong>Pizza by weight</strong> €3–5 fills you up. Bakery breakfast €2. Walk 2 streets away from any monument — prices halve and quality doubles.</div>
-        </div>
-      </div>
-      <div class="dining-item">
-        <div class="flag">🇮🇹</div>
-        <div class="body">
-          <div class="t">Italian Supermarkets — Lidl, Carrefour, Conad</div>
-          <div class="d">Mozzarella + bread + tomatoes = <strong>€4 picnic meal</strong>. Italian supermarkets stock excellent fresh produce — quality is high even at discount stores.</div>
-        </div>
-      </div>
-      <div class="dining-item">
-        <div class="flag">🇨🇭</div>
-        <div class="body">
-          <div class="t">Swiss Iron Rule: 100% Supermarket Strategy</div>
-          <div class="d">Recognize <strong>Coop</strong> and <strong>Migros</strong> — these are your lifeline. Restaurant meal: CHF 25+. Supermarket meal: CHF 8–12. Eating out twice in 7 Swiss days = entire daily budget gone.</div>
-        </div>
-      </div>
-      <div class="dining-item">
-        <div class="flag">🇨🇭</div>
-        <div class="body">
-          <div class="t">Swiss Hero Items at Coop / Migros</div>
-          <div class="d"><strong>Rotisserie chicken</strong> CHF 10–12 · pre-packed salad CHF 3–5 · Swiss muesli + milk · <strong>Rivella soda</strong> (local cult drink) · Gruyère cheese slices · sliced bread.</div>
-        </div>
-      </div>
-      <div class="dining-item">
-        <div class="flag">🍜</div>
-        <div class="body">
-          <div class="t">Maggi Noodle Salvation</div>
-          <div class="d">Pack 10 Maggi/Mamee packets + the folding electric kettle. Mountain hostels often have kitchens but no instant food. Hot noodles after Day 8 = nirvana.</div>
-        </div>
-      </div>
-      <div class="dining-item">
-        <div class="flag">⚠️</div>
-        <div class="body">
-          <div class="t">Day 6 Critical Grocery Run</div>
-          <div class="d">Gimmelwald has <strong>no supermarket</strong>. On Day 6 in Zermatt (afternoon), do a single big shop at Migros for ALL Day 7 + Day 8 food (incl. Day 8 trail snacks). Miss this, you eat overpriced hostel pasta for 2 nights.</div>
-        </div>
-      </div>
-      <div class="dining-item">
-        <div class="flag">💧</div>
-        <div class="body">
-          <div class="t">Tap Water = Free Premium Water</div>
-          <div class="d"><strong>100% drink tap water</strong> in both countries — it's mountain-spring quality. Refill at every train station, café, and public fountain. Buying bottled water = burning money.</div>
-        </div>
-      </div>
-      <div class="dining-item">
-        <div class="flag">🥘</div>
-        <div class="body">
-          <div class="t">The Reward Dinner — Day 10 Lucerne</div>
-          <div class="d">After 10 days of supermarket meals, one proper Swiss restaurant dinner. <strong>Rösti CHF 18–22</strong> at Wirtshaus Galliker, or Fondue for CHF 30 if splurging. Earned, not indulgent.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="callout callout-warn">
-      <div class="callout-title">💰 Real-World Math</div>
-      Daily food budget Italy: ~€20/person · Switzerland: ~CHF 18–22/person (supermarket-led). That's roughly <strong>RM 160/day average</strong> — exactly the RM 1,800 target across 11 days. One restaurant splurge = 2 days of supermarket budget gone.
-    </div>
-  </div>
-</section>
-
-<!-- ============ BUDGET BREAKDOWN ============ -->
-<section class="budget-section reveal" id="budget">
-  <div class="wrap">
-    <div class="head">
-      <p class="lbl">The Money Map</p>
-      <h2>RM 8,300 per person.</h2>
-      <p class="sub">Eleven days through two of the world’s priciest countries — done on hostel-and-supermarket mode. Here’s exactly where every ringgit goes.</p>
-    </div>
-    <div class="budget-grid">
-      <div class="budget-card">
-        <div class="cat">Transit</div>
-        <div class="item">Italian high-speed + Swiss Half Fare Card + tickets</div>
-        <div class="cost">RM 2,500</div>
-        <div class="strat">Book Italy trains 90 days early (€19 advance fares). Buy Swiss Half Fare Card online before crossing the border — pays for itself by Day 6.</div>
-      </div>
-      <div class="budget-card">
-        <div class="cat">Accommodation</div>
-        <div class="item">10 nights in highly-rated hostels</div>
-        <div class="cost">RM 3,500</div>
-        <div class="strat">Book non-refundable rates for ~10% off. Stay in Varenna (not Bellagio), Gimmelwald (not Mürren), and near Zurich HB (not the airport).</div>
-      </div>
-      <div class="budget-card">
-        <div class="cat">Food &amp; Water</div>
-        <div class="item">11 days of supermarket + instant noodles</div>
-        <div class="cost">RM 1,800</div>
-        <div class="strat">100% tap water — both countries have safe, delicious tap water. Coop / Migros / Conad picnics, one nice dinner per city, gelato every day.</div>
-      </div>
-      <div class="budget-card">
-        <div class="cat">SIM, ETIAS &amp; Misc</div>
-        <div class="item">eSIM, ETIAS, insurance, lockers, toilets</div>
-        <div class="cost">RM 700</div>
-        <div class="strat">Airalo eSIM + ETIAS €7 + travel insurance ~RM 200. Carry €0.50 / CHF 1 coins for station toilets. Stunning views (Stellisee, Piazzale Michelangelo) are free.</div>
-      </div>
-    </div>
-    <div class="budget-total">
-      <div class="cat">Realistic Target (per person, flights extra)</div>
-      <div class="amount">RM 9,000 – 9,500</div>
-      <div class="strat">Excel target RM 8,300 + RM 700 buffer for Swiss mountain gondolas (Day 8 + 10 + 11 combined ≈ CHF 138 / RM 680). Flights extra — book separately.</div>
-    </div>
-  </div>
-</section>
-
-<!-- CLOSING -->
-<section class="closing" id="closing">
-  <div class="closing-bg" id="closingBg"></div>
-  <div class="reveal">
-    <p class="script">somewhere between Rome &amp; the Alps...</p>
-    <h2>I’ll be holding<br>your hand.</h2>
-    <p>Eleven days. Two countries. Countless sunsets, train rides, gelatos, and quiet moments — all with you. Say yes, and let’s go make this real.</p>
-    <div class="heart-pulse">♥</div>
-  </div>
-</section>
-
-<footer>MADE WITH LOVE · AUG 17 — 27, 2026</footer>
+</div>
 
 <script>
-  // ===== Image loader: Wikipedia REST API → real article images =====
-  // Maps each image to a Wikipedia article so we always get the right photo.
-  // Each slot maps to a UNIQUE Wikipedia article so we never get duplicate images.
-  const wikiMap = {
-    'hero': 'Colosseum',
-    'closing': 'Pilatus_(mountain)',
-    // Day 1 Rome arrival
-    'Rome_Skyline.jpg': 'Rome',
-    'FCO_Terminal_3.jpg': 'Leonardo_da_Vinci–Fiumicino_Airport',
-    'Stazione_Termini_-_Roma.jpg': 'Roma_Termini_railway_station',
-    'Gelato_Italy.jpg': 'Gelato',
-    // Day 2 Rome (5 unique landmarks)
-    'Colosseo_2020.jpg': 'Colosseum',
-    'Colosseum_in_Rome,_Italy_-_April_2007.jpg': 'Colosseum',
-    'Trevi_Fountain,_Rome,_Italy_2_-_May_2007.jpg': 'Trevi_Fountain',
-    'Rome-Pantheon-Exterior.jpg': 'Pantheon,_Rome',
-    'Spanish_Steps,_Rome.jpg': 'Spanish_Steps',
-    'Roman_Forum_-_April_2007.jpg': 'Roman_Forum',
-    // Day 3 Florence
-    'Florence_Duomo_from_Michelangelo_hill.jpg': 'Florence',
-    'Florence_-_Cathedral_-_Duomo_-_panoramio_(2).jpg': 'Florence_Cathedral',
-    'Ponte_Vecchio_at_dusk_(cropped).jpg': 'Ponte_Vecchio',
-    'Piazza_della_Signoria_in_Florence.jpg': 'Piazza_della_Signoria',
-    'Florence_seen_from_Piazzale_Michelangelo.jpg': 'Piazzale_Michelangelo',
-    'Frecciarossa_1000_ETR_400.jpg': 'Frecciarossa',
-    // Day 4 Lake Como — all unique
-    'Varenna_-_Lago_di_Como.jpg': 'Lake_Como',
-    'Milan_Cathedral_from_Piazza_del_Duomo.jpg': 'Milan_Cathedral',
-    'Varenna,_Lake_Como.jpg': 'Varenna',
-    'Bellagio_Lake_Como.JPG': 'Bellagio,_Lombardy',
-    'Lago_di_Como_Italy.jpg': 'Lake_Como',
-    'Como_ferry.jpg': 'Navigazione_Lago_di_Como',
-    // Day 5 Zermatt — all unique
-    'Matterhorn_from_Domhütte_-_2.jpg': 'Matterhorn',
-    'Matterhorn_from_Zermatt.jpg': 'Matterhorn',
-    'Zermatt_-_Bahnhofstrasse.jpg': 'Zermatt',
-    'Glacier_Express_above_Brig.jpg': 'Glacier_Express',
-    'Kirchbrücke_Zermatt.jpg': 'Zermatt',
-    'Swiss_Alps_chalets.jpg': 'Swiss_chalet_style',
-    // Day 6 Stellisee — all unique
-    'Stellisee_Reflection.jpg': 'Stellisee',
-    'Sunnegga_funicular.jpg': 'Sunnegga',
-    'Stellisee_with_Matterhorn.jpg': 'Stellisee',
-    'Grindjisee.jpg': 'Grindjisee',
-    // Day 7 Lauterbrunnen — all unique
-    'Lauterbrunnen_Valley.jpg': 'Lauterbrunnen',
-    'Lauterbrunnen_-_2017.jpg': 'Lauterbrunnen_Valley',
-    'Staubbach_Falls_2010.jpg': 'Staubbach_Falls',
-    'Mürren_Switzerland.jpg': 'Mürren',
-    'Gimmelwald_Switzerland.jpg': 'Gimmelwald',
-    'Schilthorn_view.jpg': 'Schilthorn',
-    // Day 8 Grindelwald-First — all unique
-    'Bachalpsee_reflection.jpg': 'Bachalpsee',
-    'First_cliff_walk.jpg': 'First_(mountain)',
-    'Bachalpsee_Switzerland.jpg': 'Bachalpsee',
-    'Faulhorn_summit.jpg': 'Faulhorn',
-    'First_gondola_Grindelwald.jpg': 'Firstbahn',
-    'Schynige_Platte.jpg': 'Schynige_Platte',
-    // Day 9 Bern — all unique
-    'Bern_Old_City_Pano.jpg': 'Bern',
-    'Iseltwald_Lake_Brienz.jpg': 'Iseltwald',
-    'Lake_Brienz_Switzerland.jpg': 'Lake_Brienz',
-    'Bern_Altstadt.jpg': 'Old_City_of_Bern',
-    'Zytglogge_Bern.jpg': 'Zytglogge',
-    'Aare_River_Bern.jpg': 'Aare',
-    // Day 10 Lucerne + Rigi
-    'Kapellbrücke_Lucerne.jpg': 'Chapel_Bridge',
-    'Wasserturm_Lucerne.jpg': 'Lucerne',
-    'Lion_Monument_Lucerne.jpg': 'Lion_Monument',
-    'Mt_Rigi_Switzerland.jpg': 'Rigi',
-    'Lake_Lucerne_Switzerland.jpg': 'Lake_Lucerne',
-    // Day 11 Pilatus + ZRH
-    'Mt_Pilatus_Switzerland.jpg': 'Pilatus_(mountain)',
-    'Pilatus_cogwheel.jpg': 'Pilatus_railway',
-    'Zurich_Airport_Aerial.jpg': 'Zurich_Airport',
-  };
+  if('serviceWorker' in navigator){ navigator.serviceWorker.register('sw.js').catch(()=>{}); }
 
-  async function fetchWikiImage(article){
-    try {
-      const r = await fetch('https://en.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(article));
-      if(!r.ok) return null;
-      const j = await r.json();
-      return (j.originalimage && j.originalimage.source) || (j.thumbnail && j.thumbnail.source) || null;
-    } catch(e){ return null; }
-  }
-  function picsumFor(seed){
-    const s = (seed||'travel').replace(/[^a-z0-9]/gi,'').slice(0,30);
-    return 'https://picsum.photos/seed/' + s + '/1600/1000';
-  }
-  function commonsFileUrl(fname){
-    // Try literal Wikimedia Commons file. Special:FilePath 302-redirects to the file.
-    return 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(fname) + '?width=1600';
-  }
-
-  // Load images — caption-first matching. No dedup (better to repeat than to mismatch).
-  document.querySelectorAll('img[data-wf]').forEach(async img=>{
-    const fname = img.dataset.wf;
-    const article = wikiMap[fname];
-    let url = article ? await fetchWikiImage(article) : null;
-    // Fallback chain: article image → literal Commons file → picsum on error
-    if(!url) url = commonsFileUrl(fname);
-    img.onerror = function(){ if(img.dataset.fb !== '1'){ img.dataset.fb='1'; img.src = picsumFor(fname); } };
-    img.src = url;
-  });
-
-  // Hero + closing backgrounds
-  const heroBg = document.getElementById('heroBg');
-  const closingBg = document.getElementById('closingBg');
-  (async()=>{
-    const heroUrl = await fetchWikiImage(wikiMap['hero']);
-    heroBg.style.backgroundImage = `url('${heroUrl || picsumFor('hero')}')`;
-    const closingUrl = await fetchWikiImage(wikiMap['closing']);
-    closingBg.style.backgroundImage = `url('${closingUrl || picsumFor('closing')}')`;
+  (function(){
+    const dep=new Date('2026-08-17T00:00:00');
+    const days=Math.max(0,Math.ceil((dep-new Date())/86400000));
+    document.getElementById('cdDays').textContent=days;
   })();
 
-  // Hero parallax
-  const heroWrap=document.querySelector('.hero-wrap');
-  const heroContent=document.getElementById('heroContent');
-  function updateHero(){
-    const rect=heroWrap.getBoundingClientRect();
-    const total=heroWrap.offsetHeight-window.innerHeight;
-    const p=Math.min(Math.max(-rect.top,0),total)/total;
-    heroBg.style.transform=`scale(${1.1+p*0.25})`;
-    heroBg.style.opacity=1-p*0.3;
-    heroContent.style.opacity=1-p*1.4;
-    heroContent.style.transform=`translateY(${-p*80}px) scale(${1-p*0.08})`;
-  }
-  window.addEventListener('scroll',updateHero,{passive:true});
-  updateHero();
-
-  // Reveal
-  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:0.1});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-  // ===== Maps helper: open Google Maps app on iOS, web elsewhere =====
-  const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
-  function openInMaps(query){
-    const q=encodeURIComponent(query);
-    if(isIOS){
-      // Apple Maps universal link → opens iOS Maps app instantly, no prompt
-      window.location.href='https://maps.apple.com/?q='+q;
-    } else {
-      window.open('https://www.google.com/maps/search/?api=1&query='+q,'_blank','noopener');
-    }
-  }
-  // Wire up every .maplink and (after injection) every .map-pin via delegation
-  document.addEventListener('click',e=>{
-    const link=e.target.closest('.maplink, .map-pin');
-    if(!link) return;
-    const q=link.dataset.query;
-    if(!q) return;
-    e.preventDefault();
-    openInMaps(q);
-  });
-  // Convert existing static .maplink anchors → use the iOS-aware handler
-  document.querySelectorAll('.maplink').forEach(a=>{
-    try{
-      const u=new URL(a.href);
-      const q=u.searchParams.get('query');
-      if(q) a.dataset.query=q;
-    }catch(e){}
-  });
-
-  // Inject map pin on every timeline event (.rail-item)
-  const mapSvg='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>';
-  document.querySelectorAll('section[data-city]').forEach(sec=>{
-    const city=sec.dataset.city;
-    sec.querySelectorAll('.rail-item').forEach(item=>{
-      const whatEl=item.querySelector('.what');
-      if(!whatEl) return;
-      const place=whatEl.textContent.trim();
-      // Skip non-location items (decisions, reminders, "bring"-style items)
-      if(/^(decision|bring|promise|continue|reward|hide|magic hour)/i.test(item.querySelector('.time')?.textContent||'')) return;
-      const a=document.createElement('a');
-      a.className='map-pin';
-      a.href='#';
-      a.dataset.query=place+', '+city;
-      a.title='Open '+place+' in Maps';
-      a.innerHTML=mapSvg;
-      item.appendChild(a);
+  (function(){
+    const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+    document.querySelectorAll('.mapslink').forEach(a=>{
+      const q=encodeURIComponent(a.dataset.q||'');
+      a.href=isIOS?`https://maps.apple.com/?q=${q}`:`https://www.google.com/maps/search/?api=1&query=${q}`;
+      a.target='_blank'; a.rel='noopener';
     });
-  });
+  })();
 
-  // ===== Bookings Tracker (localStorage) =====
-  const BK_KEY='ourJourneyBookings_v1';
+  (function(){
+    const fab=document.getElementById('jumpFab'),sheet=document.getElementById('jumpSheet'),ov=document.getElementById('jumpOverlay');
+    const open=()=>{sheet.classList.add('open');ov.classList.add('open');};
+    const close=()=>{sheet.classList.remove('open');ov.classList.remove('open');};
+    fab.addEventListener('click',open); ov.addEventListener('click',close);
+    sheet.querySelectorAll('.jump-link').forEach(a=>a.addEventListener('click',()=>setTimeout(close,150)));
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
+  })();
+
+  const BK_KEY='ourJourneyBookings_v2';
   const bookings=[
-    {g:'Documents · Most Urgent',e:'🛂',items:[
-      {id:'etias',name:'ETIAS Travel Authorization',hint:'⚠️ MUST apply 60+ days before travel · €7 · travel-europe.europa.eu · Malaysian passport required from 2026'},
-      {id:'passport',name:'Passport Validity Check',hint:'Must be valid past Feb 2027 (3+ months after Schengen exit)'},
-      {id:'insurance',name:'Travel Insurance (high-altitude + alpine rescue)',hint:'AXA Smart Traveller or MSIG TravelEasy Premier · min €50,000 medical · MUST cover hiking ≥2,500m'},
+    {g:'证件 · 最紧急 · Documents',e:'🛂',items:[
+      {id:'etias',name:'ETIAS Travel Authorization',hint:'⚠️ 出发前 60+ 天 · €7 · travel-europe.europa.eu · 马来西亚护照 2026 起强制'},
+      {id:'passport',name:'Passport Validity Check',hint:'有效期须过 2027 年 2 月'},
+      {id:'insurance',name:'Travel Insurance · 高海拔 + 山地救援',hint:'AXA Smart Traveller / MSIG TravelEasy · 医疗 ≥ €50,000 · 含 ≥2,500m 徒步'},
     ]},
-    {g:'Flights',e:'✈️',items:[
-      {id:'flight-out',name:'KUL → FCO (Rome)',hint:'Arrival ~18:15 on 8/17 · book 3–4 months ahead'},
-      {id:'flight-back',name:'ZRH → KUL (Return)',hint:'Departs 22:35 on 8/27 · be at airport by 19:30 latest'},
+    {g:'机票 · Flights',e:'✈️',items:[
+      {id:'flight-out',name:'KUL → FCO (Rome)',hint:'8/17 抵达 ~18:15'},
+      {id:'flight-back',name:'ZRH → KUL',hint:'8/27 起飞 22:35 · 19:30 前必到机场'},
     ]},
-    {g:'Hostels · Italy',e:'🇮🇹',items:[
-      {id:'stay-d1',name:'YellowSquare Rome (Nights 1–2)',hint:'8/17–8/19 · near Termini · book non-refundable for 10% off'},
-      {id:'stay-d3',name:'PLUS Florence (Night 3)',hint:'8/19–8/20 · rooftop view of Duomo · 15-min walk from S.M.N.'},
-      {id:'stay-d4',name:'Lake Como Hostel · Menaggio (Night 4)',hint:'8/20–8/21 · lakeside · 5 min from Menaggio ferry pier'},
+    {g:'住宿 · 意大利',e:'🇮🇹',items:[
+      {id:'stay-d1',name:'YellowSquare Rome (Nights 1–2)',hint:'8/17–19 · 近 Termini · 不可退订减 10%'},
+      {id:'stay-d3',name:'PLUS Florence (Night 3)',hint:'8/19–20 · 露台远眺 Duomo'},
+      {id:'stay-d4',name:'Lake Como Hostel · Menaggio (Night 4)',hint:'8/20–21 · 距渡船码头 5 分钟'},
     ]},
-    {g:'Hostels · Switzerland',e:'🇨🇭',items:[
-      {id:'stay-d5',name:'Zermatt Youth Hostel (Nights 5–6)',hint:'8/21–8/23 · 2 nights · some rooms have Matterhorn view'},
-      {id:'stay-d7',name:'Mountain Hostel Gimmelwald (Nights 7–8)',hint:'🔥 8/23–8/25 · 2 nights · BOOK IMMEDIATELY · sells out 3 months ahead'},
-      {id:'stay-d9',name:'Backpackers Lucerne (Nights 9–10)',hint:'8/25–8/27 · 2 nights · 10 min walk to Kapellbrücke + station'},
+    {g:'住宿 · 瑞士',e:'🇨🇭',items:[
+      {id:'stay-d5',name:'Zermatt Youth Hostel (Nights 5–6)',hint:'8/21–23 · 部分房间正对马特洪峰'},
+      {id:'stay-d7',name:'Mountain Hostel Gimmelwald (Nights 7–8)',hint:'🔥 8/23–25 · 立刻订！3 个月前满房'},
+      {id:'stay-d9',name:'Backpackers Lucerne (Nights 9–10)',hint:'8/25–27 · 步行 10 分钟到卡贝尔桥'},
     ]},
-    {g:'Trains & Transit',e:'🚆',items:[
-      {id:'tr-leonardo',name:'Leonardo Express · FCO → Termini (Day 1)',hint:'€14 · 32 min · buy on Trenitalia app before landing'},
-      {id:'tr-1',name:'Roma → Firenze · Day 3',hint:'Frecciarossa or Italo · 1h 30m · book 60+ days ahead · €15–25 advance'},
-      {id:'tr-2',name:'Firenze → Milano · Day 4',hint:'Trenitalia · ~2h · book together with Day-4 onward leg'},
-      {id:'tr-3',name:'Milano → Varenna · Day 4',hint:'Trenord regional · ~1h · ~€5 · sit LEFT for lake reveal'},
-      {id:'tr-4',name:'Varenna → Zermatt (Day 5)',hint:'⚠️ 3 connections · 6–7h total · book on sbb.ch 60+ days ahead · Visp→Zermatt sells out'},
-      {id:'tr-halffare',name:'Swiss Half Fare Card',hint:'CHF 120 · sbb.ch · activate on Day 5 arrival · cuts trains/lifts 50%'},
-      {id:'tr-schynige',name:'Schynige Platte Descent · Day 8',hint:'⚠️ Historic cogwheel train · book on jungfrau.ch · CHF 18 (Half Fare) · sells out in Aug'},
+    {g:'火车 · Trains',e:'🚆',items:[
+      {id:'tr-leonardo',name:'Leonardo Express FCO → Termini · D1',hint:'€14 · 32m'},
+      {id:'tr-1',name:'Roma → Firenze · D3',hint:'1h30m · 60+ 天前订特价 €15–25'},
+      {id:'tr-2',name:'Firenze → Milano · D4',hint:'~2h'},
+      {id:'tr-3',name:'Milano → Varenna · D4',hint:'Trenord ~1h ~€5'},
+      {id:'tr-4',name:'Varenna → Zermatt · D5',hint:'⚠️ 6–7h · sbb.ch 60+ 天前订'},
+      {id:'tr-halffare',name:'Swiss Half Fare Card',hint:'CHF 120 · sbb.ch · D5 抵瑞士激活'},
+      {id:'tr-schynige',name:'Schynige Platte 下山火车 · D8',hint:'⚠️ jungfrau.ch · CHF 18（半价）'},
     ]},
-    {g:'Mountain Tickets',e:'🚠',items:[
-      {id:'mt-first',name:'First Gondola (Day 8)',hint:'Grindelwald → First · CHF 30 return (Half Fare) · cliff walk included'},
-      {id:'mt-rigi',name:'Mt. Rigi Round-Trip (Day 10)',hint:'rigi.ch · CHF 28 (Half Fare) · cogwheel + boat combo'},
-      {id:'mt-pilatus',name:'Mt. Pilatus Golden Round Trip (Day 11)',hint:'pilatus.ch · CHF 55 (Half Fare) · boat + cogwheel + gondola · book 30+ days ahead'},
+    {g:'山地缆车票 · Mountain',e:'🚠',items:[
+      {id:'mt-first',name:'First Gondola · D8',hint:'CHF 30 来回（半价）'},
+      {id:'mt-rigi',name:'Mt. Rigi 来回 · D10',hint:'rigi.ch · CHF 28（半价）'},
+      {id:'mt-pilatus',name:'Mt. Pilatus Golden · D11',hint:'pilatus.ch · CHF 55（半价）· 提前 30+ 天订'},
     ]},
-    {g:'Attractions & Tickets',e:'🎟️',items:[
-      {id:'tk-colosseum',name:'Colosseum + Forum Combo',hint:'€18 · coopculture.it · book 30+ days ahead for August'},
-      {id:'tk-vatican',name:'Vatican Museums (optional)',hint:'museivaticani.va · slots open 60 days ahead · skip if not essential'},
+    {g:'景点门票 · Tickets',e:'🎟️',items:[
+      {id:'tk-colosseum',name:'Colosseum + Forum 套票',hint:'€18 · coopculture.it · 30+ 天前订'},
+      {id:'tk-vatican',name:'Vatican Museums (选)',hint:'museivaticani.va · 60 天前开放'},
     ]},
-    {g:'Other',e:'📱',items:[
-      {id:'esim',name:'Airalo eSIM (Europe 15GB)',hint:'~RM 80 · install before flying · Italy + Switzerland coverage'},
-      {id:'wise',name:'Wise / Revolut Card',hint:'Load EUR + CHF · best FX rates · skip Malaysian bank cards (3% FX fee)'},
-      {id:'cash',name:'Cash · €50 + CHF 150',hint:'Some Swiss mountain stations only take cards/cash · Gimmelwald especially'},
+    {g:'其他 · Other',e:'📱',items:[
+      {id:'esim',name:'Airalo eSIM (Europe 15GB)',hint:'~RM 80 · 出发前装好'},
+      {id:'wise',name:'Wise / Revolut Card',hint:'装 EUR + CHF'},
+      {id:'cash',name:'Cash · €50 + CHF 150',hint:'瑞士山区只收卡或现金'},
     ]},
   ];
 
-  function loadBkData(){ try{return JSON.parse(localStorage.getItem(BK_KEY)||'{}');}catch(e){return {};} }
-  function saveBkData(d){ localStorage.setItem(BK_KEY,JSON.stringify(d)); }
+  function loadBkData(){try{return JSON.parse(localStorage.getItem(BK_KEY)||'{}');}catch(e){return{};}}
+  function saveBkData(d){localStorage.setItem(BK_KEY,JSON.stringify(d));}
+  function escapeHtml(s){return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+  function escapeAttr(s){return String(s).replace(/"/g,'&quot;').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
 
   function renderBookings(){
     const data=loadBkData();
@@ -1683,10 +855,10 @@
           <div class="hint">${it.hint}</div>
           ${summary}
           <form class="bk-form" onsubmit="return false">
-            <label>Confirmation # <input name="conf" value="${escapeAttr(saved.conf||'')}" placeholder="e.g. ABC123" /></label>
-            <label>Date / Time <input name="date" value="${escapeAttr(saved.date||'')}" placeholder="e.g. 17 Aug 2026, 14:30" /></label>
-            <label>Cost <input name="cost" value="${escapeAttr(saved.cost||'')}" placeholder="e.g. €42 / RM 200" /></label>
-            <label>Notes <textarea name="notes" placeholder="Hostel address, train carriage, contact, etc.">${escapeHtml(saved.notes||'')}</textarea></label>
+            <label>Confirmation # <input name="conf" value="${escapeAttr(saved.conf||'')}" placeholder="ABC123" /></label>
+            <label>Date / Time <input name="date" value="${escapeAttr(saved.date||'')}" placeholder="17 Aug 2026, 14:30" /></label>
+            <label>Cost <input name="cost" value="${escapeAttr(saved.cost||'')}" placeholder="€42 / RM 200" /></label>
+            <label>Notes <textarea name="notes" placeholder="地址 · 车次 · 联系...">${escapeHtml(saved.notes||'')}</textarea></label>
             <div class="actions"><button type="button" class="save">Save</button><button type="button" class="clear">Clear</button></div>
           </form>`;
         grid.appendChild(card);
@@ -1697,25 +869,15 @@
     document.getElementById('bkDone').textContent=done;
     document.getElementById('bkFill').style.width=(total?(done/total*100):0)+'%';
   }
-  function escapeHtml(s){return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
-  function escapeAttr(s){return String(s).replace(/"/g,'&quot;').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
   document.addEventListener('click',e=>{
-    const card=e.target.closest('.bk-card');
-    if(!card) return;
+    const card=e.target.closest('.bk-card'); if(!card) return;
     if(e.target.classList.contains('save')){
-      const data=loadBkData();
-      const f=card.querySelector('.bk-form');
+      const data=loadBkData(); const f=card.querySelector('.bk-form');
       data[card.dataset.id]={booked:true,conf:f.conf.value.trim(),date:f.date.value.trim(),cost:f.cost.value.trim(),notes:f.notes.value.trim()};
-      saveBkData(data);
-      renderBookings();
-      return;
+      saveBkData(data); renderBookings(); return;
     }
     if(e.target.classList.contains('clear')){
-      const data=loadBkData();
-      delete data[card.dataset.id];
-      saveBkData(data);
-      renderBookings();
-      return;
+      const data=loadBkData(); delete data[card.dataset.id]; saveBkData(data); renderBookings(); return;
     }
     if(!e.target.closest('.bk-form')){
       document.querySelectorAll('.bk-card.editing').forEach(c=>{if(c!==card)c.classList.remove('editing');});
@@ -1724,44 +886,16 @@
   });
   renderBookings();
 
-  // ===== Jump Menu (FAB) =====
-  const jumpFab=document.getElementById('jumpFab');
-  const jumpSheet=document.getElementById('jumpSheet');
-  const jumpOverlay=document.getElementById('jumpOverlay');
-  const jumpClose=document.getElementById('jumpClose');
-  function openJump(){jumpSheet.classList.add('open');jumpOverlay.classList.add('open');}
-  function closeJump(){jumpSheet.classList.remove('open');jumpOverlay.classList.remove('open');}
-  jumpFab.addEventListener('click',openJump);
-  jumpOverlay.addEventListener('click',closeJump);
-  jumpClose.addEventListener('click',closeJump);
-  jumpSheet.querySelectorAll('.jump-link').forEach(a=>a.addEventListener('click',()=>setTimeout(closeJump,150)));
-  document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeJump(); });
-
-  // Register Service Worker for offline support
-  if('serviceWorker' in navigator){
-    window.addEventListener('load',()=>{
-      navigator.serviceWorker.register('sw.js').catch(()=>{});
-    });
-  }
-
-  // Floating day-nav: show after the hero, highlight active day
-  const dayNav=document.getElementById('dayNav');
-  const navLinks=Array.from(dayNav.querySelectorAll('a'));
-  const dayIds=navLinks.map(a=>a.getAttribute('href').slice(1));
-  function updateNav(){
-    const showAfter=window.innerHeight*0.8;
-    dayNav.classList.toggle('show',window.scrollY>showAfter);
-    let activeIdx=-1;
-    const probe=window.innerHeight*0.4;
-    dayIds.forEach((id,i)=>{
-      const el=document.getElementById(id);
-      if(el && el.getBoundingClientRect().top<=probe) activeIdx=i;
-    });
-    navLinks.forEach((a,i)=>a.classList.toggle('active',i===activeIdx));
-  }
-  window.addEventListener('scroll',updateNav,{passive:true});
-  updateNav();
+  (function(){
+    const links=document.querySelectorAll('.nav a[href^="#"]');
+    const sections=[...links].map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    const onScroll=()=>{
+      const y=window.scrollY+120; let cur=null;
+      sections.forEach(s=>{if(s.offsetTop<=y) cur=s;});
+      links.forEach(l=>l.classList.toggle('active', cur && l.getAttribute('href')==='#'+cur.id));
+    };
+    window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  })();
 </script>
-
 </body>
 </html>
