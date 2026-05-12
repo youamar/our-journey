@@ -865,43 +865,6 @@ tr:nth-child(even) td{background:#FBF7EE}
   <div class="small">"计划没有变化快，但有计划的人永远比没计划的人更从容。"</div>
 </footer>
 
-<button class="jump-fab" id="jumpFab" aria-label="Jump menu">☰</button>
-<div class="jump-overlay" id="jumpOverlay"></div>
-<div class="jump-sheet" id="jumpSheet">
-  <div class="jump-handle"></div>
-  <h3>Quick Jump · 快速跳转</h3>
-  <div class="jump-group">
-    <div class="jump-group-title">Days · 每日</div>
-    <a class="jump-link" href="#d1"><span class="lbl">D1</span>罗马 · 落地</a>
-    <a class="jump-link" href="#d2"><span class="lbl">D2</span>罗马 · 25km 拉练</a>
-    <a class="jump-link" href="#d3"><span class="lbl">D3</span>佛罗伦萨</a>
-    <a class="jump-link" href="#d4"><span class="lbl">D4</span>米兰 + 科莫</a>
-    <a class="jump-link" href="#d5"><span class="lbl">D5</span>跨国 → Zermatt</a>
-    <a class="jump-link" href="#d6"><span class="lbl">D6</span>五湖徒步</a>
-    <a class="jump-link" href="#d7"><span class="lbl">D7</span>Gimmelwald</a>
-    <a class="jump-link" href="#d8"><span class="lbl">D8</span>Boss 16km</a>
-    <a class="jump-link" href="#d9"><span class="lbl">D9</span>Iseltwald + 伯恩</a>
-    <a class="jump-link" href="#d10"><span class="lbl">D10</span>卢塞恩 + Rigi</a>
-    <a class="jump-link" href="#d11"><span class="lbl">D11</span>Pilatus → 回家</a>
-  </div>
-  <div class="jump-group">
-    <div class="jump-group-title">Sections · 章节</div>
-    <a class="jump-link" href="#s1"><span class="lbl">01</span>基础信息</a>
-    <a class="jump-link" href="#s2"><span class="lbl">02</span>证件 ETIAS</a>
-    <a class="jump-link" href="#s3"><span class="lbl">03</span>大交通</a>
-    <a class="jump-link" href="#s4"><span class="lbl">04</span>住宿</a>
-    <a class="jump-link" href="#s5"><span class="lbl">05</span>每日行程</a>
-    <a class="jump-link" href="#gallery"><span class="lbl">📷</span>Photo Gallery · 相册</a>
-    <a class="jump-link" href="#s6"><span class="lbl">06</span>餐饮策略</a>
-    <a class="jump-link" href="#s7"><span class="lbl">07</span>市内交通</a>
-    <a class="jump-link" href="#s8"><span class="lbl">08</span>预算</a>
-    <a class="jump-link" href="#s9"><span class="lbl">09</span>应急预案</a>
-    <a class="jump-link" href="#s10"><span class="lbl">10</span>行李清单</a>
-    <a class="jump-link" href="#s11"><span class="lbl">11</span>节奏控制</a>
-    <a class="jump-link" href="#bookings"><span class="lbl">★</span>Bookings</a>
-  </div>
-</div>
-
 <div class="lb" id="lb">
   <button class="lb-close" id="lbClose" aria-label="Close">×</button>
   <img id="lbImg" alt="">
@@ -924,15 +887,6 @@ tr:nth-child(even) td{background:#FBF7EE}
       a.href=isIOS?`https://maps.apple.com/?q=${q}`:`https://www.google.com/maps/search/?api=1&query=${q}`;
       a.target='_blank'; a.rel='noopener';
     });
-  })();
-
-  (function(){
-    const fab=document.getElementById('jumpFab'),sheet=document.getElementById('jumpSheet'),ov=document.getElementById('jumpOverlay');
-    const open=()=>{sheet.classList.add('open');ov.classList.add('open');};
-    const close=()=>{sheet.classList.remove('open');ov.classList.remove('open');};
-    fab.addEventListener('click',open); ov.addEventListener('click',close);
-    sheet.querySelectorAll('.jump-link').forEach(a=>a.addEventListener('click',()=>setTimeout(close,150)));
-    document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
   })();
 
   const BK_KEY='ourJourneyBookings_v2';
